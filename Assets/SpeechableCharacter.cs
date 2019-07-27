@@ -6,6 +6,7 @@ public class SpeechableCharacter : MonoBehaviour
 {
     public Canvas speechCanvas;
     public InspectionManager manager;
+    public LupaButton lupa;
 
     [TextArea(3,10)]
     public string[] texts;
@@ -26,7 +27,7 @@ public class SpeechableCharacter : MonoBehaviour
     }
 
     public void selectCharacter(){
-        if(!speechCanvas.gameObject.activeInHierarchy){
+        if(!speechCanvas.gameObject.activeInHierarchy && !lupa.pressed){
             //Setar os valores do canvas
             SpeechManager sm = speechCanvas.GetComponent<SpeechManager>();
             sm.OpenText(spriteRenderer.sprite, texts);
