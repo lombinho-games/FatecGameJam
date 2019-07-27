@@ -1397,6 +1397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3d4748b9ca850a4890b2387dfe157fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lupa: {fileID: 744028558}
 --- !u!4 &741613004
 Transform:
   m_ObjectHideFlags: 0
