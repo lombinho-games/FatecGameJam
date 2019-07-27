@@ -23,7 +23,7 @@ public class Move : MonoBehaviour
         }
         else
         {
-        transform.position = Vector3.MoveTowards(transform.position, posI, speed/2);
+        transform.position = Vector3.MoveTowards(transform.position, posI, speed/10);
         }
      }    
  }
