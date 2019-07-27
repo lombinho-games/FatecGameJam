@@ -19,23 +19,17 @@ public class SpeechableCharacter : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
+    void OnMouseOver(){
+        if(Input.GetMouseButtonDown(0)){
+            selectCharacter();
+        }
     }
 
     public void selectCharacter(){
         if(!speechCanvas.gameObject.activeInHierarchy){
-            Debug.Log("Clicou no fera");
             //Setar os valores do canvas
             SpeechManager sm = speechCanvas.GetComponent<SpeechManager>();
-
-            sm.currentCharacterImage = spriteRenderer.sprite;
-            sm.texts = texts;
-
-            speechCanvas.gameObject.SetActive(true);
-
-            sm.RefreshGUI();
+            sm.OpenText(spriteRenderer.sprite, texts);
         }
     }
 }
