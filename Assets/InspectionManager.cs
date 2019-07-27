@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InspectionManager : MonoBehaviour
 {
@@ -14,5 +15,9 @@ public class InspectionManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void ClickOnInventory(){
+        SceneManager.LoadScene(1, LoadSceneMode.Additive);
     }
 }
