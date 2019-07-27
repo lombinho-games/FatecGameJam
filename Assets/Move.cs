@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
-    bool lig = false;
+    Vector3 mousePos;
+    public bool lig = false;
     public float speed = 0.25f;
      private Vector3 target;
      private Vector3 posI;
@@ -15,16 +16,6 @@ public class Move : MonoBehaviour
      }
      
      void Update () {
-         if(Input.GetMouseButtonDown(0))
-         {
-             if (lig){
-                 lig = false;
-             }
-             else
-             {
-                 lig = true;
-             }
-         }
         target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         target.z = transform.position.z;
         if(lig){
