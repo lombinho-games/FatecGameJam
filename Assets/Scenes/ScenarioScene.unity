@@ -897,15 +897,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 398221525}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e815c8b7fc1d64646a087a175cf43031, type: 3}
+  m_Script: {fileID: 11500000, guid: ad633952d0e4c104198b1fbb02858a00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speechCanvas: {fileID: 2119144613}
-  manager: {fileID: 741613003}
-  lupa: {fileID: 744028558}
-  texts:
-  - "Co\xE9 doido, ce sabe q eu nao matei ngm nao ne\t"
-  - "ot\xE1rio\n"
+  texts: []
+  currentText: 0
+  currentCharacterImage: {fileID: 0}
+  characterImage: {fileID: 0}
+  canvasText: {fileID: 0}
+  panelImage: {fileID: 0}
+  charDelay: 0
 --- !u!212 &398221528
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1645,17 +1646,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 797837170}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e815c8b7fc1d64646a087a175cf43031, type: 3}
+  m_Script: {fileID: 11500000, guid: ad633952d0e4c104198b1fbb02858a00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speechCanvas: {fileID: 2119144613}
-  manager: {fileID: 741613003}
-  lupa: {fileID: 744028558}
-  texts:
-  - "ENTAO SEU BABACA\t\t"
-  - SE LIGA SO
-  - NESSA PARADA
-  - doido
+  texts: []
+  currentText: 0
+  currentCharacterImage: {fileID: 0}
+  characterImage: {fileID: 0}
+  canvasText: {fileID: 0}
+  panelImage: {fileID: 0}
+  charDelay: 0
 --- !u!61 &797837174
 BoxCollider2D:
   m_ObjectHideFlags: 0
