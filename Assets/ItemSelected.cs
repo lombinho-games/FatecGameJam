@@ -7,6 +7,8 @@ public class ItemSelected : MonoBehaviour
 
     GameObject slot;
     public GameObject originalItem;
+
+    public Camera myCamera;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +18,7 @@ public class ItemSelected : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 mpos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 mpos = myCamera.ScreenToWorldPoint(Input.mousePosition);
         transform.position = new Vector3(mpos.x, mpos.y, 0);
 
 

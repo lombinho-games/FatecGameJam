@@ -6,6 +6,8 @@ public class SpeechableCharacter : MonoBehaviour
     public Canvas speechCanvas;
     public InspectionManager manager;
     public LupaButton lupa;
+    public GameObject personagens;
+    public GameObject gui;
 
    
     public TextData[] texts;
@@ -20,7 +22,7 @@ public class SpeechableCharacter : MonoBehaviour
 
     // Update is called once per frame
     void OnMouseOver(){
-        if(Input.GetMouseButtonDown(0)){
+        if(Input.GetMouseButtonDown(0) && !manager.mouseOnSeta){ //perguntar se o mouse não tá em cima da seta
             selectCharacter();
         }
     }
@@ -30,6 +32,8 @@ public class SpeechableCharacter : MonoBehaviour
             //Setar os valores do canvas
             SpeechManager sm = speechCanvas.GetComponent<SpeechManager>();
             sm.OpenText(texts);
+            personagens.SetActive(false);
+            gui.SetActive(false);
         }
     }
 }

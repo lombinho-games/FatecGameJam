@@ -12,6 +12,10 @@ public class PistaItem : MonoBehaviour
 
     public TextData[] texts;
 
+    public SpeechableCharacter toChange;
+
+    public TextData[] textToChange;
+
     SpriteRenderer spriteRenderer;
     // Start is called before the first frame update
     void Start()
@@ -28,7 +32,9 @@ public class PistaItem : MonoBehaviour
             GlobalProfile.getInstance().addItem(new InventoryItem(itemId, displayName, spriteRenderer.sprite));
             //Destruir item
             speech.OpenText(texts);
-            
+
+            if(toChange !=null)
+                toChange.texts = textToChange;
 
             Destroy(gameObject);
         }

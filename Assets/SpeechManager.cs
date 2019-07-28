@@ -13,6 +13,9 @@ public class SpeechManager : MonoBehaviour
     public Text canvasText;
     public Image panelImage;
 
+    public GameObject personagens;
+    public GameObject gui;
+
     //Efeito de datilografia
 
     int charactersShown = 0;
@@ -61,7 +64,13 @@ public class SpeechManager : MonoBehaviour
         if(Input.GetMouseButtonDown(0) && canProceed){
             if(BeginText(currentText + 1)){
                 gameObject.SetActive(false);
+                personagens.SetActive(true);
+                gui.SetActive(true);
             }
+        }
+
+        if(Input.GetMouseButtonDown(1)){
+            charactersShown = texts[currentText].texto.Length;
         }
 
         
