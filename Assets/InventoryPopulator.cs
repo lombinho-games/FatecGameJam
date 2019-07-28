@@ -61,5 +61,7 @@ public class InventoryPopulator : MonoBehaviour
 
     public void GoBack(){
         SceneManager.UnloadSceneAsync(1);
+        
+
     }
 }
