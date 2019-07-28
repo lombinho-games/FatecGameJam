@@ -1,7 +1,7 @@
 ﻿# FatecGameJam
 Coisas pra fazer
 
--Icones pra trocar de cenário, e fazer com q cada cenário tenha sua própria disposição de itens e personagems *
+-Icones pra trocar de cenário, e tenha sua própria disposição de itens e personagems *
 
 -Fazer com que o crafting sirva pra alguma coisa
 

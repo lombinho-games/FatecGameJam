@@ -7,10 +7,8 @@ public class SpeechManager : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public string[] texts;
+    public TextData[] texts;
     public int currentText;
-    public Sprite currentCharacterImage;
-
     public Image characterImage;
     public Text canvasText;
     public Image panelImage;
@@ -37,12 +35,6 @@ public class SpeechManager : MonoBehaviour
         //Faz o fade in
         canvasColor.a = canvasColor.a + (1 - canvasColor.a) / 10f;
 
-        if(currentCharacterImage != null)
-            characterImage.color = canvasColor;
-        else{
-            characterImage.color = new Color(1, 1, 1, 0);
-        }
-
         panelImage.color = canvasColor;
         canvasText.color = canvasColor;
 
@@ -60,11 +52,11 @@ public class SpeechManager : MonoBehaviour
         if(charTimer > charDelay / 1000f){
             charTimer -= charDelay / 1000f;
             charactersShown ++;
-            charactersShown = Mathf.Min(charactersShown, texts[currentText].Length);
-            canProceed = charactersShown == texts[currentText].Length;
+            charactersShown = Mathf.Min(charactersShown, texts[currentText].texto.Length);
+            canProceed = charactersShown == texts[currentText].texto.Length;
         }
 
-        canvasText.text = texts[currentText].Substring(0, charactersShown);
+        canvasText.text = texts[currentText].texto.Substring(0, charactersShown);
 
         if(Input.GetMouseButtonDown(0) && canProceed){
             if(BeginText(currentText + 1)){
@@ -76,10 +68,8 @@ public class SpeechManager : MonoBehaviour
 
     }
 
-    public void OpenText(Sprite image, string[] texts){
-            currentCharacterImage = image;
+    public void OpenText(TextData[] texts){
             this.texts = texts;
-
             gameObject.SetActive(true);
             RefreshGUI();
     }
@@ -91,12 +81,17 @@ public class SpeechManager : MonoBehaviour
         charTimer = 0;
         charactersShown = 0;
         canProceed = false;
+        if(texts[currentText].image != null){
+            characterImage.sprite = texts[currentText].image;
+            characterImage.color = new Color(1, 1, 1, 1);
+        }
+        else{
+            characterImage.color = new Color(1, 1, 1, 0);
+        }
         return false;
     }
 
     public void RefreshGUI(){
-        if(currentCharacterImage != null)
-            characterImage.sprite = currentCharacterImage;
         BeginText(0);
         canvasColor.a = 0;
     }

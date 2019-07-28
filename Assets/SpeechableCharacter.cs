@@ -7,8 +7,8 @@ public class SpeechableCharacter : MonoBehaviour
     public InspectionManager manager;
     public LupaButton lupa;
 
-    [TextArea(3,10)]
-    public string[] texts;
+   
+    public TextData[] texts;
 
     SpriteRenderer spriteRenderer;
 
@@ -29,7 +29,7 @@ public class SpeechableCharacter : MonoBehaviour
         if(!speechCanvas.gameObject.activeInHierarchy && !lupa.pressed){
             //Setar os valores do canvas
             SpeechManager sm = speechCanvas.GetComponent<SpeechManager>();
-            sm.OpenText(spriteRenderer.sprite, texts);
+            sm.OpenText(texts);
         }
     }
 }

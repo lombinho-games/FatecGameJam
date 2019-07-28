@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class MoveMouse : MonoBehaviour
 {
-    bool atv = false;
     Vector3 mousePos;
     Ray ray;
     RaycastHit hit;

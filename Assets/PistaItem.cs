@@ -10,6 +10,8 @@ public class PistaItem : MonoBehaviour
     public string displayName;
     public string itemId;
 
+    public TextData[] texts;
+
     SpriteRenderer spriteRenderer;
     // Start is called before the first frame update
     void Start()
@@ -25,7 +27,7 @@ public class PistaItem : MonoBehaviour
             //Abrir um texto
             GlobalProfile.getInstance().addItem(new InventoryItem(itemId, displayName, spriteRenderer.sprite));
             //Destruir item
-            speech.OpenText(null, new string[]{"Este é um computador", "Ele computa coisasa", "porra"});
+            speech.OpenText(texts);
             
 
             Destroy(gameObject);

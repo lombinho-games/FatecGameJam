@@ -7,8 +7,7 @@ public class ScenarioCamera : MonoBehaviour
     // Start is called before the first frame update
 
     Vector3 movement;
-    public  int cena;
-    float maxX;
+    public int cena;
     float Py;
 
     void Start()
@@ -19,48 +18,48 @@ public class ScenarioCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        Camera cam = Camera.main;
+        float height = 2f * cam.orthographicSize;
+        float width = height * cam.aspect;
+
+        GetComponent<BoxCollider2D>().size = new Vector2(width, height);
+
         switch (cena)
         {
             case 1: // halls bala
-            maxX = 2.9f;
             Py = 12.90f;
             transform.position = new Vector3(transform.position.x, Py,-10);
             break;
             case 2: // bribrioqueta
-            maxX = 9.5f;
-            Py = 0f;
+            Py = -15.7f;
             transform.position = new Vector3(transform.position.x, Py,-10);
             break;
             case 3: // switch
-            maxX = 9.8f;
             Py = 25f;
             transform.position = new Vector3(transform.position.x, Py, -10);
             break;
-            case 4: // sala do RANGO
-            maxX = 9.8f;
+            case 4: // cozinha
+            Py = 62f;
+            transform.position = new Vector3(transform.position.x, Py -10);
+            break;
+            case 5: // sala do RANGO
             Py = 38.5f;
             transform.position = new Vector3(transform.position.x,Py, -10);
             break;
             default: // nada nãp
-            maxX = 10f;
             break;
         } 
-        transform.position = transform.position + movement * Time.deltaTime;
+        GetComponent<Rigidbody2D>().AddForce(movement);
 
-        if(transform.position.x > maxX){
-            transform.position = new Vector3(maxX, Py, -10);
-        }
-        if(transform.position.x < -maxX){
-            transform.position = new Vector3(-maxX, Py, -10);
-        }
     }
 
     public void GoLeft(){
-        movement = new Vector3(-10, 0, 0);
+        movement = new Vector3(-20, 0, 0);
     }
 
     public void GoRight(){
-        movement = new Vector3(10, 0, 0);
+        movement = new Vector3(20, 0, 0);
     }
 
     public void StopMove(){
