@@ -1,0 +1,28 @@
+# FatecGameJam
+Coisas pra fazer
+
+-Icones pra trocar de cenário, e fazer com q cada cenário tenha sua própria disposição de itens e personagems *
+
+-Fazer com que o crafting sirva pra alguma coisa
+
+-Implementar arte de interface do inventário *
+
+-Colocar (de novo) o script de SpeechableCharacter *
+
+- Fazer intro com cutscene
+
+============
+
+Intro - 
+
+Tela preta
+
+Jornal mostra que homem é morto
+
+1 semana atrás
+
+cutscene da morte do rico
+
+fade out
+
+cena do Hall com todos os culpados
