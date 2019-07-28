@@ -40,8 +40,8 @@ public class ScenarioCamera : MonoBehaviour
             transform.position = new Vector3(transform.position.x, Py, -10);
             break;
             case 4: // cozinha
-            Py = 62f;
-            transform.position = new Vector3(transform.position.x, Py -10);
+            Py = 52f;
+            transform.position = new Vector3(transform.position.x, Py, -10);
             break;
             case 5: // sala do RANGO
             Py = 38.5f;

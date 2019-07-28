@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Inventario.unity
     guid: 6dcec021aba87f148b95c13469aca099
+  - enabled: 1
+    path: Assets/Scenes/GANHOU.unity
+    guid: c5fbbae476fc43c4b894b6fb049988cf
+  - enabled: 1
+    path: Assets/Scenes/PERDEU.unity
+    guid: 6291f45d9773b1547b5b79c0227e4ea2
   m_configObjects: {}

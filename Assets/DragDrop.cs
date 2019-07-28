@@ -7,6 +7,7 @@ public class DragDrop : MonoBehaviour
 {   
     public bool Holding;
     public ItemSelected itemSelected;
+    public InventoryItem reference;
       void Start () {
 
         EventTrigger trigger = GetComponent<EventTrigger>();

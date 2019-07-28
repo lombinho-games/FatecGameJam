@@ -14,6 +14,10 @@ public class InventoryPopulator : MonoBehaviour
     public int cellHeight;
 
     public ItemSelected itemSelected;
+
+
+    public SlotHolder s1, s2, s3;
+
     void Start()
     {
         int cont = 0;
@@ -34,6 +38,7 @@ public class InventoryPopulator : MonoBehaviour
             cellItem.transform.position = new Vector3(0, 0, 0);
 
             cellItem.AddComponent<DragDrop>().itemSelected = itemSelected;
+            cellItem.GetComponent<DragDrop>().reference = item;
             cellItem.AddComponent<EventTrigger>();
 
             rect.offsetMin = new Vector2(0, 0);
@@ -52,7 +57,18 @@ public class InventoryPopulator : MonoBehaviour
 
     public void GoBack(){
         SceneManager.UnloadSceneAsync(2);
-        
+    }
+
+    public void Solucionar(){
+
+        if(s1.held == null || s2.held == null || s3.held == null) return;
+
+        if(s1.held.reference.itemID == "chuveiro" && s2.held.reference.itemID == "oculos" && s3.held.reference.itemID == "testamento"){
+            SceneManager.LoadScene(3);
+        }
+        else{
+            SceneManager.LoadScene(4);
+        }
 
     }
 }

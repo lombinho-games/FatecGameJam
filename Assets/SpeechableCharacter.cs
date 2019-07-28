@@ -9,6 +9,10 @@ public class SpeechableCharacter : MonoBehaviour
     public GameObject personagens;
     public GameObject gui;
 
+    public Sprite headBob;
+
+    bool hasTalked = false;
+
    
     public TextData[] texts;
 
@@ -34,6 +38,11 @@ public class SpeechableCharacter : MonoBehaviour
             sm.OpenText(texts);
             personagens.SetActive(false);
             gui.SetActive(false);
+
+            if(!hasTalked){
+                hasTalked = true;
+                GlobalProfile.getInstance().addItem(new InventoryItem(gameObject.name, gameObject.name, headBob));
+            }
         }
     }
 }

@@ -6,6 +6,9 @@ using UnityEngine;
 public class telas : MonoBehaviour
 {
     public ScenarioCamera scenarioCamera;
+    public AudioSource audioComponent;
+    public AudioClip musicToChange;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,23 +27,12 @@ public class telas : MonoBehaviour
             0, Camera.main.transform.position.y,
             Camera.main.transform.position.z
         );
-    }
+        if(musicToChange != null){
+            audioComponent.Stop();
+            audioComponent.clip = musicToChange;
+            audioComponent.Play();
+        }
 
-    public void Passar(){
-        scenarioCamera.cena += 1;
-        Camera.main.transform.position = new Vector3(
-            0, Camera.main.transform.position.y,
-            Camera.main.transform.position.z
-        );
-        Debug.Log(scenarioCamera.cena);
-    }
-    public void Voltar(){
-        scenarioCamera.cena -=1;
-        Camera.main.transform.position = new Vector3(
-            0, Camera.main.transform.position.y,
-            Camera.main.transform.position.z
-        );
-        Debug.Log(scenarioCamera.cena);
     }
     
 }

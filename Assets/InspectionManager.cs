@@ -10,12 +10,13 @@ public class InspectionManager : MonoBehaviour
     public SpeechManager speech;
     public LupaButton lupa;
 
+
     [HideInInspector]
     public bool mouseOnSeta;
     // Start is called before the first frame update
     void Start()
     {
-        //speech.OpenText(initialTexts);
+        speech.OpenText(initialTexts);
     }
 
     // Update is called once per frame
@@ -26,7 +27,7 @@ public class InspectionManager : MonoBehaviour
 
     public void ClickOnInventory(){
         if(!lupa.pressed){
-        SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);
+            SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);
         }
     }
 
