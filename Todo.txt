@@ -1,4 +1,4 @@
-# FatecGameJam
+﻿# FatecGameJam
 Coisas pra fazer
 
 -Icones pra trocar de cenário, e fazer com q cada cenário tenha sua própria disposição de itens e personagems *
@@ -19,7 +19,7 @@ Tela preta
 
 Jornal mostra que homem é morto
 
-1 semana atrás
+ONTEM
 
 cutscene da morte do rico
 

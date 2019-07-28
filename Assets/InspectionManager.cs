@@ -20,7 +20,7 @@ public class InspectionManager : MonoBehaviour
 
     public void ClickOnInventory(){
         if(!lupa.pressed){
-        SceneManager.LoadScene(1);
+        SceneManager.LoadSceneAsync(1);
         }
     }
 }
