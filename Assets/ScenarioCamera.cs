@@ -7,8 +7,9 @@ public class ScenarioCamera : MonoBehaviour
     // Start is called before the first frame update
 
     Vector3 movement;
-
-    public float maxX;
+    public  int cena;
+    float maxX;
+    float Py;
 
     void Start()
     {
@@ -18,13 +19,39 @@ public class ScenarioCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        switch (cena)
+        {
+            case 1: 
+            maxX = 2.9f;
+            Py = 12.90f;
+            transform.position = new Vector3(transform.position.x, Py,-10);
+            break;
+            case 2: 
+            maxX = 7.8f;
+            Py = 0f;
+            transform.position = new Vector3(transform.position.x, Py,-10);
+            break;
+            case 3:
+            maxX = 7.8f;
+            Py = 25f;
+            transform.position = new Vector3(transform.position.x, Py, -10);
+            break;
+            case 4:
+            maxX = 7.8f;
+            Py = 38.5f;
+            transform.position = new Vector3(transform.position.x,Py, -10);
+            break;
+            default:
+            maxX = 10f;
+            break;
+        } 
         transform.position = transform.position + movement * Time.deltaTime;
 
         if(transform.position.x > maxX){
-            transform.position = new Vector3(maxX, 0, -10);
+            transform.position = new Vector3(maxX, Py, -10);
         }
         if(transform.position.x < -maxX){
-            transform.position = new Vector3(-maxX, 0, -10);
+            transform.position = new Vector3(-maxX, Py, -10);
         }
     }
 

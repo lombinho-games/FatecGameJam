@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: e815c8b7fc1d64646a087a175cf43031
+=======
+guid: 88a0008139014af4ab28d11ae1b99c07
+>>>>>>> VihhdeoGame_2
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
@@ -8,4 +12,8 @@ MonoImporter:
   icon: {instanceID: 0}
   userData: 
   assetBundleName: 
+<<<<<<< HEAD
   assetBundleVariant: 
+=======
+  assetBundleVariant: 
+>>>>>>> VihhdeoGame_2
