@@ -21,27 +21,27 @@ public class ScenarioCamera : MonoBehaviour
     {
         switch (cena)
         {
-            case 1: 
+            case 1: // halls bala
             maxX = 2.9f;
             Py = 12.90f;
             transform.position = new Vector3(transform.position.x, Py,-10);
             break;
-            case 2: 
-            maxX = 7.8f;
+            case 2: // bribrioqueta
+            maxX = 9.5f;
             Py = 0f;
             transform.position = new Vector3(transform.position.x, Py,-10);
             break;
-            case 3:
-            maxX = 7.8f;
+            case 3: // switch
+            maxX = 9.8f;
             Py = 25f;
             transform.position = new Vector3(transform.position.x, Py, -10);
             break;
-            case 4:
-            maxX = 7.8f;
+            case 4: // sala do RANGO
+            maxX = 9.8f;
             Py = 38.5f;
             transform.position = new Vector3(transform.position.x,Py, -10);
             break;
-            default:
+            default: // nada nãp
             maxX = 10f;
             break;
         } 
