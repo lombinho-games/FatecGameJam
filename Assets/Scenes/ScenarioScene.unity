@@ -481,7 +481,7 @@ MonoBehaviour:
   headBob: {fileID: 21300000, guid: 9f28c0e909ea9c8439e9d6f1878af7e9, type: 3}
   texts:
   - texto: "O que voc\xEA fez ap\xF3s o an\xFAncio do Sr. Bartolomeu?"
-    image: {fileID: 21300000, guid: 70076fe528cd3c74091b4e7f639f4301, type: 3}
+    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: "Eu voltei \xE0 cozinha, para terminar o jantar que ele resolveu estragar
       com aquele an\xFAncio. "
@@ -494,7 +494,7 @@ MonoBehaviour:
     image: {fileID: 21300000, guid: 0305e265373d57b40b75d2c6a3b79a7e, type: 3}
     owner: 
   - texto: A senhora viu alguma coisa suspeita?
-    image: {fileID: 21300000, guid: 70076fe528cd3c74091b4e7f639f4301, type: 3}
+    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: "N\xE3o me lembro de nada."
     image: {fileID: 21300000, guid: 9c4f3a67234fbfc4fa1b3d7aeee86b38, type: 3}
@@ -791,10 +791,10 @@ MonoBehaviour:
   toChange: {fileID: 1960329273}
   textToChange:
   - texto: A Srta. Alice disse que o viu entrando mais cedo no quarto do Sr. Bartolomeu.
-    image: {fileID: 21300000, guid: 70076fe528cd3c74091b4e7f639f4301, type: 3}
+    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: Pode dar detalhes?
-    image: {fileID: 21300000, guid: 70076fe528cd3c74091b4e7f639f4301, type: 3}
+    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: "\xC9 claro, eu estava fazendo alguns reparos no banheiro."
     image: {fileID: 21300000, guid: 2142826e37092594d8e5a1cc08e8890c, type: 3}
@@ -940,7 +940,7 @@ MonoBehaviour:
   toChange: {fileID: 826348930}
   textToChange:
   - texto: "Sra. Catarina, h\xE1 rosas brancas em algum lugar dessa casa? Jardim talvez?"
-    image: {fileID: 21300000, guid: 70076fe528cd3c74091b4e7f639f4301, type: 3}
+    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: "N\xE3o...n\xE3o gosto de flores somente brancas."
     image: {fileID: 21300000, guid: 992e30d02cc73af49b37a599d92ffb19, type: 3}
@@ -949,10 +949,10 @@ MonoBehaviour:
     image: {fileID: 21300000, guid: 992e30d02cc73af49b37a599d92ffb19, type: 3}
     owner: 
   - texto: "Entendi. Voc\xEA sabe ent\xE3o de quem seria esta rosa branca?"
-    image: {fileID: 21300000, guid: 70076fe528cd3c74091b4e7f639f4301, type: 3}
+    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: "Encontrei no quarto no seu quarto no ch\xE3o ao lado da cama."
-    image: {fileID: 21300000, guid: 70076fe528cd3c74091b4e7f639f4301, type: 3}
+    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: "Foi ele Detetive! A flor \xE9 do Ariel!"
     image: {fileID: 21300000, guid: 992e30d02cc73af49b37a599d92ffb19, type: 3}
@@ -1046,7 +1046,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -460.7, y: 403.9}
+  m_SizeDelta: {x: -460.7, y: 403.90002}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &187964740
 MonoBehaviour:
@@ -1068,7 +1068,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: c124ae2c00ec15842a0abf76fd096339, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bce41967f4cfb6d4e8c8d999ce62e36d, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1148,14 +1148,14 @@ MonoBehaviour:
   textToChange:
   - texto: "Quando o Sr. foi \xE0 biblioteca, era este livro de direito que estava
       procurando?"
-    image: {fileID: 21300000, guid: 70076fe528cd3c74091b4e7f639f4301, type: 3}
+    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: "Sim, eu queria dar uma olhada para garantir que ningu\xE9m atrapalharia
       os planos do Bart, eu queria o ajudar sabe?"
     image: {fileID: 21300000, guid: 651349f98a57370418139377f55c8e21, type: 3}
     owner: 
   - texto: Certo.
-    image: {fileID: 21300000, guid: 70076fe528cd3c74091b4e7f639f4301, type: 3}
+    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
 --- !u!212 &222687471
 SpriteRenderer:
@@ -2775,14 +2775,14 @@ MonoBehaviour:
   toChange: {fileID: 1566383603}
   textToChange:
   - texto: Eu encontrei ataduras no banheiro e o Sr. Bartolomeu estava cheio de hematomas.
-    image: {fileID: 21300000, guid: 70076fe528cd3c74091b4e7f639f4301, type: 3}
+    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: "Soube que sua rela\xE7\xE3o com ele n\xE3o era das melhores, e curiosamente
       voc\xEA est\xE1 com a m\xE3o machucada."
-    image: {fileID: 21300000, guid: 70076fe528cd3c74091b4e7f639f4301, type: 3}
+    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: O que tem a dizer sobre isso Jared?
-    image: {fileID: 21300000, guid: 70076fe528cd3c74091b4e7f639f4301, type: 3}
+    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: "N\xF3s n\xE3o nos d\xE1vamos muito bem, ele nunca aceitou meu namoro com
       a Alice."
@@ -3053,7 +3053,7 @@ MonoBehaviour:
   headBob: {fileID: 21300000, guid: 6507d0fe9a109f34b832655abbe7e817, type: 3}
   texts:
   - texto: "Srta. Alice, onde voc\xEA esteve ap\xF3s o ocorrido no jantar?"
-    image: {fileID: 21300000, guid: 70076fe528cd3c74091b4e7f639f4301, type: 3}
+    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: Depois que meu pai foi pro quarto, eu fiquei na sala de jantar com meu
       namorado, o Jared.
@@ -3071,7 +3071,7 @@ MonoBehaviour:
     image: {fileID: 21300000, guid: b34364f7b3dce7f41b18d8d2ed871480, type: 3}
     owner: 
   - texto: E depois?
-    image: {fileID: 21300000, guid: 70076fe528cd3c74091b4e7f639f4301, type: 3}
+    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: "Bem, estava subindo para meu quarto quando escutei minha m\xE3e discutindo
       com o Ariel na biblioteca. "
@@ -3086,7 +3086,7 @@ MonoBehaviour:
     owner: 
   - texto: "Eu entendo que voc\xEA esteja abalada, mas lembra de algo que possa nos
       ajudar a desvendar o que aconteceu?"
-    image: {fileID: 21300000, guid: 70076fe528cd3c74091b4e7f639f4301, type: 3}
+    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: "Eu vi nosso mordomo, Alfred, entrar mais cedo com uma caixa de ferramentas
       no quarto do meu pai... com certeza ele tem alguma rela\xE7\xE3o com isso, j\xE1
@@ -3177,32 +3177,32 @@ MonoBehaviour:
   initialTexts:
   - texto: "Como todos aqui devem saber, o Sr. Bartolomeu foi encontrado morto, sob
       condi\xE7\xF5es suspeitas, esta noite!"
-    image: {fileID: 21300000, guid: 70076fe528cd3c74091b4e7f639f4301, type: 3}
+    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: "Coincidentemente, \xE9 de meu conhecimento que hoje mais cedo ele havia
       feito um an\xFAncio sobre seu testamento."
-    image: {fileID: 21300000, guid: 70076fe528cd3c74091b4e7f639f4301, type: 3}
+    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: "Voc\xEAs foram as \xFAltimas pessoas a v\xEA-lo com vida, portanto todos
       nessa sala s\xE3o suspeitos."
-    image: {fileID: 21300000, guid: 70076fe528cd3c74091b4e7f639f4301, type: 3}
+    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: "Como ousa? Meu marido est\xE1 morto! E voc\xEA vem aqui acusar a mim e
       \xE0 minha filha!?"
     image: {fileID: 21300000, guid: 348808c40b656b7459baf275100f7002, type: 3}
     owner: 
   - texto: "Sra, estamos diante de um poss\xEDvel de assassinato."
-    image: {fileID: 21300000, guid: 70076fe528cd3c74091b4e7f639f4301, type: 3}
+    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: "N\xE3o estou aqui para acus\xE1-las e sim desvendar esse mist\xE9rio."
-    image: {fileID: 21300000, guid: 70076fe528cd3c74091b4e7f639f4301, type: 3}
+    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: "\xC9 de extrema import\xE2ncia que estejam todos aqui para averiguar o
       motivo da morte do Sr. Bartolomeu."
-    image: {fileID: 21300000, guid: 70076fe528cd3c74091b4e7f639f4301, type: 3}
+    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: "Irei interrog\xE1-los individualmente para encontrar o culpado."
-    image: {fileID: 21300000, guid: 70076fe528cd3c74091b4e7f639f4301, type: 3}
+    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   speech: {fileID: 2119144614}
   lupa: {fileID: 744028558}
@@ -3591,7 +3591,7 @@ MonoBehaviour:
   headBob: {fileID: 21300000, guid: 38654c84edc1f14428eac111ef301232, type: 3}
   texts:
   - texto: "Sra. Catarina, o que fez ap\xF3s o jantar?"
-    image: {fileID: 21300000, guid: 70076fe528cd3c74091b4e7f639f4301, type: 3}
+    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: "Ap\xF3s aquele an\xFAncio absurdo que ele fez, eu perdi o apetite e resolvi
       dar uma volta."
@@ -3602,7 +3602,7 @@ MonoBehaviour:
     image: {fileID: 21300000, guid: 4bf624519cabf1a499152d229073abc5, type: 3}
     owner: 
   - texto: Que tipo de problemas?
-    image: {fileID: 21300000, guid: 70076fe528cd3c74091b4e7f639f4301, type: 3}
+    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: "Bem... n\xE3o conte a ningu\xE9m, mas h\xE1 um tempo percebo que ele e
       meu marido estavam se relacionando."
@@ -5091,21 +5091,21 @@ MonoBehaviour:
   textToChange:
   - texto: "Encontramos este livro sobre heran\xE7as e o recibo consta que foi comprado
       pela Srta. Alice. "
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: Pode explicar o motivo de comprar este livro?
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: "Meu pai vinha amea\xE7ando tirar minha heran\xE7a, ent\xE3o eu comprei
       aquele livro para saber o que eu poderia fazer ao respeito."
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: b34364f7b3dce7f41b18d8d2ed871480, type: 3}
     owner: 
   - texto: "Mas, sabe de uma coisa? Eu ainda n\xE3o o li."
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: b34364f7b3dce7f41b18d8d2ed871480, type: 3}
     owner: 
   - texto: "Mas se \xE9 \xFAtil pra voc\xEA, o s\xF3cio do meu pai, Ariel, pareceu
       bem interessado nele e me fez v\xE1rias perguntas estranhas..."
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: b34364f7b3dce7f41b18d8d2ed871480, type: 3}
     owner: 
 --- !u!212 &1527364255
 SpriteRenderer:
@@ -5313,7 +5313,7 @@ MonoBehaviour:
   headBob: {fileID: 21300000, guid: 4e8b3add683aec246b309b8452dfbf33, type: 3}
   texts:
   - texto: "O que voc\xEA fez ap\xF3s o an\xFAncio?"
-    image: {fileID: 21300000, guid: 70076fe528cd3c74091b4e7f639f4301, type: 3}
+    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: "Eu fiquei um tempo com a Alice na sala de jantar, a\xED sentimos um cheiro
       de queimado."
@@ -5324,7 +5324,7 @@ MonoBehaviour:
     image: {fileID: 21300000, guid: 1ee750d326f58084995f0863fc48ce14, type: 3}
     owner: 
   - texto: "E esse machucado na m\xE3o?"
-    image: {fileID: 21300000, guid: 70076fe528cd3c74091b4e7f639f4301, type: 3}
+    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: "Eu me queimei com a panela que ela deixou no fog\xE3o quando fui pra cozinha."
     image: {fileID: 21300000, guid: afeb128736c2c0941b79d8af7575e4b5, type: 3}
@@ -5746,11 +5746,11 @@ MonoBehaviour:
   toChange: {fileID: 99167822}
   textToChange:
   - texto: Encontramos penas negras de galinha, perto da cozinha.
-    image: {fileID: 21300000, guid: 70076fe528cd3c74091b4e7f639f4301, type: 3}
+    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: O Sr. Jared acredita que a senhora tenha algum envolvimento com a morte
       do Sr. Bartolomeu. O que acha disso?
-    image: {fileID: 21300000, guid: 70076fe528cd3c74091b4e7f639f4301, type: 3}
+    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: "Ora, s\xE3o as penas da galinha que eu estava assando!"
     image: {fileID: 21300000, guid: 911e14927f866f248bc1ab3fddb6fc77, type: 3}
@@ -5900,11 +5900,11 @@ MonoBehaviour:
   toChange: {fileID: 99167822}
   textToChange:
   - texto: Encontramos penas negras de galinha, perto da cozinha.
-    image: {fileID: 21300000, guid: 70076fe528cd3c74091b4e7f639f4301, type: 3}
+    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: O Sr. Jared acredita que a senhora tenha algum envolvimento com a morte
       do Sr. Bartolomeu. O que acha disso?
-    image: {fileID: 21300000, guid: 70076fe528cd3c74091b4e7f639f4301, type: 3}
+    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: "Ora, s\xE3o as penas da galinha que eu estava assando!"
     image: {fileID: 21300000, guid: 911e14927f866f248bc1ab3fddb6fc77, type: 3}
@@ -6789,14 +6789,14 @@ MonoBehaviour:
   headBob: {fileID: 21300000, guid: f227830ca76836c4e86416006a4d2a27, type: 3}
   texts:
   - texto: "Onde voc\xEA estava na hora em que Bartolomeu morreu?"
-    image: {fileID: 21300000, guid: 70076fe528cd3c74091b4e7f639f4301, type: 3}
+    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: Eu fui ao hall cuidar de meus afazeres, quando ouvi uma gritaria na biblioteca
       e fui investigar.
     image: {fileID: 21300000, guid: 0c274af385a881a428889df5f63c23c2, type: 3}
     owner: 
   - texto: E o que encontrou?
-    image: {fileID: 21300000, guid: 70076fe528cd3c74091b4e7f639f4301, type: 3}
+    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: A Sra. Catarina estava discutindo com o Sr. Ariel.
     image: {fileID: 21300000, guid: 0c274af385a881a428889df5f63c23c2, type: 3}
@@ -7135,7 +7135,7 @@ MonoBehaviour:
   headBob: {fileID: 21300000, guid: 22fb96ec12ea77e43a678c8215de32f4, type: 3}
   texts:
   - texto: "Onde voc\xEA foi ap\xF3s o an\xFAncio?"
-    image: {fileID: 21300000, guid: 70076fe528cd3c74091b4e7f639f4301, type: 3}
+    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: "Fui \xE0 biblioteca, procurar uns livros, quando aquela louca chegou gritando
       querendo satisfa\xE7\xE3o. "
@@ -7152,7 +7152,7 @@ MonoBehaviour:
     owner: 
   - texto: "E voc\xEA sabe se ele tinha alguma amante ou algu\xE9m que atrapalhasse
       esse relacionamento?"
-    image: {fileID: 21300000, guid: 70076fe528cd3c74091b4e7f639f4301, type: 3}
+    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: "Ele n\xE3o tinha UMA amante."
     image: {fileID: 21300000, guid: a54724f4c308db54b8d9467421070424, type: 3}
@@ -7569,7 +7569,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
