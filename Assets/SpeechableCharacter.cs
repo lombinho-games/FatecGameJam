@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-using System.Collections;
-=======
-﻿using System.Collections;
->>>>>>> VihhdeoGame_2
 using System.Collections.Generic;
 using UnityEngine;
 

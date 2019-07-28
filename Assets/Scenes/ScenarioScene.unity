@@ -1193,27 +1193,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 398221525}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88a0008139014af4ab28d11ae1b99c07, type: 3}
+  m_Script: {fileID: 11500000, guid: e815c8b7fc1d64646a087a175cf43031, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speechCanvas: {fileID: 2119144613}
   manager: {fileID: 741613003}
   lupa: {fileID: 744028558}
   texts:
-  - 'Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is
-    advertised as the most popular gun in American crime. Do you believe that shit?
-    It actually says that in the little book that comes with it: the most popular
-    gun in American crime. Like they''re actually proud of that shit. '
-  - Now that we know who you are, I know who I am. I'm not a mistake! It all makes
-    sense! In a comic, you know how you can tell who the arch-villain's going to be?
-    He's the exact opposite of the hero. And most times they're friends, like you
-    and me! I should've known way back when... You know why, David? Because of the
-    kids. They called me Mr Glass.
-  - Now that we know who you are, I know who I am. I'm not a mistake! It all makes
-    sense! In a comic, you know how you can tell who the arch-villain's going to be?
-    He's the exact opposite of the hero. And most times they're friends, like you
-    and me! I should've known way back when... You know why, David? Because of the
-    kids. They called me Mr Glass.
+  - 'bla lbalalklla
+
+'
+  - afkjalsdjnlkasda
+  - dahsuijdhbsak
 --- !u!212 &398221528
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1353,7 +1344,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 454348127}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 12.89, z: -10}
+  m_LocalPosition: {x: 0, y: 0.04, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2052,16 +2043,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 797837170}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88a0008139014af4ab28d11ae1b99c07, type: 3}
+  m_Script: {fileID: 11500000, guid: e815c8b7fc1d64646a087a175cf43031, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speechCanvas: {fileID: 2119144613}
   manager: {fileID: 741613003}
   lupa: {fileID: 744028558}
   texts:
-  - tanto
-  - faz
-  - "ningu\xE9m liga"
+  - LOMBINHO GAMES!
+  - VIDIOG FRITO!
 --- !u!61 &797837174
 BoxCollider2D:
   m_ObjectHideFlags: 0
