@@ -140,7 +140,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 91354064}
   m_LocalRotation: {x: -0, y: -0, z: 0.8521864, w: 0.52323824}
-  m_LocalPosition: {x: 0, y: 0, z: -4839.6304}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.9999161, y: 0.9999161, z: 0.9999161}
   m_Children:
   - {fileID: 786053030}
@@ -853,7 +853,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 189402083}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -4839.6304}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.9999161, y: 0.9999161, z: 0.9999161}
   m_Children:
   - {fileID: 808285064}
@@ -1586,7 +1586,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!224 &385985262
 RectTransform:
@@ -1769,7 +1769,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 407978158}
   m_LocalRotation: {x: -0, y: -0, z: 0.9592248, w: 0.28264433}
-  m_LocalPosition: {x: 0, y: 0, z: -4839.6304}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.9999161, y: 0.9999161, z: 0.9999161}
   m_Children:
   - {fileID: 145143005}
@@ -2238,7 +2238,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 579098693}
   m_LocalRotation: {x: -0, y: -0, z: 0.41084445, w: 0.9117055}
-  m_LocalPosition: {x: 0, y: 0, z: -4839.6304}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.9999161, y: 0.9999161, z: 0.9999161}
   m_Children:
   - {fileID: 895346182}
@@ -2859,7 +2859,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!224 &749797656
 RectTransform:
@@ -2910,7 +2910,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 761644525}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -4839.6304}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.99991614, y: 0.99991614, z: 0.99991614}
   m_Children:
   - {fileID: 573705529}
@@ -3490,7 +3490,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1068737255}
   m_LocalRotation: {x: -0, y: -0, z: -0.1837153, w: 0.98297954}
-  m_LocalPosition: {x: 0, y: 0, z: -4839.6304}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.9999169, y: 0.9999169, z: 0.9999161}
   m_Children:
   - {fileID: 1138696751}
@@ -3865,7 +3865,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!224 &1341625961
 RectTransform:
@@ -3917,7 +3917,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1393097558}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -4839.6304}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.99991614, y: 0.99991614, z: 0.99991614}
   m_Children:
   - {fileID: 1649094672}
@@ -4109,7 +4109,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: -2
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!224 &1416083099
 RectTransform:
@@ -4269,7 +4269,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.3, y: 63.2}
+  m_Size: {x: 2.3, y: 94.4}
   m_EdgeRadius: 0
 --- !u!4 &1512759996
 Transform:
@@ -4522,7 +4522,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1567962388}
   m_LocalRotation: {x: -0, y: -0, z: 0.8792876, w: 0.47629136}
-  m_LocalPosition: {x: 0, y: 0, z: -4839.6304}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.99991614, y: 0.99991614, z: 0.99991614}
   m_Children:
   - {fileID: 172558471}
@@ -5274,7 +5274,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!224 &1833713027
 RectTransform:
@@ -5886,7 +5886,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.3, y: 63.2}
+  m_Size: {x: 2.3, y: 96.2}
   m_EdgeRadius: 0
 --- !u!4 &2077539104
 Transform:
