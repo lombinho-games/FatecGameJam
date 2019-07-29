@@ -490,7 +490,7 @@ MonoBehaviour:
   - texto: "Ent\xE3o ouvi um barulho vindo da biblioteca e vi Alfred indo pra l\xE1... "
     image: {fileID: 21300000, guid: 0305e265373d57b40b75d2c6a3b79a7e, type: 3}
     owner: 
-  - texto: "segui ele de longe at\xE9 a escadaria do hall."
+  - texto: "Segui ele de longe at\xE9 a escadaria do hall."
     image: {fileID: 21300000, guid: 0305e265373d57b40b75d2c6a3b79a7e, type: 3}
     owner: 
   - texto: A senhora viu alguma coisa suspeita?
@@ -797,12 +797,12 @@ MonoBehaviour:
     image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: "\xC9 claro, eu estava fazendo alguns reparos no banheiro."
-    image: {fileID: 21300000, guid: 2142826e37092594d8e5a1cc08e8890c, type: 3}
+    image: {fileID: 21300000, guid: 0c274af385a881a428889df5f63c23c2, type: 3}
     owner: 
   - texto: "Sabe, eu acho que voc\xEA deveria interrogar melhor ela e o namorado,
       ela estava furiosa por n\xE3o receber a heran\xE7a e o namorado n\xE3o se dava
       bem com o seu Bartolomeu..."
-    image: {fileID: 21300000, guid: 2142826e37092594d8e5a1cc08e8890c, type: 3}
+    image: {fileID: 21300000, guid: 0c274af385a881a428889df5f63c23c2, type: 3}
     owner: 
 --- !u!212 &106416827
 SpriteRenderer:
@@ -943,10 +943,10 @@ MonoBehaviour:
     image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: "N\xE3o...n\xE3o gosto de flores somente brancas."
-    image: {fileID: 21300000, guid: 992e30d02cc73af49b37a599d92ffb19, type: 3}
+    image: {fileID: 21300000, guid: 4bf624519cabf1a499152d229073abc5, type: 3}
     owner: 
   - texto: "Acho que n\xE3o d\xE3o um toque a mais ao ambiente."
-    image: {fileID: 21300000, guid: 992e30d02cc73af49b37a599d92ffb19, type: 3}
+    image: {fileID: 21300000, guid: 4bf624519cabf1a499152d229073abc5, type: 3}
     owner: 
   - texto: "Entendi. Voc\xEA sabe ent\xE3o de quem seria esta rosa branca?"
     image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
@@ -955,13 +955,13 @@ MonoBehaviour:
     image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: "Foi ele Detetive! A flor \xE9 do Ariel!"
-    image: {fileID: 21300000, guid: 992e30d02cc73af49b37a599d92ffb19, type: 3}
+    image: {fileID: 21300000, guid: 348808c40b656b7459baf275100f7002, type: 3}
     owner: 
   - texto: "N\xE3o disse que ele estava tendo um caso com meu marido?"
-    image: {fileID: 21300000, guid: 992e30d02cc73af49b37a599d92ffb19, type: 3}
+    image: {fileID: 21300000, guid: 348808c40b656b7459baf275100f7002, type: 3}
     owner: 
   - texto: "Aquele infeliz, n\xE3o respeita minha fam\xEDlia!"
-    image: {fileID: 21300000, guid: 992e30d02cc73af49b37a599d92ffb19, type: 3}
+    image: {fileID: 21300000, guid: 348808c40b656b7459baf275100f7002, type: 3}
     owner: 
 --- !u!212 &122998060
 SpriteRenderer:
@@ -1152,7 +1152,7 @@ MonoBehaviour:
     owner: 
   - texto: "Sim, eu queria dar uma olhada para garantir que ningu\xE9m atrapalharia
       os planos do Bart, eu queria o ajudar sabe?"
-    image: {fileID: 21300000, guid: 651349f98a57370418139377f55c8e21, type: 3}
+    image: {fileID: 21300000, guid: 3ea9621a915f4f0419e2c6d19f84dd45, type: 3}
     owner: 
   - texto: Certo.
     image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
@@ -2786,18 +2786,18 @@ MonoBehaviour:
     owner: 
   - texto: "N\xF3s n\xE3o nos d\xE1vamos muito bem, ele nunca aceitou meu namoro com
       a Alice."
-    image: {fileID: 21300000, guid: c651dc092ab53cc41a334354d7296f73, type: 3}
+    image: {fileID: 21300000, guid: afeb128736c2c0941b79d8af7575e4b5, type: 3}
     owner: 
   - texto: "Mas eu j\xE1 te falei, eu me queimei com a panela na cozinha!"
-    image: {fileID: 21300000, guid: c651dc092ab53cc41a334354d7296f73, type: 3}
+    image: {fileID: 21300000, guid: afeb128736c2c0941b79d8af7575e4b5, type: 3}
     owner: 
   - texto: "Por que voc\xEA n\xE3o vai falar com aquela macumbeira?"
-    image: {fileID: 21300000, guid: c651dc092ab53cc41a334354d7296f73, type: 3}
+    image: {fileID: 21300000, guid: afeb128736c2c0941b79d8af7575e4b5, type: 3}
     owner: 
   - texto: "Tenho certeza que ela tem alguma rela\xE7\xE3o com tudo isso, sabe, o
       Sr. Bartolomeu estava cogitando demiti-la, isso \xE9 mais do que motivo suficiente
       pra ela o matar."
-    image: {fileID: 21300000, guid: c651dc092ab53cc41a334354d7296f73, type: 3}
+    image: {fileID: 21300000, guid: afeb128736c2c0941b79d8af7575e4b5, type: 3}
     owner: 
 --- !u!212 &611738621
 SpriteRenderer:
@@ -5753,15 +5753,15 @@ MonoBehaviour:
     image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
     owner: 
   - texto: "Ora, s\xE3o as penas da galinha que eu estava assando!"
-    image: {fileID: 21300000, guid: 911e14927f866f248bc1ab3fddb6fc77, type: 3}
+    image: {fileID: 21300000, guid: 0305e265373d57b40b75d2c6a3b79a7e, type: 3}
     owner: 
   - texto: "N\xE3o acredite em tudo o que aquele intolerante diz."
-    image: {fileID: 21300000, guid: 911e14927f866f248bc1ab3fddb6fc77, type: 3}
+    image: {fileID: 21300000, guid: 9c4f3a67234fbfc4fa1b3d7aeee86b38, type: 3}
     owner: 
   - texto: "S\xF3 porque sigo a umbanda n\xE3o significa que fico por ai depenando
       galinhas \xE0 noite para amaldi\xE7oar ou matar pessoas, isso n\xE3o tem nada
       a ver com minha religi\xE3o."
-    image: {fileID: 21300000, guid: 911e14927f866f248bc1ab3fddb6fc77, type: 3}
+    image: {fileID: 21300000, guid: 0305e265373d57b40b75d2c6a3b79a7e, type: 3}
     owner: 
 --- !u!212 &1734371609
 SpriteRenderer:
@@ -5897,26 +5897,8 @@ MonoBehaviour:
   - texto: Tudo ira para a caridade!
     image: {fileID: 0}
     owner: 
-  toChange: {fileID: 99167822}
-  textToChange:
-  - texto: Encontramos penas negras de galinha, perto da cozinha.
-    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: 
-  - texto: O Sr. Jared acredita que a senhora tenha algum envolvimento com a morte
-      do Sr. Bartolomeu. O que acha disso?
-    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: 
-  - texto: "Ora, s\xE3o as penas da galinha que eu estava assando!"
-    image: {fileID: 21300000, guid: 911e14927f866f248bc1ab3fddb6fc77, type: 3}
-    owner: 
-  - texto: "N\xE3o acredite em tudo o que aquele intolerante diz."
-    image: {fileID: 21300000, guid: 911e14927f866f248bc1ab3fddb6fc77, type: 3}
-    owner: 
-  - texto: "S\xF3 porque sigo a umbanda n\xE3o significa que fico por ai depenando
-      galinhas \xE0 noite para amaldi\xE7oar ou matar pessoas, isso n\xE3o tem nada
-      a ver com minha religi\xE3o."
-    image: {fileID: 21300000, guid: 911e14927f866f248bc1ab3fddb6fc77, type: 3}
-    owner: 
+  toChange: {fileID: 0}
+  textToChange: []
 --- !u!212 &1737161216
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7157,7 +7139,7 @@ MonoBehaviour:
   - texto: "Ele n\xE3o tinha UMA amante."
     image: {fileID: 21300000, guid: a54724f4c308db54b8d9467421070424, type: 3}
     owner: 
-  - texto: Ele tinha UM amante
+  - texto: Ele tinha UM amante.
     image: {fileID: 21300000, guid: 3ea9621a915f4f0419e2c6d19f84dd45, type: 3}
     owner: 
   - texto: "Por isso ele n\xE3o queria deixar nada para ela."
