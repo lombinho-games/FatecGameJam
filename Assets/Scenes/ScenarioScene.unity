@@ -479,37 +479,7 @@ MonoBehaviour:
   personagens: {fileID: 2013584613}
   gui: {fileID: 525862026}
   headBob: {fileID: 21300000, guid: 9f28c0e909ea9c8439e9d6f1878af7e9, type: 3}
-  texts:
-  - texto: "O que voc\xEA fez ap\xF3s o an\xFAncio do Sr. Bartolomeu?"
-    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: 
-  - texto: "Eu voltei \xE0 cozinha, para terminar o jantar que ele resolveu estragar
-      com aquele an\xFAncio. "
-    image: {fileID: 21300000, guid: 0305e265373d57b40b75d2c6a3b79a7e, type: 3}
-    owner: 
-  - texto: "Ent\xE3o ouvi um barulho vindo da biblioteca e vi Alfred indo pra l\xE1... "
-    image: {fileID: 21300000, guid: 0305e265373d57b40b75d2c6a3b79a7e, type: 3}
-    owner: 
-  - texto: "Segui ele de longe at\xE9 a escadaria do hall."
-    image: {fileID: 21300000, guid: 0305e265373d57b40b75d2c6a3b79a7e, type: 3}
-    owner: 
-  - texto: A senhora viu alguma coisa suspeita?
-    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: 
-  - texto: "N\xE3o me lembro de nada."
-    image: {fileID: 21300000, guid: 9c4f3a67234fbfc4fa1b3d7aeee86b38, type: 3}
-    owner: 
-  - texto: "Mas acho que vale a pena falar com o genro do Sr. Bartolomeu, eles n\xE3o
-      se davam muito bem e brigavam com frequ\xEAncia."
-    image: {fileID: 21300000, guid: 0305e265373d57b40b75d2c6a3b79a7e, type: 3}
-    owner: 
-  - texto: "O Sr. Bartolomeu sempre acreditou que ele s\xF3 estava com a filha por
-      interesse e sua fortuna. E quer saber?"
-    image: {fileID: 21300000, guid: 0305e265373d57b40b75d2c6a3b79a7e, type: 3}
-    owner: 
-  - texto: "Eu tamb\xE9m acho e isso \xE9 motivo suficiente para ele o matar!"
-    image: {fileID: 21300000, guid: 0305e265373d57b40b75d2c6a3b79a7e, type: 3}
-    owner: 
+  dialogos: []
 --- !u!212 &99167823
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -778,32 +748,11 @@ MonoBehaviour:
   speech: {fileID: 2119144614}
   displayName: Chave de fenda
   itemId: chave-de-fenda
-  texts:
-  - texto: Hmm...uma chave de fenda no banheiro.
-    image: {fileID: 0}
-    owner: 
-  - texto: "Algu\xE9m estava tentando consertar algo por aqui?"
-    image: {fileID: 0}
-    owner: 
-  - texto: Ou destruir?
-    image: {fileID: 0}
-    owner: 
-  toChange: {fileID: 1960329273}
-  textToChange:
-  - texto: A Srta. Alice disse que o viu entrando mais cedo no quarto do Sr. Bartolomeu.
-    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: 
-  - texto: Pode dar detalhes?
-    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: 
-  - texto: "\xC9 claro, eu estava fazendo alguns reparos no banheiro."
-    image: {fileID: 21300000, guid: 0c274af385a881a428889df5f63c23c2, type: 3}
-    owner: 
-  - texto: "Sabe, eu acho que voc\xEA deveria interrogar melhor ela e o namorado,
-      ela estava furiosa por n\xE3o receber a heran\xE7a e o namorado n\xE3o se dava
-      bem com o seu Bartolomeu..."
-    image: {fileID: 21300000, guid: 0c274af385a881a428889df5f63c23c2, type: 3}
-    owner: 
+  dialogo:
+    texts: []
+    pergunta: 
+    message: 
+    enabled: 0
 --- !u!212 &106416827
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -927,42 +876,11 @@ MonoBehaviour:
   speech: {fileID: 2119144614}
   displayName: Rosa
   itemId: rosa
-  texts:
-  - texto: Hm...rosas brancas
-    image: {fileID: 0}
-    owner: 
-  - texto: "N\xE3o lembro de ter visto nenhuma rosa pela casa."
-    image: {fileID: 0}
-    owner: 
-  - texto: Vou questionar a Catarina a respeito!
-    image: {fileID: 0}
-    owner: 
-  toChange: {fileID: 826348930}
-  textToChange:
-  - texto: "Sra. Catarina, h\xE1 rosas brancas em algum lugar dessa casa? Jardim talvez?"
-    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: 
-  - texto: "N\xE3o...n\xE3o gosto de flores somente brancas."
-    image: {fileID: 21300000, guid: 4bf624519cabf1a499152d229073abc5, type: 3}
-    owner: 
-  - texto: "Acho que n\xE3o d\xE3o um toque a mais ao ambiente."
-    image: {fileID: 21300000, guid: 4bf624519cabf1a499152d229073abc5, type: 3}
-    owner: 
-  - texto: "Entendi. Voc\xEA sabe ent\xE3o de quem seria esta rosa branca?"
-    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: 
-  - texto: "Encontrei no quarto no seu quarto no ch\xE3o ao lado da cama."
-    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: 
-  - texto: "Foi ele Detetive! A flor \xE9 do Ariel!"
-    image: {fileID: 21300000, guid: 348808c40b656b7459baf275100f7002, type: 3}
-    owner: 
-  - texto: "N\xE3o disse que ele estava tendo um caso com meu marido?"
-    image: {fileID: 21300000, guid: 348808c40b656b7459baf275100f7002, type: 3}
-    owner: 
-  - texto: "Aquele infeliz, n\xE3o respeita minha fam\xEDlia!"
-    image: {fileID: 21300000, guid: 348808c40b656b7459baf275100f7002, type: 3}
-    owner: 
+  dialogo:
+    texts: []
+    pergunta: 
+    message: 
+    enabled: 0
 --- !u!212 &122998060
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1011,6 +929,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &147570571
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 147570572}
+  m_Layer: 5
+  m_Name: Buttons
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &147570572
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147570571}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2013198408}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -110, y: -50}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &187964738
 GameObject:
   m_ObjectHideFlags: 0
@@ -1134,29 +1087,11 @@ MonoBehaviour:
   speech: {fileID: 2119144614}
   displayName: "Livro de jur\xEDdica"
   itemId: livro-de-juridica
-  texts:
-  - texto: '... ... '
-    image: {fileID: 0}
-    owner: 
-  - texto: "Como anular testamentos. - Edi\xE7\xE3o 2"
-    image: {fileID: 0}
-    owner: 
-  - texto: "Parece que algu\xE9m estava interessando neste assunto recentemente."
-    image: {fileID: 0}
-    owner: 
-  toChange: {fileID: 1978615810}
-  textToChange:
-  - texto: "Quando o Sr. foi \xE0 biblioteca, era este livro de direito que estava
-      procurando?"
-    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: 
-  - texto: "Sim, eu queria dar uma olhada para garantir que ningu\xE9m atrapalharia
-      os planos do Bart, eu queria o ajudar sabe?"
-    image: {fileID: 21300000, guid: 3ea9621a915f4f0419e2c6d19f84dd45, type: 3}
-    owner: 
-  - texto: Certo.
-    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: 
+  dialogo:
+    texts: []
+    pergunta: 
+    message: 
+    enabled: 0
 --- !u!212 &222687471
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2779,40 +2714,11 @@ MonoBehaviour:
   speech: {fileID: 2119144614}
   displayName: Atadura
   itemId: atadura
-  texts:
-  - texto: Hmm...ataduras na pia.
-    image: {fileID: 0}
-    owner: 
-  - texto: "Parece que algu\xE9m estava machucado e precisando delas."
-    image: {fileID: 0}
-    owner: 
-  toChange: {fileID: 1566383603}
-  textToChange:
-  - texto: Eu encontrei ataduras no banheiro e o Sr. Bartolomeu estava cheio de hematomas.
-    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: 
-  - texto: "Soube que sua rela\xE7\xE3o com ele n\xE3o era das melhores, e curiosamente
-      voc\xEA est\xE1 com a m\xE3o machucada."
-    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: 
-  - texto: O que tem a dizer sobre isso Jared?
-    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: 
-  - texto: "N\xF3s n\xE3o nos d\xE1vamos muito bem, ele nunca aceitou meu namoro com
-      a Alice."
-    image: {fileID: 21300000, guid: afeb128736c2c0941b79d8af7575e4b5, type: 3}
-    owner: 
-  - texto: "Mas eu j\xE1 te falei, eu me queimei com a panela na cozinha!"
-    image: {fileID: 21300000, guid: afeb128736c2c0941b79d8af7575e4b5, type: 3}
-    owner: 
-  - texto: "Por que voc\xEA n\xE3o vai falar com aquela macumbeira?"
-    image: {fileID: 21300000, guid: afeb128736c2c0941b79d8af7575e4b5, type: 3}
-    owner: 
-  - texto: "Tenho certeza que ela tem alguma rela\xE7\xE3o com tudo isso, sabe, o
-      Sr. Bartolomeu estava cogitando demiti-la, isso \xE9 mais do que motivo suficiente
-      pra ela o matar."
-    image: {fileID: 21300000, guid: afeb128736c2c0941b79d8af7575e4b5, type: 3}
-    owner: 
+  dialogo:
+    texts: []
+    pergunta: 
+    message: 
+    enabled: 0
 --- !u!212 &611738621
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3065,52 +2971,11 @@ MonoBehaviour:
   personagens: {fileID: 2013584613}
   gui: {fileID: 525862026}
   headBob: {fileID: 21300000, guid: 6507d0fe9a109f34b832655abbe7e817, type: 3}
-  texts:
-  - texto: "Srta. Alice, onde voc\xEA esteve ap\xF3s o ocorrido no jantar?"
-    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: 
-  - texto: Depois que meu pai foi pro quarto, eu fiquei na sala de jantar com meu
-      namorado, o Jared.
-    image: {fileID: 21300000, guid: b34364f7b3dce7f41b18d8d2ed871480, type: 3}
-    owner: 
-  - texto: "N\xF3s est\xE1vamos conversando sobre aquela palha\xE7ada toda, meu pai
-      estava brincando."
-    image: {fileID: 21300000, guid: b34364f7b3dce7f41b18d8d2ed871480, type: 3}
-    owner: 
-  - texto: Ele nunca faria isso comigo!
-    image: {fileID: 21300000, guid: b34364f7b3dce7f41b18d8d2ed871480, type: 3}
-    owner: 
-  - texto: "Quando sentimos cheiro de queimado, ent\xE3o Jared foi investigar na cozinha
-      e eu fui para meu quarto."
-    image: {fileID: 21300000, guid: b34364f7b3dce7f41b18d8d2ed871480, type: 3}
-    owner: 
-  - texto: E depois?
-    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: 
-  - texto: "Bem, estava subindo para meu quarto quando escutei minha m\xE3e discutindo
-      com o Ariel na biblioteca. "
-    image: {fileID: 21300000, guid: b34364f7b3dce7f41b18d8d2ed871480, type: 3}
-    owner: 
-  - texto: "Fui chamar meu pai em seu quarto para resolver a situa\xE7\xE3o e foi
-      a\xED que... que... "
-    image: {fileID: 21300000, guid: bce41967f4cfb6d4e8c8d999ce62e36d, type: 3}
-    owner: 
-  - texto: o encontrei morto!
-    image: {fileID: 21300000, guid: bce41967f4cfb6d4e8c8d999ce62e36d, type: 3}
-    owner: 
-  - texto: "Eu entendo que voc\xEA esteja abalada, mas lembra de algo que possa nos
-      ajudar a desvendar o que aconteceu?"
-    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: 
-  - texto: "Eu vi nosso mordomo, Alfred, entrar mais cedo com uma caixa de ferramentas
-      no quarto do meu pai... com certeza ele tem alguma rela\xE7\xE3o com isso, j\xE1
-      que meu pai queria deixar toda nossa fortuna para uma institui\xE7\xE3o da comunidade
-      daquele negro favelado!"
-    image: {fileID: 21300000, guid: b34364f7b3dce7f41b18d8d2ed871480, type: 3}
-    owner: 
-  - texto: "\xC9 claro que ele queria o dinheiro!"
-    image: {fileID: 21300000, guid: b34364f7b3dce7f41b18d8d2ed871480, type: 3}
-    owner: 
+  dialogos:
+  - texts: []
+    pergunta: "Onde voc\xEA tava"
+    message: 
+    enabled: 1
 --- !u!212 &724896593
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3603,29 +3468,21 @@ MonoBehaviour:
   personagens: {fileID: 2013584613}
   gui: {fileID: 525862026}
   headBob: {fileID: 21300000, guid: 38654c84edc1f14428eac111ef301232, type: 3}
-  texts:
-  - texto: "Sra. Catarina, o que fez ap\xF3s o jantar?"
-    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: 
-  - texto: "Ap\xF3s aquele an\xFAncio absurdo que ele fez, eu perdi o apetite e resolvi
-      dar uma volta."
-    image: {fileID: 21300000, guid: 4bf624519cabf1a499152d229073abc5, type: 3}
-    owner: 
-  - texto: "Vi aquele s\xF3cio dele, Ariel, indo para a biblioteca e o segui para
-      resolver uns problemas."
-    image: {fileID: 21300000, guid: 4bf624519cabf1a499152d229073abc5, type: 3}
-    owner: 
-  - texto: Que tipo de problemas?
-    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: 
-  - texto: "Bem... n\xE3o conte a ningu\xE9m, mas h\xE1 um tempo percebo que ele e
-      meu marido estavam se relacionando."
-    image: {fileID: 21300000, guid: 4bf624519cabf1a499152d229073abc5, type: 3}
-    owner: 
-  - texto: "S\xF3 Deus sabe o quanto supliquei a Deus livrar este homem desse pecado
-      e ter meu marido de volta."
-    image: {fileID: 21300000, guid: 4bf624519cabf1a499152d229073abc5, type: 3}
-    owner: 
+  dialogos:
+  - texts:
+    - texto: "Olha s\xF3, eu nao sei do que vc t\xE1 falando nao fera"
+      image: {fileID: 21300000, guid: ef254e776793083409f8abb61f8e149e, type: 3}
+      owner: Catarina
+    - texto: "O monark tamb\xE9m t\xE1 ligado nessa parada"
+      image: {fileID: 21300000, guid: 3ea9621a915f4f0419e2c6d19f84dd45, type: 3}
+      owner: 
+    pergunta: "O que voc\xEA quer?"
+    message: cata-default
+    enabled: 1
+  - texts: []
+    pergunta: O que acha dessa rosa branca?
+    message: cata-rosa
+    enabled: 1
 --- !u!212 &826348931
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4050,16 +3907,11 @@ MonoBehaviour:
   speech: {fileID: 2119144614}
   displayName: Oculos
   itemId: oculos
-  texts:
-  - texto: "Hm...o Sr. Bartolomeu utiliza \xF3culos com grau muito forte."
-    image: {fileID: 0}
-    owner: 
-  - texto: "Provavelmente pouco antes de sua morte n\xE3o estava enxergando t\xE3o
-      bem."
-    image: {fileID: 0}
-    owner: 
-  toChange: {fileID: 0}
-  textToChange: []
+  dialogo:
+    texts: []
+    pergunta: 
+    message: 
+    enabled: 0
 --- !u!212 &1215822233
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4880,15 +4732,11 @@ MonoBehaviour:
   speech: {fileID: 2119144614}
   displayName: Chuveiro
   itemId: chuveiro
-  texts:
-  - texto: "Hmm....este chuveiro n\xE3o est\xE1 em um estado bom."
-    image: {fileID: 0}
-    owner: 
-  - texto: "O fio est\xE1 desencapado e est\xE1 muito exposto"
-    image: {fileID: 0}
-    owner: 
-  toChange: {fileID: 0}
-  textToChange: []
+  dialogo:
+    texts: []
+    pergunta: 
+    message: 
+    enabled: 0
 --- !u!212 &1459419125
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5091,36 +4939,11 @@ MonoBehaviour:
   speech: {fileID: 2119144614}
   displayName: Nota fiscal
   itemId: nota-fiscal
-  texts:
-  - texto: "Nota fiscal: \"\"Como anular testamentos. - Edi\xE7\xE3o 2\""
-    image: {fileID: 0}
-    owner: 
-  - texto: Compra efetuada por Alice
-    image: {fileID: 0}
-    owner: 
-  - texto: "Parece que algu\xE9m estava interessando neste assunto recentemente."
-    image: {fileID: 0}
-    owner: 
-  toChange: {fileID: 724896592}
-  textToChange:
-  - texto: "Encontramos este livro sobre heran\xE7as e o recibo consta que foi comprado
-      pela Srta. Alice. "
-    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: 
-  - texto: Pode explicar o motivo de comprar este livro?
-    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: 
-  - texto: "Meu pai vinha amea\xE7ando tirar minha heran\xE7a, ent\xE3o eu comprei
-      aquele livro para saber o que eu poderia fazer ao respeito."
-    image: {fileID: 21300000, guid: b34364f7b3dce7f41b18d8d2ed871480, type: 3}
-    owner: 
-  - texto: "Mas, sabe de uma coisa? Eu ainda n\xE3o o li."
-    image: {fileID: 21300000, guid: b34364f7b3dce7f41b18d8d2ed871480, type: 3}
-    owner: 
-  - texto: "Mas se \xE9 \xFAtil pra voc\xEA, o s\xF3cio do meu pai, Ariel, pareceu
-      bem interessado nele e me fez v\xE1rias perguntas estranhas..."
-    image: {fileID: 21300000, guid: b34364f7b3dce7f41b18d8d2ed871480, type: 3}
-    owner: 
+  dialogo:
+    texts: []
+    pergunta: 
+    message: 
+    enabled: 0
 --- !u!212 &1527364255
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5325,24 +5148,7 @@ MonoBehaviour:
   personagens: {fileID: 2013584613}
   gui: {fileID: 525862026}
   headBob: {fileID: 21300000, guid: 4e8b3add683aec246b309b8452dfbf33, type: 3}
-  texts:
-  - texto: "O que voc\xEA fez ap\xF3s o an\xFAncio?"
-    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: 
-  - texto: "Eu fiquei um tempo com a Alice na sala de jantar, a\xED sentimos um cheiro
-      de queimado."
-    image: {fileID: 21300000, guid: afeb128736c2c0941b79d8af7575e4b5, type: 3}
-    owner: 
-  - texto: "Resolvi ir at\xE9 a cozinha reclamar com aquela negra macumbeira, mas
-      n\xE3o a encontrei."
-    image: {fileID: 21300000, guid: 1ee750d326f58084995f0863fc48ce14, type: 3}
-    owner: 
-  - texto: "E esse machucado na m\xE3o?"
-    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: 
-  - texto: "Eu me queimei com a panela que ela deixou no fog\xE3o quando fui pra cozinha."
-    image: {fileID: 21300000, guid: afeb128736c2c0941b79d8af7575e4b5, type: 3}
-    owner: 
+  dialogos: []
 --- !u!212 &1566383604
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5750,33 +5556,11 @@ MonoBehaviour:
   speech: {fileID: 2119144614}
   displayName: Penas
   itemId: penas
-  texts:
-  - texto: Hmm...penas pretas.
-    image: {fileID: 0}
-    owner: 
-  - texto: "Parece que h\xE1 alguma ave passou por aqui."
-    image: {fileID: 0}
-    owner: 
-  toChange: {fileID: 99167822}
-  textToChange:
-  - texto: Encontramos penas negras de galinha, perto da cozinha.
-    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: 
-  - texto: O Sr. Jared acredita que a senhora tenha algum envolvimento com a morte
-      do Sr. Bartolomeu. O que acha disso?
-    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: 
-  - texto: "Ora, s\xE3o as penas da galinha que eu estava assando!"
-    image: {fileID: 21300000, guid: 0305e265373d57b40b75d2c6a3b79a7e, type: 3}
-    owner: 
-  - texto: "N\xE3o acredite em tudo o que aquele intolerante diz."
-    image: {fileID: 21300000, guid: 9c4f3a67234fbfc4fa1b3d7aeee86b38, type: 3}
-    owner: 
-  - texto: "S\xF3 porque sigo a umbanda n\xE3o significa que fico por ai depenando
-      galinhas \xE0 noite para amaldi\xE7oar ou matar pessoas, isso n\xE3o tem nada
-      a ver com minha religi\xE3o."
-    image: {fileID: 21300000, guid: 0305e265373d57b40b75d2c6a3b79a7e, type: 3}
-    owner: 
+  dialogo:
+    texts: []
+    pergunta: 
+    message: 
+    enabled: 0
 --- !u!212 &1734371609
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5900,19 +5684,11 @@ MonoBehaviour:
   speech: {fileID: 2119144614}
   displayName: Testamento
   itemId: testamento
-  texts:
-  - texto: Hm...o testamento do Sr. Bartolomeu!
-    image: {fileID: 0}
-    owner: 
-  - texto: "Realmente aqui diz que ningu\xE9m da fam\xEDlia ter\xE1 direito a sua
-      heran\xE7a."
-    image: {fileID: 0}
-    owner: 
-  - texto: Tudo ira para a caridade!
-    image: {fileID: 0}
-    owner: 
-  toChange: {fileID: 0}
-  textToChange: []
+  dialogo:
+    texts: []
+    pergunta: 
+    message: 
+    enabled: 0
 --- !u!212 &1737161216
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6115,21 +5891,11 @@ MonoBehaviour:
   speech: {fileID: 2119144614}
   displayName: Echarpe
   itemId: echarpe
-  texts:
-  - texto: Hmm...um encharpe.
-    image: {fileID: 0}
-    owner: 
-  - texto: Bem bonito por sinal.
-    image: {fileID: 0}
-    owner: 
-  - texto: "Deve ser da Sra. Catarina com certeza pela eleg\xE2ncia."
-    image: {fileID: 0}
-    owner: 
-  - texto: Com certeza ela esteve por aqui.
-    image: {fileID: 0}
-    owner: 
-  toChange: {fileID: 0}
-  textToChange: []
+  dialogo:
+    texts: []
+    pergunta: 
+    message: 
+    enabled: 0
 --- !u!212 &1804458637
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6314,8 +6080,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.3500061, y: -0.024993896}
-  m_SizeDelta: {x: -112.09999, y: -98.749985}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -110, y: -100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1890432936
 MonoBehaviour:
@@ -6783,27 +6549,14 @@ MonoBehaviour:
   personagens: {fileID: 2013584613}
   gui: {fileID: 525862026}
   headBob: {fileID: 21300000, guid: f227830ca76836c4e86416006a4d2a27, type: 3}
-  texts:
-  - texto: "Onde voc\xEA estava na hora em que Bartolomeu morreu?"
-    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: 
-  - texto: Eu fui ao hall cuidar de meus afazeres, quando ouvi uma gritaria na biblioteca
-      e fui investigar.
-    image: {fileID: 21300000, guid: 0c274af385a881a428889df5f63c23c2, type: 3}
-    owner: 
-  - texto: E o que encontrou?
-    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: 
-  - texto: A Sra. Catarina estava discutindo com o Sr. Ariel.
-    image: {fileID: 21300000, guid: 0c274af385a881a428889df5f63c23c2, type: 3}
-    owner: 
-  - texto: "N\xE3o consegui entender o motivo."
-    image: {fileID: 21300000, guid: 0c274af385a881a428889df5f63c23c2, type: 3}
-    owner: 
-  - texto: "Acho que voc\xEA deveria investigar aquele c\xF4modo e depois falar com
-      eles."
-    image: {fileID: 21300000, guid: ef254e776793083409f8abb61f8e149e, type: 3}
-    owner: 
+  dialogos:
+  - texts:
+    - texto: Olha eu acho que tu eh um viadao bonito msm
+      image: {fileID: 0}
+      owner: Alfred
+    pergunta: "O que voc\xEA acha desse pint\xE3o?"
+    message: alfred-default
+    enabled: 1
 --- !u!212 &1960329274
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7129,40 +6882,7 @@ MonoBehaviour:
   personagens: {fileID: 2013584613}
   gui: {fileID: 525862026}
   headBob: {fileID: 21300000, guid: 22fb96ec12ea77e43a678c8215de32f4, type: 3}
-  texts:
-  - texto: "Onde voc\xEA foi ap\xF3s o an\xFAncio?"
-    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: 
-  - texto: "Fui \xE0 biblioteca, procurar uns livros, quando aquela louca chegou gritando
-      querendo satisfa\xE7\xE3o. "
-    image: {fileID: 21300000, guid: 3ea9621a915f4f0419e2c6d19f84dd45, type: 3}
-    owner: 
-  - texto: Ele nunca a amou de verdade.
-    image: {fileID: 21300000, guid: 3ea9621a915f4f0419e2c6d19f84dd45, type: 3}
-    owner: 
-  - texto: "E acho que ela tamb\xE9m s\xF3 estava com ele por interesse."
-    image: {fileID: 21300000, guid: 3ea9621a915f4f0419e2c6d19f84dd45, type: 3}
-    owner: 
-  - texto: Talvez por saber disso na hora da raiva...
-    image: {fileID: 21300000, guid: 3ea9621a915f4f0419e2c6d19f84dd45, type: 3}
-    owner: 
-  - texto: "E voc\xEA sabe se ele tinha alguma amante ou algu\xE9m que atrapalhasse
-      esse relacionamento?"
-    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: 
-  - texto: "Ele n\xE3o tinha UMA amante."
-    image: {fileID: 21300000, guid: a54724f4c308db54b8d9467421070424, type: 3}
-    owner: 
-  - texto: Ele tinha UM amante.
-    image: {fileID: 21300000, guid: 3ea9621a915f4f0419e2c6d19f84dd45, type: 3}
-    owner: 
-  - texto: "Por isso ele n\xE3o queria deixar nada para ela."
-    image: {fileID: 21300000, guid: 3ea9621a915f4f0419e2c6d19f84dd45, type: 3}
-    owner: 
-  - texto: "E ent\xE3o ela veio querer tirar satisfa\xE7\xE3o comigo como se eu tivesse
-      culpa de tudo."
-    image: {fileID: 21300000, guid: a54724f4c308db54b8d9467421070424, type: 3}
-    owner: 
+  dialogos: []
 --- !u!212 &1978615811
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7241,6 +6961,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1890432935}
+  - {fileID: 147570572}
   m_Father: {fileID: 2119144617}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7301,7 +7022,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2013584614
 Transform:
   m_ObjectHideFlags: 0
@@ -7494,7 +7215,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!223 &2119144613
 Canvas:
   m_ObjectHideFlags: 0
@@ -7672,15 +7393,11 @@ MonoBehaviour:
   speech: {fileID: 2119144614}
   displayName: Chave do carro
   itemId: chave-do-carro
-  texts:
-  - texto: Hmm...uma chave de carro.
-    image: {fileID: 0}
-    owner: 
-  - texto: "Acredito que o Alfred tamb\xE9m seja o motorista da fam\xEDlia."
-    image: {fileID: 0}
-    owner: 
-  toChange: {fileID: 0}
-  textToChange: []
+  dialogo:
+    texts: []
+    pergunta: 
+    message: 
+    enabled: 0
 --- !u!212 &2127559229
 SpriteRenderer:
   m_ObjectHideFlags: 0

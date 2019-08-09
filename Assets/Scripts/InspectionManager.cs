@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class InspectionManager : MonoBehaviour
 {
 
-    public TextData[] initialTexts;
+    public List<TextData> initialTexts;
     public SpeechManager speech;
     public LupaButton lupa;
 
