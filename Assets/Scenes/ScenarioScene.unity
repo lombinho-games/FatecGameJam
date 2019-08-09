@@ -2075,6 +2075,7 @@ GameObject:
   - component: {fileID: 454348131}
   - component: {fileID: 454348133}
   - component: {fileID: 454348132}
+  - component: {fileID: 454348134}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2206,6 +2207,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &454348134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454348127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0fd2268ed9d30b4790b790338d81570, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lupa: {fileID: 744028558}
 --- !u!1 &464104782
 GameObject:
   m_ObjectHideFlags: 0
@@ -5838,7 +5852,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1737161212}
   m_LocalRotation: {x: 0.54573584, y: 0.10398647, z: -0.27268487, w: 0.7854949}
-  m_LocalPosition: {x: 7.1999993, y: 56.56999, z: 0.9999999}
+  m_LocalPosition: {x: 6.891, y: 56.269, z: 0.9999999}
   m_LocalScale: {x: 0.291, y: 0.291, z: 0.97}
   m_Children: []
   m_Father: {fileID: 1241698005}

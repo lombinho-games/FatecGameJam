@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LupaMovement : MonoBehaviour
+public class SlotHolder : MonoBehaviour
 {
+
+    public DragDrop held;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,7 +16,6 @@ public class LupaMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.SetPositionAndRotation(Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.rotation);
-        transform.position = new Vector3(transform.position.x, transform.position.y, -7);
+        
     }
 }
