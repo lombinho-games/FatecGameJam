@@ -7,7 +7,7 @@ public class SpeechManager : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public TextData[] texts;
+    public List<TextData> texts;
     public int currentText;
     public Image characterImage;
     public Text canvasText;
@@ -77,14 +77,18 @@ public class SpeechManager : MonoBehaviour
 
     }
 
-    public void OpenText(TextData[] texts){
+    public void OpenCharacterDialog(SpeechableCharacter personagem){
+        
+    }
+
+    public void OpenText(List<TextData> texts){
             this.texts = texts;
             gameObject.SetActive(true);
             RefreshGUI();
     }
 
     public bool BeginText(int textIndex){
-        if(textIndex >= texts.Length) return true;
+        if(textIndex >= texts.Count) return true;
         currentText = textIndex;
         canvasText.text = "";//texts[currentText];
         charTimer = 0;

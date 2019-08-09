@@ -11,10 +11,10 @@ public class SpeechableCharacter : MonoBehaviour
 
     public Sprite headBob;
 
+    //Verifica se ele falou com esse personagem pelo menos 1 vez pra gerar a pista do personagem
     bool hasTalked = false;
-
    
-    public TextData[] texts;
+    public List<Dialogo> dialogos = new List<Dialogo>();
 
     SpriteRenderer spriteRenderer;
 
@@ -32,6 +32,8 @@ public class SpeechableCharacter : MonoBehaviour
     }
 
     public void selectCharacter(){
+        
+        /*
         if(!speechCanvas.gameObject.activeInHierarchy && !lupa.pressed){
             //Setar os valores do canvas
             SpeechManager sm = speechCanvas.GetComponent<SpeechManager>();
@@ -44,5 +46,6 @@ public class SpeechableCharacter : MonoBehaviour
                 GlobalProfile.getInstance().addItem(new InventoryItem(gameObject.name, gameObject.name, headBob));
             }
         }
+        */
     }
 }
