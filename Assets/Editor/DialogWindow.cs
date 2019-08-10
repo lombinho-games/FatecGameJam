@@ -33,7 +33,9 @@ public class DialogWindow : EditorWindow
 
     void OnGUI(){
         GUI.enabled = !modalWindows.IsWindowOpen;
-         
+        
+        if(Selection.activeGameObject == null) return;
+
         SpeechableCharacter personagem = (SpeechableCharacter) Selection.activeGameObject.GetComponent<SpeechableCharacter>();
 
         if(personagem != null){
@@ -43,7 +45,8 @@ public class DialogWindow : EditorWindow
             personagem.personagens = (GameObject) EditorGUILayout.ObjectField("Personagens", personagem.personagens, typeof(GameObject), true);
             personagem.gui = (GameObject) EditorGUILayout.ObjectField("GUI", personagem.gui, typeof(GameObject), true);
             personagem.headBob = (Sprite) EditorGUILayout.ObjectField("Head Bob", personagem.headBob, typeof(Sprite), true);
-        
+            personagem.defaultImage = (Sprite) EditorGUILayout.ObjectField("Pose padrão", personagem.defaultImage, typeof(Sprite), true);
+
             GUILayout.Label("Diálogos:");
             if(GUILayout.Button("Adicionar diálogo")){
                 Dialogo nd = new Dialogo(new List<TextData>(), "", "", true);

@@ -54,7 +54,6 @@ public class ScenarioCamera : MonoBehaviour
         GetComponent<Rigidbody2D>().AddForce(movement);
 
         MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        print(MousePos);
 
         /* if (MousePos.x > 1.5f)
         {

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.Linq;
 public class SpeechableCharacter : MonoBehaviour
 {
     public Canvas speechCanvas;
@@ -8,6 +8,7 @@ public class SpeechableCharacter : MonoBehaviour
     public LupaButton lupa;
     public GameObject personagens;
     public GameObject gui;
+    public Sprite defaultImage;
 
     public Sprite headBob;
 
@@ -32,20 +33,17 @@ public class SpeechableCharacter : MonoBehaviour
     }
 
     public void selectCharacter(){
-        
-        /*
         if(!speechCanvas.gameObject.activeInHierarchy && !lupa.pressed){
             //Setar os valores do canvas
             SpeechManager sm = speechCanvas.GetComponent<SpeechManager>();
-            sm.OpenText(texts);
+            sm.OpenCharacterDialog(this);
             personagens.SetActive(false);
             gui.SetActive(false);
-
-            if(!hasTalked){
-                hasTalked = true;
-                GlobalProfile.getInstance().addItem(new InventoryItem(gameObject.name, gameObject.name, headBob));
-            }
         }
-        */
+    }
+
+    public List<Dialogo> AvailableDialogs(){
+        return (from item in dialogos
+            where item.enabled select item).ToList();
     }
 }

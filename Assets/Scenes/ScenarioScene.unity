@@ -478,6 +478,7 @@ MonoBehaviour:
   lupa: {fileID: 744028558}
   personagens: {fileID: 2013584613}
   gui: {fileID: 525862026}
+  defaultImage: {fileID: 0}
   headBob: {fileID: 21300000, guid: 9f28c0e909ea9c8439e9d6f1878af7e9, type: 3}
   dialogos: []
 --- !u!212 &99167823
@@ -929,41 +930,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &147570571
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 147570572}
-  m_Layer: 5
-  m_Name: Buttons
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &147570572
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 147570571}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2013198408}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -110, y: -50}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &187964738
 GameObject:
   m_ObjectHideFlags: 0
@@ -2970,6 +2936,7 @@ MonoBehaviour:
   lupa: {fileID: 744028558}
   personagens: {fileID: 2013584613}
   gui: {fileID: 525862026}
+  defaultImage: {fileID: 0}
   headBob: {fileID: 21300000, guid: 6507d0fe9a109f34b832655abbe7e817, type: 3}
   dialogos:
   - texts: []
@@ -3057,32 +3024,32 @@ MonoBehaviour:
   - texto: "Como todos aqui devem saber, o Sr. Bartolomeu foi encontrado morto, sob
       condi\xE7\xF5es suspeitas, esta noite!"
     image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: 
+    owner: Detetive
   - texto: "Coincidentemente, \xE9 de meu conhecimento que hoje mais cedo ele havia
       feito um an\xFAncio sobre seu testamento."
     image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: 
+    owner: Detetive
   - texto: "Voc\xEAs foram as \xFAltimas pessoas a v\xEA-lo com vida, portanto todos
       nessa sala s\xE3o suspeitos."
     image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: 
+    owner: Detetive
   - texto: "Como ousa? Meu marido est\xE1 morto! E voc\xEA vem aqui acusar a mim e
       \xE0 minha filha!?"
     image: {fileID: 21300000, guid: 348808c40b656b7459baf275100f7002, type: 3}
-    owner: 
+    owner: Catarina
   - texto: "Sra, estamos diante de um poss\xEDvel de assassinato."
     image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: 
+    owner: Detetive
   - texto: "N\xE3o estou aqui para acus\xE1-las e sim desvendar esse mist\xE9rio."
     image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: 
+    owner: Detetive
   - texto: "\xC9 de extrema import\xE2ncia que estejam todos aqui para averiguar o
       motivo da morte do Sr. Bartolomeu."
     image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: 
+    owner: Detetive
   - texto: "Irei interrog\xE1-los individualmente para encontrar o culpado."
     image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: 
+    owner: Detetive
   speech: {fileID: 2119144614}
   lupa: {fileID: 744028558}
   mouseOnSeta: 0
@@ -3467,6 +3434,7 @@ MonoBehaviour:
   lupa: {fileID: 744028558}
   personagens: {fileID: 2013584613}
   gui: {fileID: 525862026}
+  defaultImage: {fileID: 0}
   headBob: {fileID: 21300000, guid: 38654c84edc1f14428eac111ef301232, type: 3}
   dialogos:
   - texts:
@@ -5147,6 +5115,7 @@ MonoBehaviour:
   lupa: {fileID: 744028558}
   personagens: {fileID: 2013584613}
   gui: {fileID: 525862026}
+  defaultImage: {fileID: 0}
   headBob: {fileID: 21300000, guid: 4e8b3add683aec246b309b8452dfbf33, type: 3}
   dialogos: []
 --- !u!212 &1566383604
@@ -5197,6 +5166,134 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1577815751
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1577815752}
+  - component: {fileID: 1577815755}
+  - component: {fileID: 1577815754}
+  - component: {fileID: 1577815753}
+  m_Layer: 5
+  m_Name: Close
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1577815752
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577815751}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2013198408}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -30, y: -30}
+  m_SizeDelta: {x: 30, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1577815753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577815751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 2
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1577815754}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2119144614}
+        m_MethodName: CloseDialog
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1577815754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577815751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 3e38800f001f96648850e6a0c9bdc10d, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &1577815755
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577815751}
+  m_CullTransparentMesh: 0
 --- !u!1 &1649094671
 GameObject:
   m_ObjectHideFlags: 0
@@ -5356,6 +5453,85 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1677542847}
+  m_CullTransparentMesh: 0
+--- !u!1 &1700866241
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1700866242}
+  - component: {fileID: 1700866244}
+  - component: {fileID: 1700866243}
+  m_Layer: 5
+  m_Name: Character Name
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1700866242
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700866241}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2013198408}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 35, y: -25}
+  m_SizeDelta: {x: 300, y: 30}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &1700866243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700866241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Nome do personagem
+--- !u!222 &1700866244
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700866241}
   m_CullTransparentMesh: 0
 --- !u!1 &1715200484
 GameObject:
@@ -5892,7 +6068,10 @@ MonoBehaviour:
   displayName: Echarpe
   itemId: echarpe
   dialogo:
-    texts: []
+    texts:
+    - texto: encharpe maneira meu chapa
+      image: {fileID: 0}
+      owner: 
     pergunta: 
     message: 
     enabled: 0
@@ -6076,12 +6255,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2013198408}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -110, y: -100}
+  m_AnchoredPosition: {x: 0, y: -15}
+  m_SizeDelta: {x: -110, y: -90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1890432936
 MonoBehaviour:
@@ -6097,7 +6276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.009433985, g: 0.009433985, b: 0.009433985, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -6548,6 +6727,7 @@ MonoBehaviour:
   lupa: {fileID: 744028558}
   personagens: {fileID: 2013584613}
   gui: {fileID: 525862026}
+  defaultImage: {fileID: 21300000, guid: 0c274af385a881a428889df5f63c23c2, type: 3}
   headBob: {fileID: 21300000, guid: f227830ca76836c4e86416006a4d2a27, type: 3}
   dialogos:
   - texts:
@@ -6556,6 +6736,14 @@ MonoBehaviour:
       owner: Alfred
     pergunta: "O que voc\xEA acha desse pint\xE3o?"
     message: alfred-default
+    enabled: 1
+  - texts:
+    - texto: "Olha amig\xE3o, eu seil\xE1 que porras tu ta falando na moralzinha meu
+        chapa"
+      image: {fileID: 21300000, guid: ef254e776793083409f8abb61f8e149e, type: 3}
+      owner: Alfred
+    pergunta: "Alfred, o que voc\xEA acha dessa chave?"
+    message: alfred-chave
     enabled: 1
 --- !u!212 &1960329274
 SpriteRenderer:
@@ -6881,6 +7069,7 @@ MonoBehaviour:
   lupa: {fileID: 744028558}
   personagens: {fileID: 2013584613}
   gui: {fileID: 525862026}
+  defaultImage: {fileID: 0}
   headBob: {fileID: 21300000, guid: 22fb96ec12ea77e43a678c8215de32f4, type: 3}
   dialogos: []
 --- !u!212 &1978615811
@@ -6960,8 +7149,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1577815752}
   - {fileID: 1890432935}
-  - {fileID: 147570572}
+  - {fileID: 1700866242}
   m_Father: {fileID: 2119144617}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6984,7 +7174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -7022,7 +7212,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2013584614
 Transform:
   m_ObjectHideFlags: 0
@@ -7256,6 +7446,10 @@ MonoBehaviour:
   panelImage: {fileID: 2013198409}
   personagens: {fileID: 2013584613}
   gui: {fileID: 525862026}
+  charName: {fileID: 1700866243}
+  buttonUp: {fileID: 21300000, guid: 06182b680f730784c8172d07032de6a1, type: 3}
+  buttonDown: {fileID: 21300000, guid: b98b178e370aec04b97b9efc08eb1208, type: 3}
+  font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   charDelay: 50
 --- !u!114 &2119144615
 MonoBehaviour:
