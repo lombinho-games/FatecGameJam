@@ -478,9 +478,39 @@ MonoBehaviour:
   lupa: {fileID: 744028558}
   personagens: {fileID: 2013584613}
   gui: {fileID: 525862026}
-  defaultImage: {fileID: 0}
+  defaultImage: {fileID: 21300000, guid: 0305e265373d57b40b75d2c6a3b79a7e, type: 3}
   headBob: {fileID: 21300000, guid: 9f28c0e909ea9c8439e9d6f1878af7e9, type: 3}
-  dialogos: []
+  dialogos:
+  - texts:
+    - texto: "O que voc\xEA fez ap\xF3s o an\xFAncio do Sr. Bartolomeu?"
+      image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
+      owner: Detetive
+    - texto: "Eu voltei \xE0 cozinha, para terminar o jantar que ele resolveu estragar
+        com aquele an\xFAncio."
+      image: {fileID: 21300000, guid: 9c4f3a67234fbfc4fa1b3d7aeee86b38, type: 3}
+      owner: Greyce
+    - texto: "Ent\xE3o ouvi um barulho vindo da biblioteca e vi Alfred indo pra l\xE1...
+        segui ele de longe at\xE9 a escadaria do hall."
+      image: {fileID: 21300000, guid: 0305e265373d57b40b75d2c6a3b79a7e, type: 3}
+      owner: Greyce
+    - texto: A senhora viu alguma coisa suspeita?
+      image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
+      owner: Detetive
+    - texto: "Eu n\xE3o consegui ver nada."
+      image: {fileID: 21300000, guid: 9c4f3a67234fbfc4fa1b3d7aeee86b38, type: 3}
+      owner: Greyce
+    - texto: "Mas acho que vale a pena falar com o genro do Sr, Bartolomeu, eles n\xE3o
+        se davam muito bem, eles brigavam com frequ\xEAncia."
+      image: {fileID: 21300000, guid: 0305e265373d57b40b75d2c6a3b79a7e, type: 3}
+      owner: Greyce
+    - texto: "O Sr. Bartolomeu sempre acreditou que ele s\xF3 estava com a filha por
+        interesse e sua fortuna. E quer saber? Eu tamb\xE9m acho e isso \xE9 motivo
+        suficiente para ele o matar!"
+      image: {fileID: 21300000, guid: 0305e265373d57b40b75d2c6a3b79a7e, type: 3}
+      owner: Greyce
+    pergunta: "Onde esteve ap\xF3s o an\xFAncio?"
+    message: greyce-default
+    enabled: 1
 --- !u!212 &99167823
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2936,12 +2966,42 @@ MonoBehaviour:
   lupa: {fileID: 744028558}
   personagens: {fileID: 2013584613}
   gui: {fileID: 525862026}
-  defaultImage: {fileID: 0}
+  defaultImage: {fileID: 21300000, guid: b34364f7b3dce7f41b18d8d2ed871480, type: 3}
   headBob: {fileID: 21300000, guid: 6507d0fe9a109f34b832655abbe7e817, type: 3}
   dialogos:
-  - texts: []
-    pergunta: "Onde voc\xEA tava"
-    message: 
+  - texts:
+    - texto: "Srta. Alice, onde voc\xEA esteve ap\xF3s o ocorrido no jantar?"
+      image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
+      owner: Detetive
+    - texto: "Depois que meu pai foi para o quarto dele, eu fiquei na sala de jantar
+        com meu namorado, o Jared. N\xF3s estavamos conversando sobre aquela palha\xE7ada
+        toda, meu pai estava brincando. Ele nunca faria isso comigo! "
+      image: {fileID: 21300000, guid: b34364f7b3dce7f41b18d8d2ed871480, type: 3}
+      owner: Alice
+    - texto: "Escutamos minha m\xE3e discutindo com o Ariel na biblioteca e ficamos
+        preocupados. Quando sentimos cheiro de queimado, ent\xE3o Jared foi investigar
+        na cozinha e eu fui para o meu quarto."
+      image: {fileID: 21300000, guid: b34364f7b3dce7f41b18d8d2ed871480, type: 3}
+      owner: Alice
+    - texto: E o que aconteceu depois?
+      image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
+      owner: Detetive
+    - texto: "Bem, depois eu me cansei de ficar esperando por Jared e resolvi tirar
+        satisfa\xE7\xE3o com o meu pai e foi ai que... que... o encontrei morto!"
+      image: {fileID: 21300000, guid: bce41967f4cfb6d4e8c8d999ce62e36d, type: 3}
+      owner: Alice
+    - texto: "Eu entendo que voc\xEA esteja abalada, mas se lembra de algo que possa
+        nos ajudar a desvendar o que aconteceu?"
+      image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
+      owner: Detetive
+    - texto: "Eu vi nosso mordomo, Alfred, entrar mais cedo com uma caixa de ferramentas
+        no quarto do meu pai... com certeza ele tem alguma rela\xE7\xE3o com isso,
+        j\xE1 que meu pai queria deixar toda a nossa fortuna para a institui\xE7\xE3o
+        da comunidade daquele negro favelado! \xC9 claro que ele queria o dinheiro!"
+      image: {fileID: 21300000, guid: b34364f7b3dce7f41b18d8d2ed871480, type: 3}
+      owner: Alice
+    pergunta: "Onde voc\xEA estava?"
+    message: alice-default
     enabled: 1
 --- !u!212 &724896593
 SpriteRenderer:
@@ -3434,17 +3494,27 @@ MonoBehaviour:
   lupa: {fileID: 744028558}
   personagens: {fileID: 2013584613}
   gui: {fileID: 525862026}
-  defaultImage: {fileID: 0}
+  defaultImage: {fileID: 21300000, guid: 4bf624519cabf1a499152d229073abc5, type: 3}
   headBob: {fileID: 21300000, guid: 38654c84edc1f14428eac111ef301232, type: 3}
   dialogos:
   - texts:
-    - texto: "Olha s\xF3, eu nao sei do que vc t\xE1 falando nao fera"
-      image: {fileID: 21300000, guid: ef254e776793083409f8abb61f8e149e, type: 3}
+    - texto: "Sra. Catarina, o que fez ap\xF3s o jantar?\t"
+      image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
+      owner: Detetive
+    - texto: "Ap\xF3s aquele an\xFAncio absurdo que ele fez, eu perdi o apetite e
+        resolvi dar uma volta, foi quando eu vi aquele s\xF3cio dele, Ariel, indo
+        para a biblioteca e o segui para resolver alguns problemas."
+      image: {fileID: 21300000, guid: 4bf624519cabf1a499152d229073abc5, type: 3}
       owner: Catarina
-    - texto: "O monark tamb\xE9m t\xE1 ligado nessa parada"
-      image: {fileID: 21300000, guid: 3ea9621a915f4f0419e2c6d19f84dd45, type: 3}
-      owner: 
-    pergunta: "O que voc\xEA quer?"
+    - texto: Que tipo de problemas?
+      image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
+      owner: Detetive
+    - texto: "Bem.. n\xE3o conte a ningu\xE9m, mas a um tempo percebo que ele e o
+        meu marido estavam se relacionando. Pe\xE7o que Deus livre este homem desse
+        pecado e ter meu marido de volta."
+      image: {fileID: 21300000, guid: 4bf624519cabf1a499152d229073abc5, type: 3}
+      owner: Catarina
+    pergunta: "Onde voc\xEA estava?"
     message: cata-default
     enabled: 1
   - texts: []
@@ -3916,7 +3986,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: bf44c09812165094d989f91089546513, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5115,9 +5185,31 @@ MonoBehaviour:
   lupa: {fileID: 744028558}
   personagens: {fileID: 2013584613}
   gui: {fileID: 525862026}
-  defaultImage: {fileID: 0}
+  defaultImage: {fileID: 21300000, guid: afeb128736c2c0941b79d8af7575e4b5, type: 3}
   headBob: {fileID: 21300000, guid: 4e8b3add683aec246b309b8452dfbf33, type: 3}
-  dialogos: []
+  dialogos:
+  - texts:
+    - texto: "O que voc\xEA fez ap\xF3s o an\xFAncio no jantar?"
+      image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
+      owner: Detetive
+    - texto: 'Eu fiquei um tempo com a Alice na sala de jantar, ai sentimos um cheiro
+        de queimado. '
+      image: {fileID: 21300000, guid: afeb128736c2c0941b79d8af7575e4b5, type: 3}
+      owner: Jared
+    - texto: "Resolvi ir at\xE9 a cozinha reclamar com aquela negra macumbeira, mas
+        eu n\xE3o a encontrei."
+      image: {fileID: 21300000, guid: 1ee750d326f58084995f0863fc48ce14, type: 3}
+      owner: Jared
+    - texto: "E como conseguiu esse machucado na sua m\xE3o?"
+      image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
+      owner: Detetive
+    - texto: "Eu me queimei na panela que aquela empregada deixou no fog\xE3o quando
+        fui para cozinha."
+      image: {fileID: 21300000, guid: afeb128736c2c0941b79d8af7575e4b5, type: 3}
+      owner: Jared
+    pergunta: "Onde esteve ap\xF3s o an\xFAncio?"
+    message: jared-default
+    enabled: 1
 --- !u!212 &1566383604
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6731,10 +6823,22 @@ MonoBehaviour:
   headBob: {fileID: 21300000, guid: f227830ca76836c4e86416006a4d2a27, type: 3}
   dialogos:
   - texts:
-    - texto: Olha eu acho que tu eh um viadao bonito msm
-      image: {fileID: 0}
+    - texto: "Onde voc\xEA estava na hora em que o Sr. Bartolomeu morreu?"
+      image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
+      owner: Detetive
+    - texto: Eu fui ao hall para cuidar de meus afazeres, quando ouvi uma gritaria
+        na biblioteca e fui dar uma olhada.
+      image: {fileID: 21300000, guid: 0c274af385a881a428889df5f63c23c2, type: 3}
       owner: Alfred
-    pergunta: "O que voc\xEA acha desse pint\xE3o?"
+    - texto: E o que encontrou?
+      image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
+      owner: Detetive
+    - texto: "A Sra. Catarina estava discutindo com o Sr. Ariel. N\xE3o conseguir
+        entender o motivo. Acho que voc\xEA deveria ir a biblioteca e depois conversar
+        com eles"
+      image: {fileID: 21300000, guid: 0c274af385a881a428889df5f63c23c2, type: 3}
+      owner: Alfred
+    pergunta: Onde estava na hora da morte do Bartolomeu?
     message: alfred-default
     enabled: 1
   - texts:
@@ -7069,9 +7173,36 @@ MonoBehaviour:
   lupa: {fileID: 744028558}
   personagens: {fileID: 2013584613}
   gui: {fileID: 525862026}
-  defaultImage: {fileID: 0}
+  defaultImage: {fileID: 21300000, guid: 3ea9621a915f4f0419e2c6d19f84dd45, type: 3}
   headBob: {fileID: 21300000, guid: 22fb96ec12ea77e43a678c8215de32f4, type: 3}
-  dialogos: []
+  dialogos:
+  - texts:
+    - texto: "Onde foi ap\xF3s o an\xFAncio?"
+      image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
+      owner: Detetive
+    - texto: "Fui \xE0 biblioteca, procurar alguns livros, quando aquela louca chegou
+        gritando querendo satisfa\xE7\xE3o. Ele nunca a amou de verdade. E acho que
+        ela tamb\xE9m s\xF3 estava com ele por causa do dinheiro. Talvez por saber
+        disso na hora da raiva..."
+      image: {fileID: 21300000, guid: 3ea9621a915f4f0419e2c6d19f84dd45, type: 3}
+      owner: Ariel
+    - texto: "E voc\xEA sabe se ele tinha uma amante ou algu\xE9m que atrapalhasse
+        esse relacionamento?"
+      image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
+      owner: Detetive
+    - texto: "Ele n\xE3o tinha UMA amante."
+      image: {fileID: 21300000, guid: a54724f4c308db54b8d9467421070424, type: 3}
+      owner: Ariel
+    - texto: Ele tinha UM amante.
+      image: {fileID: 21300000, guid: 3ea9621a915f4f0419e2c6d19f84dd45, type: 3}
+      owner: Ariel
+    - texto: "N\xF3s nos amavamos! Por isso ela veio querer tirar satisfa\xE7\xE3o
+        comigo como se eu tivesse culpa de tudo."
+      image: {fileID: 21300000, guid: a54724f4c308db54b8d9467421070424, type: 3}
+      owner: Ariel
+    pergunta: "Onde esteve ap\xF3s o an\xFAncio?"
+    message: ariel-default
+    enabled: 1
 --- !u!212 &1978615811
 SpriteRenderer:
   m_ObjectHideFlags: 0
