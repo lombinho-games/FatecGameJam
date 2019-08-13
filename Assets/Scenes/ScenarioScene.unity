@@ -474,7 +474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speechCanvas: {fileID: 2119144613}
-  manager: {fileID: 741613003}
+  manager: {fileID: 0}
   lupa: {fileID: 744028558}
   personagens: {fileID: 2013584613}
   gui: {fileID: 525862026}
@@ -1252,7 +1252,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 741613003}
+        - m_Target: {fileID: 0}
           m_MethodName: SetaEnter
           m_Mode: 1
           m_Arguments:
@@ -1269,7 +1269,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 741613003}
+        - m_Target: {fileID: 0}
           m_MethodName: SetaExit
           m_Mode: 1
           m_Arguments:
@@ -2228,7 +2228,7 @@ Transform:
   m_LocalScale: {x: 0.60723, y: 0.60723, z: 0.60723}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &478346875
 GameObject:
@@ -2483,7 +2483,7 @@ RectTransform:
   - {fileID: 1715200485}
   - {fileID: 1912892900}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2888,7 +2888,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &724896589
 GameObject:
@@ -2962,7 +2962,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speechCanvas: {fileID: 2119144613}
-  manager: {fileID: 741613003}
+  manager: {fileID: 0}
   lupa: {fileID: 744028558}
   personagens: {fileID: 2013584613}
   gui: {fileID: 525862026}
@@ -3051,82 +3051,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &741613002
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 741613004}
-  - component: {fileID: 741613003}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &741613003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 741613002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3d4748b9ca850a4890b2387dfe157fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialTexts:
-  - texto: "Como todos aqui devem saber, o Sr. Bartolomeu foi encontrado morto, sob
-      condi\xE7\xF5es suspeitas, esta noite!"
-    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: Detetive
-  - texto: "Coincidentemente, \xE9 de meu conhecimento que hoje mais cedo ele havia
-      feito um an\xFAncio sobre seu testamento."
-    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: Detetive
-  - texto: "Voc\xEAs foram as \xFAltimas pessoas a v\xEA-lo com vida, portanto todos
-      nessa sala s\xE3o suspeitos."
-    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: Detetive
-  - texto: "Como ousa? Meu marido est\xE1 morto! E voc\xEA vem aqui acusar a mim e
-      \xE0 minha filha!?"
-    image: {fileID: 21300000, guid: 348808c40b656b7459baf275100f7002, type: 3}
-    owner: Catarina
-  - texto: "Sra, estamos diante de um poss\xEDvel de assassinato."
-    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: Detetive
-  - texto: "N\xE3o estou aqui para acus\xE1-las e sim desvendar esse mist\xE9rio."
-    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: Detetive
-  - texto: "\xC9 de extrema import\xE2ncia que estejam todos aqui para averiguar o
-      motivo da morte do Sr. Bartolomeu."
-    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: Detetive
-  - texto: "Irei interrog\xE1-los individualmente para encontrar o culpado."
-    image: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
-    owner: Detetive
-  speech: {fileID: 2119144614}
-  lupa: {fileID: 744028558}
-  mouseOnSeta: 0
---- !u!4 &741613004
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 741613002}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.168213, y: 0.06476453, z: -10.172784}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &744028554
 GameObject:
   m_ObjectHideFlags: 0
@@ -3490,7 +3414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speechCanvas: {fileID: 2119144613}
-  manager: {fileID: 741613003}
+  manager: {fileID: 0}
   lupa: {fileID: 744028558}
   personagens: {fileID: 2013584613}
   gui: {fileID: 525862026}
@@ -3627,7 +3551,7 @@ Transform:
   - {fileID: 1545834690}
   - {fileID: 1765835295}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &946692424
 GameObject:
@@ -4037,7 +3961,7 @@ Transform:
   - {fileID: 1215822230}
   - {fileID: 1737161213}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1312753670
 GameObject:
@@ -5181,7 +5105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speechCanvas: {fileID: 2119144613}
-  manager: {fileID: 741613003}
+  manager: {fileID: 0}
   lupa: {fileID: 744028558}
   personagens: {fileID: 2013584613}
   gui: {fileID: 525862026}
@@ -5718,7 +5642,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 741613003}
+        - m_Target: {fileID: 0}
           m_MethodName: SetaEnter
           m_Mode: 1
           m_Arguments:
@@ -5735,7 +5659,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 741613003}
+        - m_Target: {fileID: 0}
           m_MethodName: SetaExit
           m_Mode: 1
           m_Arguments:
@@ -6551,7 +6475,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 741613003}
+      - m_Target: {fileID: 0}
         m_MethodName: ClickOnInventory
         m_Mode: 1
         m_Arguments:
@@ -6633,7 +6557,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 741613003}
+        - m_Target: {fileID: 0}
           m_MethodName: SetaEnter
           m_Mode: 1
           m_Arguments:
@@ -6650,7 +6574,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 741613003}
+        - m_Target: {fileID: 0}
           m_MethodName: SetaExit
           m_Mode: 1
           m_Arguments:
@@ -6815,7 +6739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speechCanvas: {fileID: 2119144613}
-  manager: {fileID: 741613003}
+  manager: {fileID: 0}
   lupa: {fileID: 744028558}
   personagens: {fileID: 2013584613}
   gui: {fileID: 525862026}
@@ -6987,7 +6911,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 741613003}
+        - m_Target: {fileID: 0}
           m_MethodName: SetaEnter
           m_Mode: 1
           m_Arguments:
@@ -7004,7 +6928,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 741613003}
+        - m_Target: {fileID: 0}
           m_MethodName: SetaExit
           m_Mode: 1
           m_Arguments:
@@ -7097,6 +7021,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1967324917}
   m_CullTransparentMesh: 0
+--- !u!1 &1970357004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1970357006}
+  - component: {fileID: 1970357005}
+  m_Layer: 0
+  m_Name: Game Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1970357005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970357004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3d4748b9ca850a4890b2387dfe157fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lupa: {fileID: 0}
+  mouseOnSeta: 0
+--- !u!4 &1970357006
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970357004}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.2422817, y: -1.4056969, z: -0.7852778}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1978615807
 GameObject:
   m_ObjectHideFlags: 0
@@ -7169,7 +7138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speechCanvas: {fileID: 2119144613}
-  manager: {fileID: 741613003}
+  manager: {fileID: 0}
   lupa: {fileID: 744028558}
   personagens: {fileID: 2013584613}
   gui: {fileID: 525862026}
@@ -7362,7 +7331,7 @@ Transform:
   - {fileID: 1978615808}
   - {fileID: 99167820}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2077539101
 GameObject:

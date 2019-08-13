@@ -2,6 +2,7 @@
  using UnityEditor;
  using System.Collections;
  using System.Collections.Generic;
+ using System.IO;
  
  public class ModalWindow
  {
@@ -83,11 +84,14 @@
  
  public class EditorWindowTest : EditorWindow
  {
-     [MenuItem("Tools/TestWindow")]
-     public static void Init()
-     {
-         GetWindow<EditorWindowTest>();
-     }
+
+    [MenuItem("Tools/Clear SaveData")]
+    private static void NewMenuOption()
+    {
+        DirectoryInfo dataDir = new DirectoryInfo(Application.persistentDataPath);
+        dataDir.Delete(true);
+    }
+
  
      ModalSystem modalWindows = new ModalSystem();
  

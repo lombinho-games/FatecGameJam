@@ -7,13 +7,17 @@ public class SpeechManager : MonoBehaviour
 {
     // Start is called before the first frame update
 
+    [HideInInspector]
     public List<TextData> texts;
+    [HideInInspector]
     public int currentText;
+    [HideInInspector]
     public Image characterImage;
     public Text canvasText;
     public Image panelImage;
     public GameObject personagens;
     public GameObject gui;
+    [HideInInspector]
     public Text charName;
 
     //Button ui

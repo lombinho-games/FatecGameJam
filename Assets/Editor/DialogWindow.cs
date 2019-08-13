@@ -37,13 +37,58 @@ public class DialogWindow : EditorWindow
         if(Selection.activeGameObject == null) return;
 
         SpeechableCharacter personagem = (SpeechableCharacter) Selection.activeGameObject.GetComponent<SpeechableCharacter>();
+        if(personagem != null)
+            OpenCharacterDialogEditor(personagem);
 
-        if(personagem != null){
+        PistaItem pista = (PistaItem) Selection.activeGameObject.GetComponent<PistaItem>();
+        if(pista != null)
+            OpenPistaDialogEditor(pista);
+        
+         
+        BeginWindows();
+        modalWindows.Draw();
+        EndWindows();
+    }
+
+    public void OpenPistaDialogEditor(PistaItem pista){
+        pista.lupa = (LupaButton) EditorGUILayout.ObjectField("Lupa", pista.lupa, typeof(LupaButton), true);
+        pista.speech = (SpeechManager) EditorGUILayout.ObjectField("Speech Canvas", pista.speech, typeof(SpeechManager), true);
+        pista.displayName = EditorGUILayout.TextField("Nome Display", pista.displayName);
+        pista.itemId = EditorGUILayout.TextField("ID do item", pista.itemId);
+
+        if(GUILayout.Button("Editar diálogo")){                
+                //Modal para criar o diálogo
+                var win = new ModalWindow(new Rect(30, 30, position.width - 60, position.height - 60), "CreateDialog", (w) =>
+                {
+                    pista.dialogo.enabled = EditorGUILayout.Toggle("Destravado", pista.dialogo.enabled);
+                        if(GUILayout.Button("Adicionar Texto")){
+                            pista.dialogo.texts.Add(new TextData());
+                        }
+
+                        for(int j = 0; j < pista.dialogo.texts.Count; j ++){
+                            GUILayout.Label("Texto " + j, EditorStyles.boldLabel);
+                            pista.dialogo.texts[j].texto = EditorGUILayout.TextArea(pista.dialogo.texts[j].texto);
+                            GUILayout.BeginHorizontal("box");
+                            pista.dialogo.texts[j].owner = EditorGUILayout.TextField("Quem tá falando", pista.dialogo.texts[j].owner);
+                            pista.dialogo.texts[j].image = ((Sprite)EditorGUILayout.ObjectField(pista.dialogo.texts[j].image, typeof(Sprite), false));
+                            Debug.Log("Atualizando imagem " + pista.dialogo.texts[j].image);
+                            GUILayout.EndHorizontal();
+                            GUILayout.Space(10);
+                        }
+
+                        if(GUILayout.Button("Fechar")) w.Close();
+
+                        GUI.DragWindow();
+                });
+                modalWindows.Add(win);
+            }
+    
+    }
+
+    public void OpenCharacterDialogEditor(SpeechableCharacter personagem){
             personagem.speechCanvas = (Canvas) EditorGUILayout.ObjectField("Speech Canvas", personagem.speechCanvas, typeof(Canvas), true);
             personagem.manager = (InspectionManager) EditorGUILayout.ObjectField("Manager", personagem.manager, typeof(InspectionManager), true);
             personagem.lupa = (LupaButton) EditorGUILayout.ObjectField("Lupa", personagem.lupa, typeof(LupaButton), true);
-            personagem.personagens = (GameObject) EditorGUILayout.ObjectField("Personagens", personagem.personagens, typeof(GameObject), true);
-            personagem.gui = (GameObject) EditorGUILayout.ObjectField("GUI", personagem.gui, typeof(GameObject), true);
             personagem.headBob = (Sprite) EditorGUILayout.ObjectField("Head Bob", personagem.headBob, typeof(Sprite), true);
             personagem.defaultImage = (Sprite) EditorGUILayout.ObjectField("Pose padrão", personagem.defaultImage, typeof(Sprite), true);
 
@@ -93,7 +138,9 @@ public class DialogWindow : EditorWindow
                             dig.texts[j].texto = EditorGUILayout.TextArea(dig.texts[j].texto);
                             GUILayout.BeginHorizontal("box");
                             dig.texts[j].owner = EditorGUILayout.TextField("Quem tá falando", dig.texts[j].owner);
-                            dig.texts[j].image = (Sprite)EditorGUILayout.ObjectField(dig.texts[j].image, typeof(Sprite), false);
+                            dig.texts[j].image = ((Sprite)EditorGUILayout.ObjectField(dig.texts[j].image, typeof(Sprite), false));
+                            Debug.Log("Atualizando imagem " + dig.texts[j].image);
+
                             GUILayout.EndHorizontal();
                             GUILayout.Space(10);
                         }
@@ -110,11 +157,6 @@ public class DialogWindow : EditorWindow
                 }
                 GUILayout.EndHorizontal();
             }
-        }
-         
-        BeginWindows();
-        modalWindows.Draw();
-        EndWindows();
     }
 
 }

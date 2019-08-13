@@ -5,6 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class Dialogo
 {
+    [SerializeField]
    public List<TextData> texts;
    public string pergunta;
    public string message;
