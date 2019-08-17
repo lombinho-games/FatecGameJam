@@ -36,6 +36,7 @@ public class DialogWindow : EditorWindow
         
         if(Selection.activeGameObject == null) return;
 
+
         SpeechableCharacter personagem = (SpeechableCharacter) Selection.activeGameObject.GetComponent<SpeechableCharacter>();
         if(personagem != null)
             OpenCharacterDialogEditor(personagem);
@@ -43,8 +44,7 @@ public class DialogWindow : EditorWindow
         PistaItem pista = (PistaItem) Selection.activeGameObject.GetComponent<PistaItem>();
         if(pista != null)
             OpenPistaDialogEditor(pista);
-        
-         
+
         BeginWindows();
         modalWindows.Draw();
         EndWindows();
@@ -53,25 +53,25 @@ public class DialogWindow : EditorWindow
     public void OpenPistaDialogEditor(PistaItem pista){
         pista.lupa = (LupaButton) EditorGUILayout.ObjectField("Lupa", pista.lupa, typeof(LupaButton), true);
         pista.speech = (SpeechManager) EditorGUILayout.ObjectField("Speech Canvas", pista.speech, typeof(SpeechManager), true);
-        pista.displayName = EditorGUILayout.TextField("Nome Display", pista.displayName);
-        pista.itemId = EditorGUILayout.TextField("ID do item", pista.itemId);
+        pista.scriptable.displayName = EditorGUILayout.TextField("Nome Display", pista.scriptable.displayName);
+        pista.scriptable.itemId = EditorGUILayout.TextField("ID do item", pista.scriptable.itemId);
 
         if(GUILayout.Button("Editar diálogo")){                
                 //Modal para criar o diálogo
                 var win = new ModalWindow(new Rect(30, 30, position.width - 60, position.height - 60), "CreateDialog", (w) =>
                 {
-                    pista.dialogo.enabled = EditorGUILayout.Toggle("Destravado", pista.dialogo.enabled);
+                    pista.scriptable.dialogo.enabled = EditorGUILayout.Toggle("Destravado", pista.scriptable.dialogo.enabled);
                         if(GUILayout.Button("Adicionar Texto")){
-                            pista.dialogo.texts.Add(new TextData());
+                            pista.scriptable.dialogo.texts.Add(new TextData());
                         }
 
-                        for(int j = 0; j < pista.dialogo.texts.Count; j ++){
+                        for(int j = 0; j < pista.scriptable.dialogo.texts.Count; j ++){
                             GUILayout.Label("Texto " + j, EditorStyles.boldLabel);
-                            pista.dialogo.texts[j].texto = EditorGUILayout.TextArea(pista.dialogo.texts[j].texto);
+                            pista.scriptable.dialogo.texts[j].texto = EditorGUILayout.TextArea(pista.scriptable.dialogo.texts[j].texto);
                             GUILayout.BeginHorizontal("box");
-                            pista.dialogo.texts[j].owner = EditorGUILayout.TextField("Quem tá falando", pista.dialogo.texts[j].owner);
-                            pista.dialogo.texts[j].image = ((Sprite)EditorGUILayout.ObjectField(pista.dialogo.texts[j].image, typeof(Sprite), false));
-                            Debug.Log("Atualizando imagem " + pista.dialogo.texts[j].image);
+                            pista.scriptable.dialogo.texts[j].owner = EditorGUILayout.TextField("Quem tá falando", pista.scriptable.dialogo.texts[j].owner);
+                            pista.scriptable.dialogo.texts[j].image = ((Sprite)EditorGUILayout.ObjectField(pista.scriptable.dialogo.texts[j].image, typeof(Sprite), false));
+                            Debug.Log("Atualizando imagem " + pista.scriptable.dialogo.texts[j].image);
                             GUILayout.EndHorizontal();
                             GUILayout.Space(10);
                         }
@@ -86,11 +86,11 @@ public class DialogWindow : EditorWindow
     }
 
     public void OpenCharacterDialogEditor(SpeechableCharacter personagem){
-            personagem.speechCanvas = (Canvas) EditorGUILayout.ObjectField("Speech Canvas", personagem.speechCanvas, typeof(Canvas), true);
+            personagem.speechCanvas = (SpeechManager) EditorGUILayout.ObjectField("Speech Canvas", personagem.speechCanvas, typeof(SpeechManager), true);
             personagem.manager = (InspectionManager) EditorGUILayout.ObjectField("Manager", personagem.manager, typeof(InspectionManager), true);
             personagem.lupa = (LupaButton) EditorGUILayout.ObjectField("Lupa", personagem.lupa, typeof(LupaButton), true);
-            personagem.headBob = (Sprite) EditorGUILayout.ObjectField("Head Bob", personagem.headBob, typeof(Sprite), true);
-            personagem.defaultImage = (Sprite) EditorGUILayout.ObjectField("Pose padrão", personagem.defaultImage, typeof(Sprite), true);
+            personagem.personagem_data.headBob = (Sprite) EditorGUILayout.ObjectField("Head Bob", personagem.personagem_data.headBob, typeof(Sprite), true);
+            personagem.personagem_data.defaultImage = (Sprite) EditorGUILayout.ObjectField("Pose padrão", personagem.personagem_data.defaultImage, typeof(Sprite), true);
 
             GUILayout.Label("Diálogos:");
             if(GUILayout.Button("Adicionar diálogo")){
@@ -103,7 +103,7 @@ public class DialogWindow : EditorWindow
                     nd.pergunta = EditorGUILayout.TextField("Pergunta", nd.pergunta);
                     nd.enabled = EditorGUILayout.Toggle("Destravado", nd.enabled);
                     if(GUILayout.Button("OK")){
-                        personagem.dialogos.Add(nd);
+                        personagem.personagem_data.dialogos.Add(nd);
                         w.Close();
                     } 
                     if(GUILayout.Button("Cancel")) w.Close();
@@ -112,20 +112,20 @@ public class DialogWindow : EditorWindow
                 modalWindows.Add(win);
             }
 
-            if(personagem.dialogos == null){
-                personagem.dialogos = new List<Dialogo>();
+            if(personagem.personagem_data.dialogos == null){
+                personagem.personagem_data.dialogos = new List<Dialogo>();
             }
-            for(int i = 0; i < personagem.dialogos.Count; i ++){
+            for(int i = 0; i < personagem.personagem_data.dialogos.Count; i ++){
                 GUILayout.BeginHorizontal("box");
-                if(personagem.dialogos[i] == null) personagem.dialogos[i] = new Dialogo(new List<TextData>(), "", "", true);
+                if(personagem.personagem_data.dialogos[i] == null) personagem.personagem_data.dialogos[i] = new Dialogo(new List<TextData>(), "", "", true);
                 GUILayout.Label("Pergunta");
-                personagem.dialogos[i].pergunta = EditorGUILayout.TextField(personagem.dialogos[i].pergunta);
+                personagem.personagem_data.dialogos[i].pergunta = EditorGUILayout.TextField(personagem.personagem_data.dialogos[i].pergunta);
                 GUILayout.Label("ID da Mensagem");
-                personagem.dialogos[i].message = EditorGUILayout.TextField(personagem.dialogos[i].message);
+                personagem.personagem_data.dialogos[i].message = EditorGUILayout.TextField(personagem.personagem_data.dialogos[i].message);
                 if(GUILayout.Button("Editar")){
 
                     //Modal pra editar cada texto do diálogo:
-                    Dialogo dig = personagem.dialogos[i];
+                    Dialogo dig = personagem.personagem_data.dialogos[i];
                     var win = new ModalWindow(new Rect(30, 30, position.width - 60, position.height - 60), "Edit Dialog", (w) =>
                     {
                         dig.enabled = EditorGUILayout.Toggle("Destravado", dig.enabled);
@@ -153,7 +153,7 @@ public class DialogWindow : EditorWindow
 
                 }
                 if(GUILayout.Button("Remover")){
-                    personagem.dialogos.Remove(personagem.dialogos[i]);
+                    personagem.personagem_data.dialogos.Remove(personagem.personagem_data.dialogos[i]);
                 }
                 GUILayout.EndHorizontal();
             }

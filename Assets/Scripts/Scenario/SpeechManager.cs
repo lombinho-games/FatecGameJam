@@ -90,7 +90,7 @@ public class SpeechManager : MonoBehaviour
         gameObject.SetActive(true);
         personagens.SetActive(false);
         gui.SetActive(false);
-        characterImage.sprite = personagem.defaultImage;
+        characterImage.sprite = personagem.personagem_data.defaultImage;
         characterImage.color = new Color(1, 1, 1, 1);
         canvasText.text = "";
         charName.text = "Detetive";

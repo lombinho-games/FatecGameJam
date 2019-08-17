@@ -27,8 +27,13 @@ public class ExitPoint : MonoBehaviour
 
     public void Exit(){
         //TODO: Salva cenário
-        bool succ = SaveGameSystem.SaveGame(manager.CreateScenarioData(), "slot0_" + manager.scenarioName);
+        ScenarioData data = manager.CreateScenarioData();
+        bool succ = SaveGameSystem.SaveGame(data, "slot0_" + manager.scenarioName);
         Debug.Log("Salvando arquivo " + "slot0_" + manager.scenarioName + ", sucesso? " + succ);
+
+        string output = JsonUtility.ToJson(data,true);
+        Debug.Log(output);
+
         SceneManager.LoadScene((int)exitPoint);
     }
 

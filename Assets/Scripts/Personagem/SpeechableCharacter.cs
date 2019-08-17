@@ -3,16 +3,18 @@ using UnityEngine;
 using System.Linq;
 public class SpeechableCharacter : MonoBehaviour
 {
-    public Canvas speechCanvas;
+    public SpeechManager speechCanvas;
     public InspectionManager manager;
     public LupaButton lupa;
-    public Sprite defaultImage;
-    public Sprite headBob;
+
+    public ScriptableCharacter personagem_data;
+    //public Sprite defaultImage;
+    //public Sprite headBob;
 
     //Verifica se ele falou com esse personagem pelo menos 1 vez pra gerar a pista do personagem
     bool hasTalked = false;
    
-    public List<Dialogo> dialogos = new List<Dialogo>();
+    //public List<Dialogo> dialogos = new List<Dialogo>();
 
     SpriteRenderer spriteRenderer;
 
@@ -22,10 +24,16 @@ public class SpeechableCharacter : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
+    void Update(){
+        personagem_data.position = transform.position;
+        personagem_data.scale = transform.localScale;
+        personagem_data.rotation = transform.rotation;
+    }
+
     // Update is called once per frame
     void OnMouseOver(){
         if(Input.GetMouseButtonDown(0) && !manager.mouseOnSeta){ //perguntar se o mouse não tá em cima da seta
-            if(dialogos.Count > 0)
+            if(personagem_data.dialogos.Count > 0)
                 selectCharacter();
         }
     }
@@ -39,30 +47,19 @@ public class SpeechableCharacter : MonoBehaviour
     }
 
     public List<Dialogo> AvailableDialogs(){
-        return (from item in dialogos
+        return (from item in personagem_data.dialogos
             where item.enabled select item).ToList();
     }
 
-    public void LoadData(CharacterData data, Canvas canvas, InspectionManager manager, LupaButton lupa){
-        dialogos = data.dialogos;
-        defaultImage = data.defaultImage;
-        headBob = data.headBob;
-        transform.position = data.position;
-        transform.localScale = data.scale;
-        transform.rotation = data.rotation;
+    public void LoadData(ScriptableCharacter script, SpeechManager canvas, InspectionManager manager, LupaButton lupa){
+        GetComponent<SpriteRenderer>().sprite = script.defaultImage;
+        personagem_data = script;
+        transform.position = script.position;
+        transform.localScale = script.scale;
+        transform.rotation = script.rotation;
         this.speechCanvas = canvas;
         this.manager = manager;
         this.lupa = lupa;
     }
-
-    public CharacterData GetData(){
-        CharacterData data = new CharacterData();
-        data.dialogos = dialogos;
-        data.defaultImage = defaultImage;
-        data.headBob = headBob;
-        data.position = transform.position;
-        data.scale = transform.localScale;
-        data.rotation = transform.rotation;
-        return data;
-    }
+   
 }

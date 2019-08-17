@@ -130,12 +130,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad633952d0e4c104198b1fbb02858a00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!223 &611006811 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 4593652365716892221, guid: dfc79180924da2340ab88c61091fce5a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1951008846}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &905135016
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,19 +175,19 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.4150489, y: -0.09223366}
+  m_UsedByComposite: 1
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 5.2, y: 5.64}
-    newSize: {x: 1.43, y: 1.36}
+    newSize: {x: 5.2, y: 5.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.412214, y: 5.1723003}
+  m_Size: {x: 5, y: 5}
   m_EdgeRadius: 0
 --- !u!114 &905135019
 MonoBehaviour:
@@ -209,22 +203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lupa: {fileID: 1211899989}
   speech: {fileID: 451729944}
-  displayName: Chave de fenda
-  itemId: chave-de-fenda
-  dialogo:
-    texts:
-    - texto: Essa chave de fenda parede FODA
-      imageUrl: 
-      owner: 
-    - texto: FO
-      imageUrl: 
-      owner: 
-    - texto: DA
-      imageUrl: 
-      owner: 
-    pergunta: 
-    message: 
-    enabled: 1
+  scriptable: {fileID: 11400000, guid: 6d65a90f9e5cd694da4b9a7e2dfb4b6f, type: 2}
 --- !u!212 &905135020
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -267,7 +246,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.43, y: 1.36}
+  m_Size: {x: 5.2, y: 5.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -614,22 +593,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e815c8b7fc1d64646a087a175cf43031, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speechCanvas: {fileID: 611006811}
+  speechCanvas: {fileID: 451729944}
   manager: {fileID: 1412784564}
   lupa: {fileID: 1211899989}
-  defaultImage: {fileID: 21300000, guid: 4bf624519cabf1a499152d229073abc5, type: 3}
-  headBob: {fileID: 21300000, guid: f227830ca76836c4e86416006a4d2a27, type: 3}
-  dialogos:
-  - texts:
-    - texto: "Di\xE1logo 1"
-      imageUrl: Personagens/detetive_final
-      owner: Detetive
-    - texto: "Di\xE1logo 2"
-      imageUrl: Personagens/filha chorando
-      owner: Alfred
-    pergunta: "Pergunta padr\xE3o"
-    message: mensagem-default
-    enabled: 1
+  personagem_data: {fileID: 11400000, guid: c68072aef75d21844b7a7a9939275e94, type: 2}
 --- !u!61 &6883256478108607221
 BoxCollider2D:
   m_ObjectHideFlags: 0
