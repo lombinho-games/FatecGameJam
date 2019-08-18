@@ -203,7 +203,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lupa: {fileID: 1211899989}
   speech: {fileID: 451729944}
-  scriptable: {fileID: 11400000, guid: 6d65a90f9e5cd694da4b9a7e2dfb4b6f, type: 2}
+  manager: {fileID: 1412784564}
+  data:
+    dialogo:
+      texts:
+      - texto: Esta chave de fenda
+        image: detective-default
+        owner: Detetive
+      - texto: "Come o cu de quem t\xE1 lendo"
+        image: detective-default
+        owner: Detetive
+      pergunta: 
+      message: 
+      enabled: 0
+    image: chave-de-fenda
+    displayName: Chave de fenda
+    itemId: chave-de-fenda
+    messages: []
+    position: {x: 0, y: 0, z: 0}
+    scale: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!212 &905135020
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -596,7 +615,33 @@ MonoBehaviour:
   speechCanvas: {fileID: 451729944}
   manager: {fileID: 1412784564}
   lupa: {fileID: 1211899989}
-  personagem_data: {fileID: 11400000, guid: c68072aef75d21844b7a7a9939275e94, type: 2}
+  data:
+    defaultImage: alfred-default
+    headBob: alfred-icon
+    dialogos:
+    - texts:
+      - texto: O que faz aqui parceiro?
+        image: detective-default
+        owner: Detetive
+      - texto: Como o cu de quem ta lendo
+        image: alfred-default
+        owner: Alfred
+      pergunta: O que faz aqui?
+      message: alfred-default
+      enabled: 1
+    - texts:
+      - texto: "Esta pergunta n\xE3o existe?"
+        image: detective-default
+        owner: Detetive
+      - texto: "Sinceramente, eu n\xE3o sei"
+        image: alfred-default
+        owner: Alfred
+      pergunta: Esta pergunta nao existe?
+      message: alfred-disabled
+      enabled: 0
+    position: {x: 0, y: 0, z: 0}
+    scale: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!61 &6883256478108607221
 BoxCollider2D:
   m_ObjectHideFlags: 0

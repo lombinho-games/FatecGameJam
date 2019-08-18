@@ -3,7 +3,9 @@ guid: 1ab73d7298b6f464bbe53199ba6b47f7
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - m_PersistentViewDataDictionary: {instanceID: 0}
+  - textureManager: {fileID: 11400000, guid: 165dd8d4bb439664582ca39a741ac8e9, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

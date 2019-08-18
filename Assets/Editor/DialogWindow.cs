@@ -1,11 +1,10 @@
 ﻿using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
-
+using UnityEditor.SceneManagement;
 
 public class DialogWindow : EditorWindow
 {
-
     ModalSystem modalWindows = new ModalSystem();
 
     [MenuItem("Window/Dialogs")]
@@ -45,6 +44,10 @@ public class DialogWindow : EditorWindow
         if(pista != null)
             OpenPistaDialogEditor(pista);
 
+        if(GUI.changed){
+            EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
+        }
+
         BeginWindows();
         modalWindows.Draw();
         EndWindows();
@@ -53,25 +56,37 @@ public class DialogWindow : EditorWindow
     public void OpenPistaDialogEditor(PistaItem pista){
         pista.lupa = (LupaButton) EditorGUILayout.ObjectField("Lupa", pista.lupa, typeof(LupaButton), true);
         pista.speech = (SpeechManager) EditorGUILayout.ObjectField("Speech Canvas", pista.speech, typeof(SpeechManager), true);
-        pista.scriptable.displayName = EditorGUILayout.TextField("Nome Display", pista.scriptable.displayName);
-        pista.scriptable.itemId = EditorGUILayout.TextField("ID do item", pista.scriptable.itemId);
+        pista.data.displayName = EditorGUILayout.TextField("Nome Display", pista.data.displayName);
+        pista.data.itemId = EditorGUILayout.TextField("ID do item", pista.data.itemId);
+
+        string[] pistaKeys = pista.manager.textureManager.getPistaKeys();
+        string[] posesKeys = pista.manager.textureManager.getPoseKeys();
+
+        int imageValue = EditorGUILayout.Popup("Ícone pista", pista.manager.textureManager.getIndexByKeyPista(pista.data.image), pistaKeys);
+        pista.data.image = pistaKeys[imageValue];
+        GUI.DrawTexture(new Rect(0, 100, 100, 100), pista.manager.textureManager.pistas[imageValue].sprite.texture);
+        GUILayout.Space(120);
 
         if(GUILayout.Button("Editar diálogo")){                
                 //Modal para criar o diálogo
                 var win = new ModalWindow(new Rect(30, 30, position.width - 60, position.height - 60), "CreateDialog", (w) =>
                 {
-                    pista.scriptable.dialogo.enabled = EditorGUILayout.Toggle("Destravado", pista.scriptable.dialogo.enabled);
+                    pista.data.dialogo.enabled = EditorGUILayout.Toggle("Destravado", pista.data.dialogo.enabled);
                         if(GUILayout.Button("Adicionar Texto")){
-                            pista.scriptable.dialogo.texts.Add(new TextData());
+                            pista.data.dialogo.texts.Add(new TextData());
                         }
 
-                        for(int j = 0; j < pista.scriptable.dialogo.texts.Count; j ++){
+                        for(int j = 0; j < pista.data.dialogo.texts.Count; j ++){
                             GUILayout.Label("Texto " + j, EditorStyles.boldLabel);
-                            pista.scriptable.dialogo.texts[j].texto = EditorGUILayout.TextArea(pista.scriptable.dialogo.texts[j].texto);
+                            pista.data.dialogo.texts[j].texto = EditorGUILayout.TextArea(pista.data.dialogo.texts[j].texto);
                             GUILayout.BeginHorizontal("box");
-                            pista.scriptable.dialogo.texts[j].owner = EditorGUILayout.TextField("Quem tá falando", pista.scriptable.dialogo.texts[j].owner);
-                            pista.scriptable.dialogo.texts[j].image = ((Sprite)EditorGUILayout.ObjectField(pista.scriptable.dialogo.texts[j].image, typeof(Sprite), false));
-                            Debug.Log("Atualizando imagem " + pista.scriptable.dialogo.texts[j].image);
+                            pista.data.dialogo.texts[j].owner = EditorGUILayout.TextField("Quem tá falando", pista.data.dialogo.texts[j].owner);
+                            
+                            int index = pista.manager.textureManager.getIndexByKeyPose( pista.data.dialogo.texts[j].image);
+                            if(index == -1) index = 0;
+                            int digValue = EditorGUILayout.Popup("Imagem", index, posesKeys);
+                             pista.data.dialogo.texts[j].image = posesKeys[digValue];
+
                             GUILayout.EndHorizontal();
                             GUILayout.Space(10);
                         }
@@ -89,8 +104,21 @@ public class DialogWindow : EditorWindow
             personagem.speechCanvas = (SpeechManager) EditorGUILayout.ObjectField("Speech Canvas", personagem.speechCanvas, typeof(SpeechManager), true);
             personagem.manager = (InspectionManager) EditorGUILayout.ObjectField("Manager", personagem.manager, typeof(InspectionManager), true);
             personagem.lupa = (LupaButton) EditorGUILayout.ObjectField("Lupa", personagem.lupa, typeof(LupaButton), true);
-            personagem.personagem_data.headBob = (Sprite) EditorGUILayout.ObjectField("Head Bob", personagem.personagem_data.headBob, typeof(Sprite), true);
-            personagem.personagem_data.defaultImage = (Sprite) EditorGUILayout.ObjectField("Pose padrão", personagem.personagem_data.defaultImage, typeof(Sprite), true);
+            //Busca a lista
+            string[] pistaKeys = personagem.manager.textureManager.getPistaKeys();
+            string[] poseKeys = personagem.manager.textureManager.getPoseKeys();
+
+            //Icone
+            int bobValue = EditorGUILayout.Popup("Ícone", personagem.manager.textureManager.getIndexByKeyPista(personagem.data.headBob), pistaKeys);
+            personagem.data.headBob = pistaKeys[bobValue];
+            GUI.DrawTexture(new Rect(0, 70, 100, 100), personagem.manager.textureManager.pistas[bobValue].sprite.texture);
+            GUILayout.Space(120);
+
+            //Pose
+            int poseValue = EditorGUILayout.Popup("Pose padrão", personagem.manager.textureManager.getIndexByKeyPose(personagem.data.defaultImage), poseKeys);
+            personagem.data.defaultImage = poseKeys[poseValue];
+            GUI.DrawTexture(new Rect(0, 210, 100, 100), personagem.manager.textureManager.sprites[poseValue].sprite.texture);
+            GUILayout.Space(120);
 
             GUILayout.Label("Diálogos:");
             if(GUILayout.Button("Adicionar diálogo")){
@@ -103,7 +131,7 @@ public class DialogWindow : EditorWindow
                     nd.pergunta = EditorGUILayout.TextField("Pergunta", nd.pergunta);
                     nd.enabled = EditorGUILayout.Toggle("Destravado", nd.enabled);
                     if(GUILayout.Button("OK")){
-                        personagem.personagem_data.dialogos.Add(nd);
+                        personagem.data.dialogos.Add(nd);
                         w.Close();
                     } 
                     if(GUILayout.Button("Cancel")) w.Close();
@@ -112,20 +140,20 @@ public class DialogWindow : EditorWindow
                 modalWindows.Add(win);
             }
 
-            if(personagem.personagem_data.dialogos == null){
-                personagem.personagem_data.dialogos = new List<Dialogo>();
+            if(personagem.data.dialogos == null){
+                personagem.data.dialogos = new List<Dialogo>();
             }
-            for(int i = 0; i < personagem.personagem_data.dialogos.Count; i ++){
+            for(int i = 0; i < personagem.data.dialogos.Count; i ++){
                 GUILayout.BeginHorizontal("box");
-                if(personagem.personagem_data.dialogos[i] == null) personagem.personagem_data.dialogos[i] = new Dialogo(new List<TextData>(), "", "", true);
+                if(personagem.data.dialogos[i] == null) personagem.data.dialogos[i] = new Dialogo(new List<TextData>(), "", "", true);
                 GUILayout.Label("Pergunta");
-                personagem.personagem_data.dialogos[i].pergunta = EditorGUILayout.TextField(personagem.personagem_data.dialogos[i].pergunta);
+                personagem.data.dialogos[i].pergunta = EditorGUILayout.TextField(personagem.data.dialogos[i].pergunta);
                 GUILayout.Label("ID da Mensagem");
-                personagem.personagem_data.dialogos[i].message = EditorGUILayout.TextField(personagem.personagem_data.dialogos[i].message);
+                personagem.data.dialogos[i].message = EditorGUILayout.TextField(personagem.data.dialogos[i].message);
                 if(GUILayout.Button("Editar")){
 
                     //Modal pra editar cada texto do diálogo:
-                    Dialogo dig = personagem.personagem_data.dialogos[i];
+                    Dialogo dig = personagem.data.dialogos[i];
                     var win = new ModalWindow(new Rect(30, 30, position.width - 60, position.height - 60), "Edit Dialog", (w) =>
                     {
                         dig.enabled = EditorGUILayout.Toggle("Destravado", dig.enabled);
@@ -138,9 +166,12 @@ public class DialogWindow : EditorWindow
                             dig.texts[j].texto = EditorGUILayout.TextArea(dig.texts[j].texto);
                             GUILayout.BeginHorizontal("box");
                             dig.texts[j].owner = EditorGUILayout.TextField("Quem tá falando", dig.texts[j].owner);
-                            dig.texts[j].image = ((Sprite)EditorGUILayout.ObjectField(dig.texts[j].image, typeof(Sprite), false));
-                            Debug.Log("Atualizando imagem " + dig.texts[j].image);
-
+                            
+                            int index = personagem.manager.textureManager.getIndexByKeyPose(dig.texts[j].image);
+                            if(index == -1) index = 0;
+                            int digValue = EditorGUILayout.Popup("Imagem", index, poseKeys);
+                            dig.texts[j].image = poseKeys[digValue];
+                            
                             GUILayout.EndHorizontal();
                             GUILayout.Space(10);
                         }
@@ -153,7 +184,7 @@ public class DialogWindow : EditorWindow
 
                 }
                 if(GUILayout.Button("Remover")){
-                    personagem.personagem_data.dialogos.Remove(personagem.personagem_data.dialogos[i]);
+                    personagem.data.dialogos.Remove(personagem.data.dialogos[i]);
                 }
                 GUILayout.EndHorizontal();
             }
