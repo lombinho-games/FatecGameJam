@@ -63,7 +63,6 @@ public class ScenarioCamera : MonoBehaviour
         {
             GoLeft();
         }*/
-
     }
 
     public void GoLeft(){
