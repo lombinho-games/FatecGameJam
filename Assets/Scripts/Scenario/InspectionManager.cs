@@ -7,7 +7,6 @@ public class InspectionManager : MonoBehaviour
 {
 
     //Prefabs
-
     public GameObject personagemPrefab;
     public GameObject pistaPrefab;
 
@@ -15,9 +14,7 @@ public class InspectionManager : MonoBehaviour
     public GameObject personagens_folder;
     public GameObject pistas_folder;
     public GameObject exits_folder;
-
-    public CharacterList characters;
-    public PistaList pistas;
+    public TextureManager textureManager;
 
     public string scenarioName;
     public LupaButton lupa;
@@ -47,9 +44,7 @@ public class InspectionManager : MonoBehaviour
                 for(int i = 0; i < scenarioData.characters.Count; i ++){
                     GameObject character = Instantiate(personagemPrefab);
                     character.transform.SetParent(personagens_folder.transform, false);
-
-                    ScriptableCharacter script = characters.FindValue(scenarioData.characters[i]);
-                    character.GetComponent<SpeechableCharacter>().LoadData(script, speechManager, this, lupa);
+                    character.GetComponent<SpeechableCharacter>().LoadData(scenarioData.characters[i], speechManager, this, lupa);
                 }
 
                 //Limpando pistas e instanciando de novo
@@ -60,9 +55,7 @@ public class InspectionManager : MonoBehaviour
                 for(int i = 0; i < scenarioData.pistas.Count; i ++){
                     GameObject pista = Instantiate(pistaPrefab);
                     pista.transform.SetParent(pistas_folder.transform, false);
-
-                    ScriptablePista script = pistas.FindValue(scenarioData.pistas[i]);
-                    pista.GetComponent<PistaItem>().LoadData(script, lupa, speechManager);
+                    pista.GetComponent<PistaItem>().LoadData(scenarioData.pistas[i], lupa, speechManager, this);
                 }
 
                 //TODO: limpar as pastas e instanciar a galera;
@@ -102,18 +95,13 @@ public class InspectionManager : MonoBehaviour
         
         //Itera por todos os personagens
         foreach(Transform obj in personagens_folder.transform){
-             //procura esse cara na minha lista, e salva só o nome
-            string key = characters.FindKey(obj.GetComponent<SpeechableCharacter>().personagem_data);
-            if(key != null){
-                data.characters.Add(key);
-            }
+            SpeechableCharacter character = obj.GetComponent<SpeechableCharacter>();
+            data.characters.Add(character.data);
         }
         //Itera por todas as pistas
         foreach(Transform obj in pistas_folder.transform){
-            string key = pistas.FindKey(obj.GetComponent<PistaItem>().scriptable);
-            if(key != null){
-                data.pistas.Add(key);
-            }
+            PistaItem pista = obj.GetComponent<PistaItem>();
+            data.pistas.Add(pista.data);
         }
         //Itera por todos os exits
         foreach(Transform obj in exits_folder.transform){
