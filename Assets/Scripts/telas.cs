@@ -22,7 +22,7 @@ public class telas : MonoBehaviour
     }
 
     public void Entrar(int cena){
-        scenarioCamera.cena = cena;
+        //scenarioCamera.cena = cena;
         Camera.main.transform.position = new Vector3(
             0, Camera.main.transform.position.y,
             Camera.main.transform.position.z

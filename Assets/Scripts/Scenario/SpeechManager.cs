@@ -7,13 +7,17 @@ public class SpeechManager : MonoBehaviour
 {
     // Start is called before the first frame update
 
+    [HideInInspector]
     public List<TextData> texts;
+    [HideInInspector]
     public int currentText;
+    [HideInInspector]
     public Image characterImage;
     public Text canvasText;
     public Image panelImage;
     public GameObject personagens;
     public GameObject gui;
+    [HideInInspector]
     public Text charName;
 
     //Button ui
@@ -86,7 +90,7 @@ public class SpeechManager : MonoBehaviour
         gameObject.SetActive(true);
         personagens.SetActive(false);
         gui.SetActive(false);
-        characterImage.sprite = personagem.defaultImage;
+        characterImage.sprite = personagem.personagem_data.defaultImage;
         characterImage.color = new Color(1, 1, 1, 1);
         canvasText.text = "";
         charName.text = "Detetive";
