@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40b96a05c7568564d8b635c931432a9d, type: 3}
+  m_Name: TextureManager
+  m_EditorClassIdentifier: 
+  sprites:
+  - name: alfred-default
+    sprite: {fileID: 21300000, guid: 0c274af385a881a428889df5f63c23c2, type: 3}
+  - name: alfred-neutral
+    sprite: {fileID: 21300000, guid: ef254e776793083409f8abb61f8e149e, type: 3}
+  - name: ariel-default
+    sprite: {fileID: 21300000, guid: 3ea9621a915f4f0419e2c6d19f84dd45, type: 3}
+  - name: ariel-angry
+    sprite: {fileID: 21300000, guid: a54724f4c308db54b8d9467421070424, type: 3}
+  - name: detective-default
+    sprite: {fileID: 21300000, guid: 760477bd0d93bac46ad2aa10fb68dabe, type: 3}
+  - name: catarina-default
+    sprite: {fileID: 21300000, guid: 4bf624519cabf1a499152d229073abc5, type: 3}
+  - name: catarina-angry
+    sprite: {fileID: 21300000, guid: 348808c40b656b7459baf275100f7002, type: 3}
+  - name: alice-crying
+    sprite: {fileID: 21300000, guid: bce41967f4cfb6d4e8c8d999ce62e36d, type: 3}
+  - name: alice-worried
+    sprite: {fileID: 21300000, guid: b34364f7b3dce7f41b18d8d2ed871480, type: 3}
+  - name: greyce-default
+    sprite: {fileID: 21300000, guid: 0305e265373d57b40b75d2c6a3b79a7e, type: 3}
+  - name: greyce-closed
+    sprite: {fileID: 21300000, guid: 9c4f3a67234fbfc4fa1b3d7aeee86b38, type: 3}
+  - name: jared-default
+    sprite: {fileID: 21300000, guid: afeb128736c2c0941b79d8af7575e4b5, type: 3}
+  - name: jared-angry
+    sprite: {fileID: 21300000, guid: 1ee750d326f58084995f0863fc48ce14, type: 3}
+  pistas:
+  - name: alfred
+    sprite: {fileID: 21300000, guid: f227830ca76836c4e86416006a4d2a27, type: 3}
+  - name: ariel
+    sprite: {fileID: 21300000, guid: 22fb96ec12ea77e43a678c8215de32f4, type: 3}
+  - name: greyce
+    sprite: {fileID: 21300000, guid: 9f28c0e909ea9c8439e9d6f1878af7e9, type: 3}
+  - name: catarina
+    sprite: {fileID: 21300000, guid: 38654c84edc1f14428eac111ef301232, type: 3}
+  - name: alice
+    sprite: {fileID: 21300000, guid: 6507d0fe9a109f34b832655abbe7e817, type: 3}
+  - name: jared
+    sprite: {fileID: 21300000, guid: 4e8b3add683aec246b309b8452dfbf33, type: 3}
+  - name: atadura
+    sprite: {fileID: 21300000, guid: 9eb970ebf26c35d4c9fcddb27aa051d3, type: 3}
+  - name: chave-de-fenda
+    sprite: {fileID: 21300000, guid: c6c6cab8f5c7bf04b9e04d6facfebaa4, type: 3}
+  - name: chave-do-carro
+    sprite: {fileID: 21300000, guid: d7c64968e37e28244aacfae1db2710c2, type: 3}
+  - name: chuveiro
+    sprite: {fileID: 21300000, guid: 6e71f371f9f0369449923e78155c5f87, type: 3}
+  - name: encharpe
+    sprite: {fileID: 21300000, guid: 2b86dad8068070541b1003e5a3b86bb1, type: 3}
+  - name: livro-aberto
+    sprite: {fileID: 21300000, guid: 5d0ddbf8645ced34887f66302b1f6401, type: 3}
+  - name: nota-fiscal
+    sprite: {fileID: 21300000, guid: e4eb2a69ee0e0cf429c53dd536abca44, type: 3}
+  - name: oculos
+    sprite: {fileID: 21300000, guid: bf44c09812165094d989f91089546513, type: 3}
+  - name: penas-de-galinha
+    sprite: {fileID: 21300000, guid: ae29d2ee76084bc4488fb9d60656f1ea, type: 3}
+  - name: rosa-branca
+    sprite: {fileID: 21300000, guid: fc8020fc895ddf44887f78467a452b89, type: 3}
+  - name: tempero
+    sprite: {fileID: 21300000, guid: 2fd8c5d33ae6f434bb7f57f03390cc04, type: 3}
+  - name: testamento
+    sprite: {fileID: 21300000, guid: a5a07f37eeeedb743a5c96ef480ead11, type: 3}

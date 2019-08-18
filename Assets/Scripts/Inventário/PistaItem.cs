@@ -6,9 +6,10 @@ public class PistaItem : MonoBehaviour
 {
     public LupaButton lupa;
     public SpeechManager speech;
+    public InspectionManager manager;
     SpriteRenderer spriteRenderer;
 
-    public ScriptablePista scriptable;
+    public PistaData data;
 
     // Start is called before the first frame update
     void Start()
@@ -17,9 +18,9 @@ public class PistaItem : MonoBehaviour
     }
 
     void Update(){
-        scriptable.position = transform.position;
-        scriptable.scale = transform.localScale;
-        scriptable.rotation = transform.rotation;
+        data.position = transform.position;
+        data.scale = transform.localScale;
+        data.rotation = transform.rotation;
     }
 
     // Update is called once per frame
@@ -27,16 +28,17 @@ public class PistaItem : MonoBehaviour
         if(lupa.pressed){
             //Adicionar ao inventário
             //Abrir um texto
-            GlobalProfile.getInstance().addItem(new InventoryItem(scriptable.itemId, scriptable.displayName, spriteRenderer.sprite));
+            GlobalProfile.getInstance().addItem(new InventoryItem(data.itemId, data.displayName, spriteRenderer.sprite));
             //Destruir item
-            speech.OpenText(scriptable.dialogo.texts);
+            speech.OpenText(data.dialogo.texts);
             Destroy(gameObject);
         }
     }
 
-    public void LoadData(ScriptablePista data, LupaButton lupa, SpeechManager speech){
-        GetComponent<SpriteRenderer>().sprite = data.image;
-        scriptable = data;
+    public void LoadData(PistaData data, LupaButton lupa, SpeechManager speech, InspectionManager manager){
+        GetComponent<SpriteRenderer>().sprite = manager.textureManager.GetSpritePista(data.image);
+        this.manager = manager;
+        this.data = data;
         transform.position = data.position;
         transform.localScale = data.scale;
         transform.rotation = data.rotation;

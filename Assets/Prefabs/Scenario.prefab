@@ -242,6 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad633952d0e4c104198b1fbb02858a00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager: {fileID: 3611990409394683886}
   texts: []
   currentText: 0
   characterImage: {fileID: 3667924363724731268}
@@ -689,8 +690,7 @@ MonoBehaviour:
   personagens_folder: {fileID: 4748278524782131710}
   pistas_folder: {fileID: 2796230212296183068}
   exits_folder: {fileID: 2179302160700208103}
-  characters: {fileID: 11400000, guid: 27e2a4725fb553b4ca35b51d269abab0, type: 2}
-  pistas: {fileID: 11400000, guid: e7b13574ab4a5544da3c705f27e1c520, type: 2}
+  textureManager: {fileID: 11400000, guid: 165dd8d4bb439664582ca39a741ac8e9, type: 2}
   scenarioName: 
   lupa: {fileID: 6782741223169554925}
   speechManager: {fileID: 5075874318973852194}
