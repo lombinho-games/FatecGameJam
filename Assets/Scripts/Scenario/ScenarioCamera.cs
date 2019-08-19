@@ -7,8 +7,8 @@ public class ScenarioCamera : MonoBehaviour
     // Start is called before the first frame update
 
     Vector3 movement;
-    Vector3 MousePos;
     Camera cam;
+    int velocity = 70;
 
     void Start()
     {
@@ -26,16 +26,14 @@ public class ScenarioCamera : MonoBehaviour
         GetComponent<BoxCollider2D>().size = new Vector2(width, height);
         GetComponent<Rigidbody2D>().AddForce(movement);
 
-        MousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-
     }
 
     public void GoLeft(){
-        movement = new Vector3(-55, 0, 0);
+        movement = new Vector3(-velocity, 0, 0);
     }
 
     public void GoRight(){
-        movement = new Vector3(55, 0, 0);
+        movement = new Vector3(velocity, 0, 0);
     }
 
     public void StopMove(){

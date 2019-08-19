@@ -617,7 +617,7 @@ MonoBehaviour:
   lupa: {fileID: 1211899989}
   data:
     defaultImage: alfred-default
-    headBob: alfred-icon
+    headBob: alfred
     dialogos:
     - texts:
       - texto: O que faz aqui parceiro?
@@ -637,7 +637,7 @@ MonoBehaviour:
         image: alfred-default
         owner: Alfred
       pergunta: Esta pergunta nao existe?
-      message: alfred-disabled
+      message: atadura
       enabled: 0
     position: {x: 0, y: 0, z: 0}
     scale: {x: 0, y: 0, z: 0}

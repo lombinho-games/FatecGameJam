@@ -15,6 +15,8 @@ public class SpeechableCharacter : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+       
     }
 
     void Update(){
@@ -26,8 +28,18 @@ public class SpeechableCharacter : MonoBehaviour
     // Update is called once per frame
     void OnMouseOver(){
         if(Input.GetMouseButtonDown(0) && !manager.mouseOnSeta){ //perguntar se o mouse não tá em cima da seta
-            if(data.dialogos.Count > 0)
+            if(data.dialogos.Count > 0){
+
+                foreach(InventoryItem item in GlobalProfile.getInstance().GetItems()){
+                    foreach(Dialogo d in data.dialogos){
+                        if(d.message == item.itemID){
+                            d.enabled = true;
+                        }
+                    }
+                }  
+
                 selectCharacter();
+            }
         }
     }
 

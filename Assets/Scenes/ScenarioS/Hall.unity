@@ -341,6 +341,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2132464284636721919, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1942700919967388219, guid: dfc79180924da2340ab88c61091fce5a,
         type: 3}
       propertyPath: m_IsActive
@@ -616,6 +621,16 @@ MonoBehaviour:
       pergunta: O que rolastes?
       message: catarina-default
       enabled: 1
+    - texts:
+      - texto: nao eh problema seu
+        image: catarina-angry
+        owner: catarina
+      - texto: eh msm eh
+        image: detective-default
+        owner: detetive
+      pergunta: E essa chave de fenda ai
+      message: chave-de-fenda
+      enabled: 0
     position: {x: 0, y: 0, z: 0}
     scale: {x: 0, y: 0, z: 0}
     rotation: {x: 0, y: 0, z: 0, w: 0}
