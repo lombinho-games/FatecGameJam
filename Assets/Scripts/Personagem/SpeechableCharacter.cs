@@ -30,7 +30,7 @@ public class SpeechableCharacter : MonoBehaviour
         if(Input.GetMouseButtonDown(0) && !manager.mouseOnSeta){ //perguntar se o mouse não tá em cima da seta
             if(data.dialogos.Count > 0){
 
-                foreach(InventoryItem item in GlobalProfile.getInstance().GetItems()){
+                foreach(InventoryItem item in GlobalProfile.getInstance().GetItems(manager.textureManager)){
                     foreach(Dialogo d in data.dialogos){
                         if(d.message == item.itemID){
                             d.enabled = true;

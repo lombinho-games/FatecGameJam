@@ -21,6 +21,8 @@ public class InventoryPopulator : MonoBehaviour
     void Start()
     {
         int cont = 0;
+
+        /*
         foreach(InventoryItem item in GlobalProfile.getInstance().GetItems()){
             
             GameObject cellItem = new GameObject();
@@ -47,6 +49,7 @@ public class InventoryPopulator : MonoBehaviour
             img.sprite = item.image;
             cont++;
         }
+        */
     }
 
     // Update is called once per frame

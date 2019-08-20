@@ -143,7 +143,7 @@ GameObject:
   - component: {fileID: 905135019}
   - component: {fileID: 905135018}
   m_Layer: 0
-  m_Name: PistaDefault
+  m_Name: Chave de Fenda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -157,7 +157,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 905135016}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.83, y: 2.34, z: -9}
+  m_LocalPosition: {x: -1.8, y: 2.38, z: -9}
   m_LocalScale: {x: 0.13734, y: 0.13734, z: 0.6867}
   m_Children: []
   m_Father: {fileID: 1836714121}
