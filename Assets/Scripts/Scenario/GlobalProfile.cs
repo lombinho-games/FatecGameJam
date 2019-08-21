@@ -22,8 +22,11 @@ public class GlobalProfile
         if(items == null){
             items = new List<InventoryItem>();
         }
-        dirty = true;
-        items.Add(item);
+
+        if (!items.Contains(item)) {
+            dirty = true;
+            items.Add(item);
+        }
     }
 
     public List<InventoryItem> GetItems(TextureManager manager){
@@ -41,6 +44,7 @@ public class GlobalProfile
     {
         dirty = false;
         InventorySave inventory = SaveGameSystem.LoadGame("slot0_inventory") as InventorySave;
+        if (inventory == null) return;
 
         if (items == null) items = new List<InventoryItem>();
 
