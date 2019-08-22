@@ -11,6 +11,10 @@ public class Inventory : MonoBehaviour
     public Sprite slotSprite;
     public GameObject selection;
     public Camera mainCamera;
+    public GameObject framePrefab;
+    Quadro quadro;
+
+    float width;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +24,7 @@ public class Inventory : MonoBehaviour
 
         int cols = 4;
         float margin = 10;
-        float width = (rect.rect.width - (cols+1) * margin) / cols;
+        width = (rect.rect.width - (cols+1) * margin) / cols;
 
         int x = 0;
         int y = 0;
@@ -46,7 +50,7 @@ public class Inventory : MonoBehaviour
 
             //Criando o item dentro do slot
 
-            GameObject itemGO = new GameObject("Image");
+            GameObject itemGO = new GameObject(item.displayName);
             RectTransform itemRect = itemGO.AddComponent<RectTransform>();
             Image itemImage = itemGO.AddComponent<Image>();
             itemImage.preserveAspect = true;
@@ -100,13 +104,14 @@ public class Inventory : MonoBehaviour
     {
         PointerEventData pointer = (PointerEventData)data;
 
-        pointer.pointerDrag.GetComponent<Image>().color = new Color(1, 1, 1, 0);
-        selection.GetComponent<Image>().sprite = pointer.pointerDrag.GetComponent<Image>().sprite;
+        if (pointer.pointerDrag.GetComponent<Image>().color.a == 1) {
 
+            pointer.pointerDrag.GetComponent<Image>().color = new Color(1, 1, 1, 0);
+            selection.GetComponent<Image>().sprite = pointer.pointerDrag.GetComponent<Image>().sprite;
+            selection.name = pointer.pointerDrag.name;
 
-//pointer.pointerDrag.SetActive(false);
-selection.SetActive(true);
-        Debug.Log("Begin drag");
+            selection.SetActive(true);
+        }
     }
 
     void Drag(BaseEventData data)
@@ -117,11 +122,40 @@ selection.SetActive(true);
     void Drop(BaseEventData data)
     {
         PointerEventData pointer = (PointerEventData)data;
-        pointer.pointerDrag.GetComponent<Image>().color = new Color(1, 1, 1, 1);
 
-        selection.SetActive(false);
-        //pointer.pointerDrag.SetActive(true);
-        Debug.Log("Drop");
+        
+
+        if (selection.activeInHierarchy) {
+            selection.SetActive(false);
+            if (quadro != null) {
+                //Coloca o manolo no quadro
+                GameObject itemQuadro = Instantiate(framePrefab);// new GameObject("Item");
+
+                itemQuadro.transform.Find("Pista").GetComponent<Image>().sprite = selection.GetComponent<Image>().sprite;
+                itemQuadro.transform.Find("Text").GetComponent<Text>().text = selection.name;
+
+                //Adiciona evento de click
+                EventTrigger trigger = itemQuadro.AddComponent<EventTrigger>();
+                EventTrigger.Entry entry = new EventTrigger.Entry();
+                entry.eventID = EventTriggerType.PointerClick;
+                entry.callback.AddListener(new UnityEngine.Events.UnityAction<BaseEventData>( (BaseEventData baseData) => {
+                    quadro.OpenMenu();
+                }));
+                trigger.triggers.Add(entry);
+
+                //Posiciona ele
+                itemQuadro.transform.SetParent(quadro.content.transform, false);
+                Vector3 mouseWorldPos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+                Vector3 itPos = mouseWorldPos;
+                itPos.z = 0;
+                itemQuadro.transform.position = itPos;
+                itemQuadro.transform.RotateAround(itemQuadro.transform.position, new Vector3(0, 0, 1), Random.Range(-10, 10));
+
+            }
+            else {
+                pointer.pointerDrag.GetComponent<Image>().color = new Color(1, 1, 1, 1);
+            }
+        }
     }
 
     // Update is called once per frame
@@ -133,5 +167,15 @@ selection.SetActive(true);
             position.z = 0;
             selection.transform.position = position;
         }
+    }
+
+    public void PointerEnterQuadro(Quadro quadro)
+    {
+        this.quadro = quadro;
+    }
+
+    public void PointerExitQuadro(Quadro quadro)
+    {
+        quadro = null;
     }
 }
