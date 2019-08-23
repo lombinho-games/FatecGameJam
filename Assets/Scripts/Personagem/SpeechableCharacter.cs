@@ -3,10 +3,15 @@ using UnityEngine;
 using System.Linq;
 public class SpeechableCharacter : MonoBehaviour
 {
+    public CursorMode CursorMode = CursorMode.Auto;
+    public Texture2D ReadTexture2D;
+    public Texture2D NReadTexture2D;
+    public Vector2 hotSpot = Vector2.zero;
     public SpeechManager speechCanvas;
     public InspectionManager manager;
     public LupaButton lupa;
     SpriteRenderer spriteRenderer;
+    public bool cRead;
 
     //Data
     public CharacterData data;
@@ -66,5 +71,23 @@ public class SpeechableCharacter : MonoBehaviour
         this.manager = manager;
         this.lupa = lupa;
     }
-   
+
+    public void OnMouseEnter() {
+         foreach(Dialogo d in data.dialogos){
+             if(d.enabled && !d.read){  
+                cRead = false;
+             }
+         }
+         if(cRead){
+            Cursor.SetCursor(NReadTexture2D,hotSpot,CursorMode);        
+        }
+        else{
+             Cursor.SetCursor(ReadTexture2D,hotSpot,CursorMode);
+        }
+
+    }
+    public void OnMouseExit() {
+        Cursor.SetCursor(null,hotSpot,CursorMode);
+        cRead = true;
+    }   
 }

@@ -138,6 +138,7 @@ public class SpeechManager : MonoBehaviour
 
                 btn_btn.onClick.AddListener( () => {
                     OpenText(dig.texts);
+                    dig.read = true;
                 });
 
                 //Cria o texto do botão

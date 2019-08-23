@@ -68,6 +68,7 @@ public class GlobalProfile
 
     public InventorySave GetSerializableInventory()
     {
+        if (items == null) items = new List<InventoryItem>();
         InventorySave inventory = new InventorySave();
         foreach(InventoryItem i in items) {
             inventory.items.Add(i.itemID);
