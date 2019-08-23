@@ -11,7 +11,6 @@ public class SpeechableCharacter : MonoBehaviour
     public InspectionManager manager;
     public LupaButton lupa;
     SpriteRenderer spriteRenderer;
-    public bool cRead;
 
     //Data
     public CharacterData data;
@@ -73,21 +72,21 @@ public class SpeechableCharacter : MonoBehaviour
     }
 
     public void OnMouseEnter() {
+        bool cRead = true;
          foreach(Dialogo d in data.dialogos){
-             if(d.enabled && !d.read){  
+             if(d.enabled && !d.read){
                 cRead = false;
              }
          }
-         if(cRead){
-            Cursor.SetCursor(NReadTexture2D,hotSpot,CursorMode);        
+        if(!cRead){
+            Cursor.SetCursor(ReadTexture2D,hotSpot,CursorMode); // Cursor de novo Texto disponivel      
         }
         else{
-             Cursor.SetCursor(ReadTexture2D,hotSpot,CursorMode);
+             Cursor.SetCursor(NReadTexture2D,hotSpot,CursorMode); // Cursor de Texto base
         }
 
     }
     public void OnMouseExit() {
         Cursor.SetCursor(null,hotSpot,CursorMode);
-        cRead = true;
     }   
 }

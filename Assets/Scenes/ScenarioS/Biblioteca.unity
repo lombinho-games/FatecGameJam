@@ -130,288 +130,516 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad633952d0e4c104198b1fbb02858a00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &905135016
-GameObject:
+--- !u!1001 &745577669
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 905135017}
-  - component: {fileID: 905135020}
-  - component: {fileID: 905135019}
-  - component: {fileID: 905135018}
-  m_Layer: 0
-  m_Name: Chave de Fenda
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &905135017
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 905135016}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.8, y: 2.38, z: -9}
-  m_LocalScale: {x: 0.13734, y: 0.13734, z: 0.6867}
-  m_Children: []
-  m_Father: {fileID: 1836714121}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &905135018
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 905135016}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 1
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.2, y: 5.64}
-    newSize: {x: 5.2, y: 5.64}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5, y: 5}
-  m_EdgeRadius: 0
---- !u!114 &905135019
-MonoBehaviour:
+  m_Modification:
+    m_TransformParent: {fileID: 1836714121}
+    m_Modifications:
+    - target: {fileID: 2602953544191078622, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_Name
+      value: Chave de Fenda
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078623, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078623, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078623, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078623, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078623, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078623, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078623, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078623, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078623, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078623, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078623, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078618, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c6cab8f5c7bf04b9e04d6facfebaa4,
+        type: 3}
+    - target: {fileID: 2602953544191078618, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 5.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078618, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 5.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078618, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: data.messages.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: data.dialogo.texts.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: lupa
+      value: 
+      objectReference: {fileID: 1211899989}
+    - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: speech
+      value: 
+      objectReference: {fileID: 451729944}
+    - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 1412784564}
+    - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: data.image
+      value: chave-de-fenda
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: data.displayName
+      value: Chave de fenda
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: data.itemId
+      value: chave-de-fenda
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: data.messages.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: data.dialogo.texts.Array.data[0].texto
+      value: Essa chave ta ai
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: data.dialogo.texts.Array.data[1].texto
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: data.dialogo.texts.Array.data[0].image
+      value: detective-default
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: data.dialogo.texts.Array.data[0].owner
+      value: Detetive
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9e4f6afbecbea0f46bef53ae6fa8739a, type: 3}
+--- !u!1001 &1060767202
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 905135016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c489ffecf77bdb749a45c747d526c143, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lupa: {fileID: 1211899989}
-  speech: {fileID: 451729944}
-  manager: {fileID: 1412784564}
-  data:
-    dialogo:
-      texts:
-      - texto: Esta chave de fenda
-        image: detective-default
-        owner: Detetive
-      - texto: "Come o cu de quem t\xE1 lendo"
-        image: detective-default
-        owner: Detetive
-      pergunta: 
-      message: 
-      enabled: 0
-    image: chave-de-fenda
-    displayName: Chave de fenda
-    itemId: chave-de-fenda
-    messages: []
-    position: {x: 0, y: 0, z: 0}
-    scale: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 0}
---- !u!212 &905135020
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 905135016}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: c6c6cab8f5c7bf04b9e04d6facfebaa4, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 5.2, y: 5.64}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!1 &1207380693
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1207380694}
-  - component: {fileID: 1207380697}
-  - component: {fileID: 1207380696}
-  - component: {fileID: 1207380695}
-  m_Layer: 0
-  m_Name: Rosa
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1207380694
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1207380693}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.73, y: 2.36, z: -9}
-  m_LocalScale: {x: 0.13734, y: 0.13734, z: 0.6867}
-  m_Children: []
-  m_Father: {fileID: 1836714121}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1207380695
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1207380693}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 1
-  m_Offset: {x: 0, y: 0.000003874302}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.2, y: 3.46}
-    newSize: {x: 5.2, y: 5.64}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5, y: 2.8754644}
-  m_EdgeRadius: 0
---- !u!114 &1207380696
-MonoBehaviour:
+  m_Modification:
+    m_TransformParent: {fileID: 378206426}
+    m_Modifications:
+    - target: {fileID: 7277678701974216968, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: m_Name
+      value: Alfred
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948241479598367973, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -12.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948241479598367973, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948241479598367973, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948241479598367973, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948241479598367973, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948241479598367973, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948241479598367973, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948241479598367973, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948241479598367973, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948241479598367973, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948241479598367973, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 393748280731334981, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0c274af385a881a428889df5f63c23c2,
+        type: 3}
+    - target: {fileID: 393748280731334981, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[0].texts.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[1].texts.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: speechCanvas
+      value: 
+      objectReference: {fileID: 451729944}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 1412784564}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: lupa
+      value: 
+      objectReference: {fileID: 1211899989}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.defaultImage
+      value: alfred-default
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.headBob
+      value: alfred
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[0].texts.Array.data[0].texto
+      value: O que faz aqui parceiro?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[0].texts.Array.data[0].image
+      value: detective-default
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[0].texts.Array.data[0].owner
+      value: Detetive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[0].texts.Array.data[1].texto
+      value: Como o cu de quem ta lendo
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[0].texts.Array.data[1].image
+      value: alfred-default
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[0].texts.Array.data[1].owner
+      value: Alfred
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[0].pergunta
+      value: O que faz aqui?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[0].message
+      value: alfred-default
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[0].enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[1].texts.Array.data[0].texto
+      value: "Esta pergunta n\xE3o existe?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[1].texts.Array.data[0].image
+      value: detective-default
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[1].texts.Array.data[0].owner
+      value: Detetive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[1].texts.Array.data[1].texto
+      value: "Sinceramente, eu n\xE3o sei"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[1].texts.Array.data[1].image
+      value: alfred-default
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[1].texts.Array.data[1].owner
+      value: Alfred
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[1].pergunta
+      value: Esta pergunta nao existe?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[1].message
+      value: atadura
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e30920b744d4dce4d8107c9168e7a55e, type: 3}
+--- !u!1001 &1075721375
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1207380693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c489ffecf77bdb749a45c747d526c143, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lupa: {fileID: 1211899989}
-  speech: {fileID: 451729944}
-  manager: {fileID: 1412784564}
-  data:
-    dialogo:
-      texts:
-      - texto: Esta chave de fenda
-        image: detective-default
-        owner: Detetive
-      - texto: "Come o cu de quem t\xE1 lendo"
-        image: detective-default
-        owner: Detetive
-      pergunta: 
-      message: 
-      enabled: 0
-    image: rosa-branca
-    displayName: Rosa
-    itemId: rosa-branca
-    messages: []
-    position: {x: 0, y: 0, z: 0}
-    scale: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 0}
---- !u!212 &1207380697
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1207380693}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: fc8020fc895ddf44887f78467a452b89, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 5.2, y: 5.64}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1836714121}
+    m_Modifications:
+    - target: {fileID: 2602953544191078622, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_Name
+      value: Rosa Branca
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078623, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078623, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078623, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078623, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078623, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078623, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078623, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078623, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078623, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078623, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078623, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078618, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fc8020fc895ddf44887f78467a452b89,
+        type: 3}
+    - target: {fileID: 2602953544191078618, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 5.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078618, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 5.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078618, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: data.dialogo.texts.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: lupa
+      value: 
+      objectReference: {fileID: 1211899989}
+    - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: speech
+      value: 
+      objectReference: {fileID: 451729944}
+    - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 1412784564}
+    - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: data.image
+      value: rosa-branca
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: data.displayName
+      value: Rosa
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: data.itemId
+      value: rosa-branca
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: data.dialogo.texts.Array.data[0].texto
+      value: "\xC9 uma rosa, foda-se"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: data.dialogo.texts.Array.data[0].owner
+      value: Detetive
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: data.dialogo.texts.Array.data[0].image
+      value: detective-default
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078620, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 5.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078620, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 5.64
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9e4f6afbecbea0f46bef53ae6fa8739a, type: 3}
 --- !u!114 &1211899989 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6782741223169554925, guid: dfc79180924da2340ab88c61091fce5a,
@@ -689,152 +917,3 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1951008846}
   m_PrefabAsset: {fileID: 0}
---- !u!212 &393748282223407528
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7277678700482046437}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0c274af385a881a428889df5f63c23c2, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 28.94, y: 40.93}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &3948241478037122056
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7277678700482046437}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.23, y: -1.46, z: 9}
-  m_LocalScale: {x: 0.18312, y: 0.18312, z: 0.18312}
-  m_Children: []
-  m_Father: {fileID: 378206426}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5151352205009191078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7277678700482046437}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e815c8b7fc1d64646a087a175cf43031, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speechCanvas: {fileID: 451729944}
-  manager: {fileID: 1412784564}
-  lupa: {fileID: 1211899989}
-  data:
-    defaultImage: alfred-default
-    headBob: alfred
-    dialogos:
-    - texts:
-      - texto: O que faz aqui parceiro?
-        image: detective-default
-        owner: Detetive
-      - texto: Como o cu de quem ta lendo
-        image: alfred-default
-        owner: Alfred
-      pergunta: O que faz aqui?
-      message: alfred-default
-      enabled: 1
-    - texts:
-      - texto: "Esta pergunta n\xE3o existe?"
-        image: detective-default
-        owner: Detetive
-      - texto: "Sinceramente, eu n\xE3o sei"
-        image: alfred-default
-        owner: Alfred
-      pergunta: Esta pergunta nao existe?
-      message: atadura
-      enabled: 0
-    position: {x: 0, y: 0, z: 0}
-    scale: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 0}
---- !u!61 &6883256478108607221
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7277678700482046437}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0000104904175, y: -0.90306854}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 28.94, y: 40.93}
-    newSize: {x: 28.94, y: 40.93}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 21.263903, y: 39.123863}
-  m_EdgeRadius: 0
---- !u!1 &7277678700482046437
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3948241478037122056}
-  - component: {fileID: 393748282223407528}
-  - component: {fileID: 5151352205009191078}
-  - component: {fileID: 6883256478108607221}
-  m_Layer: 0
-  m_Name: PersonagemDefault
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
