@@ -6,8 +6,14 @@ using UnityEngine.UI;
 public class InventoryItemMenu : MonoBehaviour
 {
 
+    [HideInInspector]
     public PistaFrame selected;
+    [HideInInspector]
     public GameObject pistaSlot;
+
+    public GameObject mouse;
+    public GameObject lineGroup;
+    public Quadro quadro;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +29,19 @@ public class InventoryItemMenu : MonoBehaviour
 
     public void Connect()
     {
+        gameObject.SetActive(false);
+
+
+        GameObject lineConection = new GameObject("Line");
+        ItemConnection connection = lineConection.AddComponent<ItemConnection>();
+        connection.width = 5;
+        connection.objectA = selected.outerPin;
+        connection.objectB = mouse;
+        connection.isOnMouse = true;
+
+        lineConection.transform.SetParent(lineGroup.transform, false);
+
+        quadro.creatingConnection = connection;
 
     }
 

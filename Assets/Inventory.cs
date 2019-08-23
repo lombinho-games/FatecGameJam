@@ -119,7 +119,7 @@ public class Inventory : MonoBehaviour
 
     void Drag(BaseEventData data)
     {
-        Debug.Log("Drag");
+
     }
 
     void Drop(BaseEventData data)
@@ -134,21 +134,11 @@ public class Inventory : MonoBehaviour
                 //Coloca o manolo no quadro
                 GameObject itemQuadro = Instantiate(framePrefab);// new GameObject("Item");
                 PistaFrame frame = itemQuadro.GetComponent<PistaFrame>();
+                frame.quadro = quadro;
+                frame.originalSlot = selection.originalSlot;
                 
                 itemQuadro.transform.Find("Pista").GetComponent<Image>().sprite = selection.GetComponent<Image>().sprite;
                 itemQuadro.transform.Find("Text").GetComponent<Text>().text = selection.name;
-
-                //Adiciona evento de click
-                EventTrigger trigger = itemQuadro.AddComponent<EventTrigger>();
-                EventTrigger.Entry entry = new EventTrigger.Entry();
-                entry.eventID = EventTriggerType.PointerClick;
-                entry.callback.AddListener(new UnityEngine.Events.UnityAction<BaseEventData>( (BaseEventData baseData) => {
-
-                    if(!frame.draggin)
-                        quadro.OpenMenu(frame, selection.originalSlot);
-
-                }));
-                trigger.triggers.Add(entry);
 
                 //Posiciona ele
                 itemQuadro.transform.SetParent(quadro.content.transform, false);

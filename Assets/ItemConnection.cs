@@ -10,7 +10,12 @@ public class ItemConnection : MaskableGraphic
     public GameObject objectA;
     public GameObject objectB;
 
+    Color currentColor;
+
     public float width;
+    public bool isOnMouse;
+
+    Vector2[] corners = new Vector2[4];
 
     LineRenderer lineRenderer;
 
@@ -33,15 +38,16 @@ public class ItemConnection : MaskableGraphic
 
         Vector3 v2 = new Vector3(direction.x, direction.y, 0);
 
-        vh.AddVert(pa + v2, color, Vector2.zero);
-        vh.AddVert(pa - v2, color, Vector2.zero);
-        vh.AddVert(pb + v2, color, Vector2.zero);
-        vh.AddVert(pb - v2, color, Vector2.zero);
+        corners[0] = pa + v2;
+        corners[1] = pa - v2;
+        corners[2] = pb - v2;
+        corners[3] = pb + v2;
 
+        for(int i = 0; i < 4; i ++)
+            vh.AddVert(corners[i], currentColor, Vector2.zero);
 
         vh.AddTriangle(0, 1, 2);
-        vh.AddTriangle(1, 2, 3);
-
+        vh.AddTriangle(0, 2, 3);
 
     }
 
@@ -58,6 +64,28 @@ public class ItemConnection : MaskableGraphic
         return vec;
     }
 
+    public bool IsPointInPolygon(Vector2 point, Vector2[] polygon)
+    {
+        int polygonLength = polygon.Length, i = 0;
+        bool inside = false;
+        // x, y for tested point.
+        float pointX = point.x, pointY = point.y;
+        // start / end point for the current polygon segment.
+        float startX, startY, endX, endY;
+        Vector2 endPoint = polygon[polygonLength - 1];
+        endX = endPoint.x;
+        endY = endPoint.y;
+        while (i < polygonLength) {
+            startX = endX; startY = endY;
+            endPoint = polygon[i++];
+            endX = endPoint.x; endY = endPoint.y;
+            //
+            inside ^= (endY > pointY ^ startY > pointY) /* ? pointY inside [startY;endY] segment ? */
+                      && /* if so, test if it is under the segment */
+                      ((pointX - endX) < (pointY - endY) * (startX - endX) / (startY - endY));
+        }
+        return inside;
+    }
 
     // Start is called before the first frame update
     protected override void Start()
@@ -69,5 +97,14 @@ public class ItemConnection : MaskableGraphic
     void Update()
     {
         SetAllDirty();
+
+        currentColor = color;
+
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePosition = transform.InverseTransformPoint(mousePosition);
+
+        if(IsPointInPolygon(mousePosition, corners) && !isOnMouse) {
+            currentColor = Color.red;
+        }
     }
 }
