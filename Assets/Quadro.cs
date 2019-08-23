@@ -23,12 +23,15 @@ public class Quadro : MonoBehaviour
         
     }
 
-    public void OpenMenu()
+    public void OpenMenu(PistaFrame pista, GameObject pistaSlot)
     {
         Vector3 position = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         position.z = 0;
         menu.transform.position = position;
         menu.SetActive(true);
+        menu.GetComponent<InventoryItemMenu>().selected = pista;
+        menu.GetComponent<InventoryItemMenu>().pistaSlot = pistaSlot;
+
     }
 
     public void CloseMenu()

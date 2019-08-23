@@ -9,9 +9,10 @@ public class Inventory : MonoBehaviour
     public GameObject content;
     public TextureManager manager;
     public Sprite slotSprite;
-    public GameObject selection;
+    public ItemSelection selection;
     public Camera mainCamera;
     public GameObject framePrefab;
+    public GameObject pinPrefab;
     Quadro quadro;
 
     float width;
@@ -110,7 +111,9 @@ public class Inventory : MonoBehaviour
             selection.GetComponent<Image>().sprite = pointer.pointerDrag.GetComponent<Image>().sprite;
             selection.name = pointer.pointerDrag.name;
 
-            selection.SetActive(true);
+            selection.originalSlot = pointer.pointerDrag;
+
+            selection.gameObject.SetActive(true);
         }
     }
 
@@ -125,12 +128,13 @@ public class Inventory : MonoBehaviour
 
         
 
-        if (selection.activeInHierarchy) {
-            selection.SetActive(false);
+        if (selection.gameObject.activeInHierarchy) {
+            selection.gameObject.SetActive(false);
             if (quadro != null) {
                 //Coloca o manolo no quadro
                 GameObject itemQuadro = Instantiate(framePrefab);// new GameObject("Item");
-
+                PistaFrame frame = itemQuadro.GetComponent<PistaFrame>();
+                
                 itemQuadro.transform.Find("Pista").GetComponent<Image>().sprite = selection.GetComponent<Image>().sprite;
                 itemQuadro.transform.Find("Text").GetComponent<Text>().text = selection.name;
 
@@ -139,18 +143,28 @@ public class Inventory : MonoBehaviour
                 EventTrigger.Entry entry = new EventTrigger.Entry();
                 entry.eventID = EventTriggerType.PointerClick;
                 entry.callback.AddListener(new UnityEngine.Events.UnityAction<BaseEventData>( (BaseEventData baseData) => {
-                    quadro.OpenMenu();
+
+                    if(!frame.draggin)
+                        quadro.OpenMenu(frame, selection.originalSlot);
+
                 }));
                 trigger.triggers.Add(entry);
 
                 //Posiciona ele
                 itemQuadro.transform.SetParent(quadro.content.transform, false);
+                itemQuadro.transform.SetAsFirstSibling();
                 Vector3 mouseWorldPos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
                 Vector3 itPos = mouseWorldPos;
                 itPos.z = 0;
                 itemQuadro.transform.position = itPos;
                 itemQuadro.transform.RotateAround(itemQuadro.transform.position, new Vector3(0, 0, 1), Random.Range(-10, 10));
 
+                GameObject pin = Instantiate(pinPrefab);
+                pin.GetComponent<PistaPin>().pista = itemQuadro.transform.Find("Pin").gameObject;
+                pin.transform.SetParent(quadro.content.transform, false);
+                pin.transform.SetAsLastSibling();
+
+                frame.outerPin = pin;
             }
             else {
                 pointer.pointerDrag.GetComponent<Image>().color = new Color(1, 1, 1, 1);

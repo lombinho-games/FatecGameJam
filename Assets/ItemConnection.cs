@@ -10,27 +10,33 @@ public class ItemConnection : MaskableGraphic
     public GameObject objectA;
     public GameObject objectB;
 
+    public float width;
+
     LineRenderer lineRenderer;
 
     protected override void OnPopulateMesh(VertexHelper vh)
     {
         vh.Clear();
 
+        if (objectA == null || objectB == null) return;
+
         Vector3 pa = transform.InverseTransformPoint(objectA.transform.position);
+        pa.z = 0;
         Vector3 pb = transform.InverseTransformPoint(objectB.transform.position);
+        pb.z = 0;
 
         Vector2 direction = (pb - pa).normalized;
 
         direction = rotateVector(direction, 90);
 
-        direction *= 10;
+        direction *= width;
 
         Vector3 v2 = new Vector3(direction.x, direction.y, 0);
 
-        vh.AddVert(pa + v2, Color.white, Vector2.zero);
-        vh.AddVert(pa - v2, Color.white, Vector2.zero);
-        vh.AddVert(pb + v2, Color.white, Vector2.zero);
-        vh.AddVert(pb - v2, Color.white, Vector2.zero);
+        vh.AddVert(pa + v2, color, Vector2.zero);
+        vh.AddVert(pa - v2, color, Vector2.zero);
+        vh.AddVert(pb + v2, color, Vector2.zero);
+        vh.AddVert(pb - v2, color, Vector2.zero);
 
 
         vh.AddTriangle(0, 1, 2);
