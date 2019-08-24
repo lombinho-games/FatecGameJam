@@ -6,7 +6,7 @@ public class Quadro : MonoBehaviour
 {
 
     public GameObject content;
-    public GameObject menu;
+    public InventoryItemMenu menu;
     public Camera mainCamera;
     public GameObject mouse;
 
@@ -29,23 +29,20 @@ public class Quadro : MonoBehaviour
 
     public void OpenMenu(PistaFrame pista, GameObject pistaSlot)
     {
-        Vector3 position = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-        position.z = 0;
-        menu.transform.position = position;
-        menu.SetActive(true);
-        menu.GetComponent<InventoryItemMenu>().selected = pista;
-        menu.GetComponent<InventoryItemMenu>().pistaSlot = pistaSlot;
+        
+        menu.OpenMenu(pista, pistaSlot, null, true, true);
+        
     }
 
     public void CloseMenu()
     {
-        menu.SetActive(false);
+        menu.gameObject.SetActive(false);
     }
 
     public void QuadroClick()
     {
-        if (menu.activeInHierarchy) {
-            menu.SetActive(false);
+        if (menu.gameObject.activeInHierarchy) {
+            menu.gameObject.SetActive(false);
         }
 
         if (creatingConnection != null) {

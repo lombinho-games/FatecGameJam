@@ -10,10 +10,16 @@ public class InventoryItemMenu : MonoBehaviour
     public PistaFrame selected;
     [HideInInspector]
     public GameObject pistaSlot;
+    [HideInInspector]
+    public ItemConnection connection;
 
     public GameObject mouse;
     public GameObject lineGroup;
     public Quadro quadro;
+
+    //Botões
+    public GameObject connectButton;
+    public GameObject removeButton;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +30,21 @@ public class InventoryItemMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+
+    public void OpenMenu(PistaFrame pista, GameObject pistaSlot, ItemConnection connection, bool connectButton, bool removeButton)
+    {
+        Vector3 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        position.z = 0;
+        transform.position = position;
+        gameObject.SetActive(true);
+        selected = pista;
+        this.pistaSlot = pistaSlot;
+        this.connection = connection;
+
+        this.connectButton.SetActive(connectButton);
+        this.removeButton.SetActive(removeButton);
     }
 
     public void Connect()
@@ -38,6 +58,8 @@ public class InventoryItemMenu : MonoBehaviour
         connection.objectA = selected.outerPin;
         connection.objectB = mouse;
         connection.isOnMouse = true;
+        connection.menu = this;
+        connection.color = new Color(227 / 255f, 208 / 255f, 117 / 255f);
 
         lineConection.transform.SetParent(lineGroup.transform, false);
 
@@ -49,9 +71,22 @@ public class InventoryItemMenu : MonoBehaviour
 
         //Destroi a conexão se existe alguma
 
-        Destroy(selected.outerPin.gameObject);
-        Destroy(selected.gameObject);
-        pistaSlot.GetComponent<Image>().color = new Color(1, 1, 1, 1);
+        if (selected != null) {
+
+            for(int i = 0; i < lineGroup.transform.childCount; i++) {
+                ItemConnection conn = lineGroup.transform.GetChild(i).GetComponent<ItemConnection>();
+                if(conn.objectA == selected.outerPin || conn.objectB == selected.outerPin) {
+                    Destroy(conn.gameObject);
+                }
+            }
+
+            Destroy(selected.outerPin.gameObject);
+            Destroy(selected.gameObject);
+            pistaSlot.GetComponent<Image>().color = new Color(1, 1, 1, 1);
+        }
+        if(connection != null) {
+            Destroy(connection.gameObject);
+        }
 
         gameObject.SetActive(false);
 

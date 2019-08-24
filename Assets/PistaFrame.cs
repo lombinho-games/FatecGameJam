@@ -7,6 +7,7 @@ public class PistaFrame : MonoBehaviour
     public Quadro quadro;
     public GameObject outerPin;
     public GameObject originalSlot;
+    public GameObject linhaGroup;
     public bool draggin;
 
     // Start is called before the first frame update
@@ -42,26 +43,44 @@ public class PistaFrame : MonoBehaviour
 
     public void Click()
     {
-        if(quadro.creatingConnection != null) {
-            if(quadro.creatingConnection.objectA == gameObject) {
+        if(quadro.creatingConnection != null) {// Se eu clico com conexão
+            if(quadro.creatingConnection.objectA == gameObject) { //Conectando comigo msm
                 Destroy(quadro.creatingConnection.gameObject);
                 quadro.creatingConnection = null;
             }
-            else {
-                quadro.creatingConnection.objectB = outerPin;
-                quadro.creatingConnection.isOnMouse = false;
-                quadro.creatingConnection = null;
+            else {// Conectando com outro objeto
 
-                return;
+                bool exists = false; //pergunta se já existe um objeto com essa mesma conexão
+
+                for (int i = 0; i < linhaGroup.transform.childCount; i++) {
+                    ItemConnection linha = linhaGroup.transform.GetChild(i).gameObject.GetComponent<ItemConnection>();
+                    if (linha == quadro.creatingConnection) continue;
+
+                    if (linha.objectA == quadro.creatingConnection.objectA && linha.objectB == outerPin) {
+                        exists = true;
+                    }
+                    else if (linha.objectA == outerPin && linha.objectB == quadro.creatingConnection.objectA) {
+                        exists = true;
+                    }
+                }
+
+                if (!exists) {
+                    quadro.creatingConnection.objectB = outerPin;
+                    quadro.creatingConnection.isOnMouse = false;
+                    quadro.creatingConnection = null;
+                }
+                else {
+                    Destroy(quadro.creatingConnection.gameObject);
+                    quadro.creatingConnection = null;
+                }
             }
 
         }
-
-        if (!draggin && !quadro.menu.activeInHierarchy) {
-            quadro.OpenMenu(this, originalSlot);
+        else {
+            if (!draggin && !quadro.menu.gameObject.activeInHierarchy) {
+                quadro.OpenMenu(this, originalSlot);
+            }
         }
-
-        
     }
 
 }

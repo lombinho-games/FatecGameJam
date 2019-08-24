@@ -13,6 +13,7 @@ public class Inventory : MonoBehaviour
     public Camera mainCamera;
     public GameObject framePrefab;
     public GameObject pinPrefab;
+    public GameObject linhaGroup;
     Quadro quadro;
 
     float width;
@@ -134,6 +135,7 @@ public class Inventory : MonoBehaviour
                 //Coloca o manolo no quadro
                 GameObject itemQuadro = Instantiate(framePrefab);// new GameObject("Item");
                 PistaFrame frame = itemQuadro.GetComponent<PistaFrame>();
+                frame.linhaGroup = linhaGroup;
                 frame.quadro = quadro;
                 frame.originalSlot = selection.originalSlot;
                 

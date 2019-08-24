@@ -9,6 +9,7 @@ public class ItemConnection : MaskableGraphic
 
     public GameObject objectA;
     public GameObject objectB;
+    public InventoryItemMenu menu;
 
     Color currentColor;
 
@@ -105,6 +106,10 @@ public class ItemConnection : MaskableGraphic
 
         if(IsPointInPolygon(mousePosition, corners) && !isOnMouse) {
             currentColor = Color.red;
+
+            if (Input.GetMouseButtonDown(0)) {
+                menu.OpenMenu(null, null, this, false, true);
+            }
         }
     }
 }
