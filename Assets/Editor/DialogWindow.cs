@@ -122,7 +122,7 @@ public class DialogWindow : EditorWindow
 
             GUILayout.Label("Diálogos:");
             if(GUILayout.Button("Adicionar diálogo")){
-                Dialogo nd = new Dialogo(new List<TextData>(), "", "", true);
+                Dialogo nd = new Dialogo(new List<TextData>(), "", "", true,false);
                 
                 //Modal para criar o diálogo
                 var win = new ModalWindow(new Rect(30, 30, position.width - 60, position.height - 60), "CreateDialog", (w) =>
@@ -145,7 +145,7 @@ public class DialogWindow : EditorWindow
             }
             for(int i = 0; i < personagem.data.dialogos.Count; i ++){
                 GUILayout.BeginHorizontal("box");
-                if(personagem.data.dialogos[i] == null) personagem.data.dialogos[i] = new Dialogo(new List<TextData>(), "", "", true);
+                if(personagem.data.dialogos[i] == null) personagem.data.dialogos[i] = new Dialogo(new List<TextData>(), "", "", true,false);
                 GUILayout.Label("Pergunta");
                 personagem.data.dialogos[i].pergunta = EditorGUILayout.TextField(personagem.data.dialogos[i].pergunta);
                 GUILayout.Label("ID da Mensagem");

@@ -93,10 +93,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e815c8b7fc1d64646a087a175cf43031, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CursorMode: 0
+  ReadTexture2D: {fileID: 2800000, guid: afe31887c54d350479bb6841cafe864a, type: 3}
+  NReadTexture2D: {fileID: 2800000, guid: 87676f8789d2209408c73c2c6f8a9ade, type: 3}
+  hotSpot: {x: 0, y: 0}
   speechCanvas: {fileID: 0}
   manager: {fileID: 0}
   lupa: {fileID: 0}
-  personagem_data: {fileID: 0}
+  data:
+    defaultImage: 
+    headBob: 
+    dialogos: []
+    position: {x: 0, y: 0, z: 0}
+    scale: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!61 &6883256478797408792
 BoxCollider2D:
   m_ObjectHideFlags: 0

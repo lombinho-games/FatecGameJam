@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PistaItem : MonoBehaviour
 {
+    public Texture2D cursorTexture;
+    public CursorMode cursorMode = CursorMode.Auto;
+    public Vector2 hotSpot = Vector2.zero;
     public LupaButton lupa;
     public SpeechManager speech;
     public InspectionManager manager;
@@ -44,5 +47,11 @@ public class PistaItem : MonoBehaviour
         transform.rotation = data.rotation;
         this.lupa = lupa;
         this.speech = speech;
+    }
+    private void OnMouseOver() {
+        Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);    
+    }
+    private void OnMouseExit() {
+        Cursor.SetCursor(null, hotSpot, cursorMode);
     }
 }

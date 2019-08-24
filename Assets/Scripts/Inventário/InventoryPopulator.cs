@@ -22,8 +22,8 @@ public class InventoryPopulator : MonoBehaviour
     {
         int cont = 0;
 
-        /*
-        foreach(InventoryItem item in GlobalProfile.getInstance().GetItems()){
+        
+       /* foreach(InventoryItem item in GlobalProfile.getInstance().GetItems()){
             
             GameObject cellItem = new GameObject();
             RectTransform rect = cellItem.AddComponent<RectTransform>();
