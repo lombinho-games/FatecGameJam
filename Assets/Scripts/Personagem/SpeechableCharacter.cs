@@ -33,15 +33,6 @@ public class SpeechableCharacter : MonoBehaviour
     void OnMouseOver(){
         if(Input.GetMouseButtonDown(0) && !manager.mouseOnSeta){ //perguntar se o mouse não tá em cima da seta
             if(data.dialogos.Count > 0){
-
-                foreach(InventoryItem item in GlobalProfile.getInstance().GetItems(manager.textureManager)){
-                    foreach(Dialogo d in data.dialogos){
-                        if(d.message == item.itemID){
-                            d.enabled = true;
-                        }
-                    }
-                }  
-
                 selectCharacter();
             }
         }
@@ -73,11 +64,18 @@ public class SpeechableCharacter : MonoBehaviour
 
     public void OnMouseEnter() {
         bool cRead = true;
-         foreach(Dialogo d in data.dialogos){
-             if(d.enabled && !d.read){
-                cRead = false;
-             }
-         }
+        if(data.dialogos.Count > 0){
+            foreach(Dialogo d in data.dialogos){
+                foreach(InventoryItem item in GlobalProfile.getInstance().GetItems(manager.textureManager)){
+                    if(d.message == item.itemID){
+                        d.enabled = true;
+                    }
+                }
+                if(d.enabled && !d.read){
+                    cRead = false;
+                }
+            }
+        }
         if(!cRead){
             Cursor.SetCursor(ReadTexture2D,hotSpot,CursorMode); // Cursor de novo Texto disponivel      
         }
