@@ -8,6 +8,7 @@ public class PistaFrame : MonoBehaviour
     public GameObject outerPin;
     public GameObject originalSlot;
     public GameObject linhaGroup;
+    public InventoryItem item;
     public bool draggin;
 
     // Start is called before the first frame update

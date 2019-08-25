@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.EventSystems;
 public class Quadro : MonoBehaviour
 {
 
@@ -25,12 +25,25 @@ public class Quadro : MonoBehaviour
         Vector3 position = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         position.z = 0;
         mouse.transform.position = position;
+
+        if(Input.mouseScrollDelta.y > 0){
+            Vector3 vs = content.GetComponent<RectTransform>().localScale;
+            vs /= 0.9f;
+            vs.z = 1;
+            content.GetComponent<RectTransform>().localScale = vs;
+        }
+        else if(Input.mouseScrollDelta.y < 0){
+            Vector3 vs = content.GetComponent<RectTransform>().localScale;
+            vs *= 0.9f;
+            vs.z = 1;
+            content.GetComponent<RectTransform>().localScale = vs;
+        }
     }
 
     public void OpenMenu(PistaFrame pista, GameObject pistaSlot)
     {
         
-        menu.OpenMenu(pista, pistaSlot, null, true, true);
+        menu.OpenMenu(pista, pistaSlot, null, true, true, true);
         
     }
 
@@ -50,6 +63,6 @@ public class Quadro : MonoBehaviour
             creatingConnection = null;
         }
     }
-    
+
     
 }

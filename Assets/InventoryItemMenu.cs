@@ -12,14 +12,18 @@ public class InventoryItemMenu : MonoBehaviour
     public GameObject pistaSlot;
     [HideInInspector]
     public ItemConnection connection;
+    public GameObject connectionPanel;
+    public GameObject descriptionPanel;
 
     public GameObject mouse;
     public GameObject lineGroup;
     public Quadro quadro;
+    public GameObject connectionPrefab;
 
     //Botões
     public GameObject connectButton;
     public GameObject removeButton;
+    public GameObject descButton;
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +37,7 @@ public class InventoryItemMenu : MonoBehaviour
 
     }
 
-    public void OpenMenu(PistaFrame pista, GameObject pistaSlot, ItemConnection connection, bool connectButton, bool removeButton)
+    public void OpenMenu(PistaFrame pista, GameObject pistaSlot, ItemConnection connection, bool connectButton, bool descButton, bool removeButton)
     {
         Vector3 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         position.z = 0;
@@ -45,24 +49,20 @@ public class InventoryItemMenu : MonoBehaviour
 
         this.connectButton.SetActive(connectButton);
         this.removeButton.SetActive(removeButton);
+        this.descButton.SetActive(descButton);
     }
 
     public void Connect()
     {
         gameObject.SetActive(false);
-
-
-        GameObject lineConection = new GameObject("Line");
-        ItemConnection connection = lineConection.AddComponent<ItemConnection>();
-        connection.width = 5;
+        GameObject lineConection = Instantiate(connectionPrefab);
+        ItemConnection connection = lineConection.GetComponent<ItemConnection>();
+        connection.connectorSelector = connectionPanel;
         connection.objectA = selected.outerPin;
         connection.objectB = mouse;
         connection.isOnMouse = true;
         connection.menu = this;
-        connection.color = new Color(227 / 255f, 208 / 255f, 117 / 255f);
-
         lineConection.transform.SetParent(lineGroup.transform, false);
-
         quadro.creatingConnection = connection;
 
     }
@@ -89,6 +89,21 @@ public class InventoryItemMenu : MonoBehaviour
         }
 
         gameObject.SetActive(false);
+
+    }
+
+    public void Description(){
+
+        if(selected != null){
+
+            descriptionPanel.GetComponentInChildren<Text>().text = selected.item.description;
+            descriptionPanel.SetActive(true);
+
+            return;
+        }
+        if(connection != null){
+
+        }
 
     }
 }

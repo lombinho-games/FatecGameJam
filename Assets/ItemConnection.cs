@@ -7,9 +7,22 @@ using UnityEngine.UI;
 public class ItemConnection : MaskableGraphic
 {
 
+    public enum ConnectorName{
+        Conector1,
+        Conector2,
+        Conector3,
+        Conector4,
+        Conector5,
+        Conector6
+    }
+
+
     public GameObject objectA;
     public GameObject objectB;
     public InventoryItemMenu menu;
+    public ConnectorName connector = ConnectorName.Conector1;
+    public GameObject textObject;
+    public GameObject connectorSelector;
 
     Color currentColor;
 
@@ -108,8 +121,19 @@ public class ItemConnection : MaskableGraphic
             currentColor = Color.red;
 
             if (Input.GetMouseButtonDown(0)) {
-                menu.OpenMenu(null, null, this, false, true);
+                menu.OpenMenu(null, null, this, false, true, true);
             }
         }
+
+        if(objectA != null && objectB != null){
+            textObject.GetComponent<Text>().text = connector.ToString();
+            textObject.transform.position = (objectB.transform.position + objectA.transform.position)/2f;
+        }
+    }
+
+    public void ClickOnText(){
+        connectorSelector.SetActive(true);
+        ConnectorSelector conn = connectorSelector.transform.GetChild(0).GetComponent<ConnectorSelector>();
+        conn.connection = this;
     }
 }

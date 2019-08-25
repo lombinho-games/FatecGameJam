@@ -14,6 +14,7 @@ public class Inventory : MonoBehaviour
     public GameObject framePrefab;
     public GameObject pinPrefab;
     public GameObject linhaGroup;
+    public GameObject descriptionPanel;
     Quadro quadro;
 
     float width;
@@ -39,8 +40,6 @@ public class Inventory : MonoBehaviour
             image.sprite = slotSprite;
             image.preserveAspect = true;
 
-            
-
             slotRect.anchorMin = new Vector2(0, 1);
             slotRect.anchorMax = new Vector2(0, 1);
             slotRect.pivot = new Vector2(0, 1);
@@ -51,8 +50,8 @@ public class Inventory : MonoBehaviour
             slot.transform.SetParent(content.transform, false);
 
             //Criando o item dentro do slot
-
             GameObject itemGO = new GameObject(item.displayName);
+            itemGO.AddComponent<ItemSlot>().item = item;
             RectTransform itemRect = itemGO.AddComponent<RectTransform>();
             Image itemImage = itemGO.AddComponent<Image>();
             itemImage.preserveAspect = true;
@@ -127,14 +126,13 @@ public class Inventory : MonoBehaviour
     {
         PointerEventData pointer = (PointerEventData)data;
 
-        
-
         if (selection.gameObject.activeInHierarchy) {
             selection.gameObject.SetActive(false);
             if (quadro != null) {
                 //Coloca o manolo no quadro
                 GameObject itemQuadro = Instantiate(framePrefab);// new GameObject("Item");
                 PistaFrame frame = itemQuadro.GetComponent<PistaFrame>();
+                frame.item = pointer.pointerDrag.GetComponent<ItemSlot>().item;
                 frame.linhaGroup = linhaGroup;
                 frame.quadro = quadro;
                 frame.originalSlot = selection.originalSlot;
@@ -183,5 +181,9 @@ public class Inventory : MonoBehaviour
     public void PointerExitQuadro(Quadro quadro)
     {
         quadro = null;
+    }
+
+    public void CloseDescriptionBox(){
+        descriptionPanel.SetActive(false);
     }
 }
