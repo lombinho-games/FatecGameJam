@@ -54,7 +54,8 @@ public class GlobalProfile
                 new InventoryItem(
                     inventory.items[i],
                     inventory.displayName[i],
-                    manager.GetSpritePista(inventory.items[i])
+                    manager.GetSpritePista(inventory.items[i]),
+                    inventory.descriptions[i]
                     )
                 );
         }
@@ -73,6 +74,7 @@ public class GlobalProfile
         foreach(InventoryItem i in items) {
             inventory.items.Add(i.itemID);
             inventory.displayName.Add(i.displayName);
+            inventory.descriptions.Add(i.description);
         }
 
         return inventory;
@@ -85,11 +87,14 @@ public class GlobalProfile
         public List<string> items;
         [SerializeField]
         public List<string> displayName;
+        [SerializeField]
+        public List<string> descriptions;
 
         public InventorySave()
         {
             items = new List<string>();
             displayName = new List<string>();
+            descriptions = new List<string>();
         }
     }
 

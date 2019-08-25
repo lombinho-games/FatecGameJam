@@ -31,7 +31,7 @@ public class PistaItem : MonoBehaviour
         if(lupa.pressed){
             //Adicionar ao inventário
             //Abrir um texto
-            GlobalProfile.getInstance().addItem(new InventoryItem(data.itemId, data.displayName, spriteRenderer.sprite));
+            GlobalProfile.getInstance().addItem(new InventoryItem(data.itemId, data.displayName, spriteRenderer.sprite, data.itemDescription));
             //Destruir item
             speech.OpenText(data.dialogo.texts);
             Destroy(gameObject);

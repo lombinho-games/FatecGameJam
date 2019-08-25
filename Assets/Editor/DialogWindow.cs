@@ -59,12 +59,15 @@ public class DialogWindow : EditorWindow
         pista.data.displayName = EditorGUILayout.TextField("Nome Display", pista.data.displayName);
         pista.data.itemId = EditorGUILayout.TextField("ID do item", pista.data.itemId);
 
+        EditorGUILayout.LabelField("Descrição do item");
+        pista.data.itemDescription = EditorGUILayout.TextArea(pista.data.itemDescription, GUILayout.Height(50));
+
         string[] pistaKeys = pista.manager.textureManager.getPistaKeys();
         string[] posesKeys = pista.manager.textureManager.getPoseKeys();
 
         int imageValue = EditorGUILayout.Popup("Ícone pista", pista.manager.textureManager.getIndexByKeyPista(pista.data.image), pistaKeys);
         pista.data.image = pistaKeys[imageValue];
-        GUI.DrawTexture(new Rect(0, 100, 100, 100), pista.manager.textureManager.pistas[imageValue].sprite.texture);
+        GUI.DrawTexture(new Rect(10, 160, 100, 100), pista.manager.textureManager.pistas[imageValue].sprite.texture);
         GUILayout.Space(120);
 
         if(GUILayout.Button("Editar diálogo")){                
