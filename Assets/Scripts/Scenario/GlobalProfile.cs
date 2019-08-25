@@ -31,9 +31,7 @@ public class GlobalProfile
 
     public List<InventoryItem> GetItems(TextureManager manager){
         if (!dirty) {
-
             LoadInventory(manager);
-
         }
 
         if(items == null) items = new List<InventoryItem>();
