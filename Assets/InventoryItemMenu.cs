@@ -92,6 +92,10 @@ public class InventoryItemMenu : MonoBehaviour
 
     }
 
+    public void CloseConnectionSelector(){
+        connectionPanel.gameObject.SetActive(false);
+    }
+
     public void Description(){
 
         if(selected != null){
@@ -100,9 +104,6 @@ public class InventoryItemMenu : MonoBehaviour
             descriptionPanel.SetActive(true);
 
             return;
-        }
-        if(connection != null){
-
         }
 
     }

@@ -121,7 +121,7 @@ public class ItemConnection : MaskableGraphic
             currentColor = Color.red;
 
             if (Input.GetMouseButtonDown(0)) {
-                menu.OpenMenu(null, null, this, false, true, true);
+                menu.OpenMenu(null, null, this, false, false, true);
             }
         }
 
