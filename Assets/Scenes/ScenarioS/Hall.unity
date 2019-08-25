@@ -533,6 +533,7 @@ MonoBehaviour:
     image: atadura
     displayName: Atadura
     itemId: atadura
+    itemDescription: "Minha descri\xE7\xE3o legal"
     messages: []
     position: {x: 0, y: 0, z: 0}
     scale: {x: 0, y: 0, z: 0}
@@ -609,11 +610,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CursorMode: 0
-  curtorTextures2D: []
+  ReadTexture2D: {fileID: 0}
+  NReadTexture2D: {fileID: 0}
   hotSpot: {x: 0, y: 0}
   speechCanvas: {fileID: 1483544357}
   manager: {fileID: 636359886}
   lupa: {fileID: 1216552695}
+  cRead: 0
   data:
     defaultImage: catarina-default
     headBob: catarina

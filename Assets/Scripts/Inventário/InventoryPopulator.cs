@@ -20,7 +20,6 @@ public class InventoryPopulator : MonoBehaviour
 
     void Start()
     {
-        int cont = 0;
 
         
        /* foreach(InventoryItem item in GlobalProfile.getInstance().GetItems()){

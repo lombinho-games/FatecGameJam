@@ -201,6 +201,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c489ffecf77bdb749a45c747d526c143, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 0}
+  cursorMode: 0
+  hotSpot: {x: 0, y: 0}
   lupa: {fileID: 1211899989}
   speech: {fileID: 451729944}
   manager: {fileID: 1412784564}
@@ -216,9 +219,11 @@ MonoBehaviour:
       pergunta: 
       message: 
       enabled: 0
+      read: 0
     image: chave-de-fenda
     displayName: Chave de fenda
     itemId: chave-de-fenda
+    itemDescription: Chavita de el fendita maneirita
     messages: []
     position: {x: 0, y: 0, z: 0}
     scale: {x: 0, y: 0, z: 0}
@@ -342,6 +347,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c489ffecf77bdb749a45c747d526c143, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 0}
+  cursorMode: 0
+  hotSpot: {x: 0, y: 0}
   lupa: {fileID: 1211899989}
   speech: {fileID: 451729944}
   manager: {fileID: 1412784564}
@@ -357,9 +365,11 @@ MonoBehaviour:
       pergunta: 
       message: 
       enabled: 0
+      read: 0
     image: rosa-branca
     displayName: Rosa
     itemId: rosa-branca
+    itemDescription: "Esta rosa \xE9 branca e come o cu de quem t\xE1 lendo"
     messages: []
     position: {x: 0, y: 0, z: 0}
     scale: {x: 0, y: 0, z: 0}
@@ -763,9 +773,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e815c8b7fc1d64646a087a175cf43031, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CursorMode: 0
+  ReadTexture2D: {fileID: 0}
+  NReadTexture2D: {fileID: 0}
+  hotSpot: {x: 0, y: 0}
   speechCanvas: {fileID: 451729944}
   manager: {fileID: 1412784564}
   lupa: {fileID: 1211899989}
+  cRead: 0
   data:
     defaultImage: alfred-default
     headBob: alfred
@@ -780,6 +795,7 @@ MonoBehaviour:
       pergunta: O que faz aqui?
       message: alfred-default
       enabled: 1
+      read: 0
     - texts:
       - texto: "Esta pergunta n\xE3o existe?"
         image: detective-default
@@ -790,6 +806,7 @@ MonoBehaviour:
       pergunta: Esta pergunta nao existe?
       message: atadura
       enabled: 0
+      read: 0
     position: {x: 0, y: 0, z: 0}
     scale: {x: 0, y: 0, z: 0}
     rotation: {x: 0, y: 0, z: 0, w: 0}
