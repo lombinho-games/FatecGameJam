@@ -251,12 +251,12 @@ PrefabInstance:
     - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
         type: 3}
       propertyPath: data.dialogos.Array.data[0].texts.Array.data[0].texto
-      value: pedra
+      value: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
       objectReference: {fileID: 0}
     - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
         type: 3}
       propertyPath: data.dialogos.Array.data[0].texts.Array.data[1].texto
-      value: SEU BURROOOOOO
+      value: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
       objectReference: {fileID: 0}
     - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
         type: 3}

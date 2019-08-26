@@ -26,7 +26,6 @@ public class LupaButton : MonoBehaviour
 
         pressed = !pressed;
         lupaInGame.SetActive(pressed);
-        Cursor.visible = !pressed;
         Color temp = lupaIcon.color;
 
         temp.a = pressed ? 0 : 1;
