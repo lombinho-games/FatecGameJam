@@ -14,7 +14,8 @@ public class Inventory : MonoBehaviour
     public GameObject framePrefab;
     public GameObject pinPrefab;
     public GameObject linhaGroup;
-    Quadro quadro;
+    public GameObject descriptionPanel;
+    public Quadro quadro;
 
     float width;
 
@@ -39,8 +40,6 @@ public class Inventory : MonoBehaviour
             image.sprite = slotSprite;
             image.preserveAspect = true;
 
-            
-
             slotRect.anchorMin = new Vector2(0, 1);
             slotRect.anchorMax = new Vector2(0, 1);
             slotRect.pivot = new Vector2(0, 1);
@@ -51,8 +50,8 @@ public class Inventory : MonoBehaviour
             slot.transform.SetParent(content.transform, false);
 
             //Criando o item dentro do slot
-
             GameObject itemGO = new GameObject(item.displayName);
+            itemGO.AddComponent<ItemSlot>().item = item;
             RectTransform itemRect = itemGO.AddComponent<RectTransform>();
             Image itemImage = itemGO.AddComponent<Image>();
             itemImage.preserveAspect = true;
@@ -123,40 +122,59 @@ public class Inventory : MonoBehaviour
 
     }
 
+    public PistaFrame InsertPistaFrame(Vector3 position, InventoryItem item){
+
+        //Coloca o manolo no quadro
+        GameObject itemQuadro = Instantiate(framePrefab);// new GameObject("Item");
+        PistaFrame frame = itemQuadro.GetComponent<PistaFrame>();
+        frame.item = item;
+        frame.linhaGroup = linhaGroup;
+        frame.quadro = quadro;
+
+        ItemSlot[] slots = content.transform.GetComponentsInChildren<ItemSlot>();
+        foreach(ItemSlot slot in slots){
+            if(slot.item.itemID == item.itemID){
+                frame.originalSlot = slot.gameObject;
+                break;
+            }
+        }
+
+        frame.originalSlot.GetComponent<Image>().color = new Color(1, 1, 1, 0);
+
+        //frame.originalSlot = selection.originalSlot; //Encontrar baseado no Item
+                
+        itemQuadro.transform.Find("Pista").GetComponent<Image>().sprite = item.image;
+        itemQuadro.transform.Find("Text").GetComponent<Text>().text = item.displayName;
+
+        //Posiciona ele
+        itemQuadro.transform.SetParent(quadro.content.transform, false);
+        itemQuadro.transform.SetAsFirstSibling();
+        itemQuadro.transform.position = position;
+        itemQuadro.transform.RotateAround(itemQuadro.transform.position, new Vector3(0, 0, 1), Random.Range(-10, 10));
+
+        GameObject pin = Instantiate(pinPrefab);
+        pin.GetComponent<PistaPin>().pista = itemQuadro.transform.Find("Pin").gameObject;
+        pin.transform.SetParent(quadro.content.transform, false);
+        pin.transform.SetAsLastSibling();
+
+        frame.outerPin = pin;
+
+        return frame;
+    }
+
     void Drop(BaseEventData data)
     {
         PointerEventData pointer = (PointerEventData)data;
 
-        
-
         if (selection.gameObject.activeInHierarchy) {
             selection.gameObject.SetActive(false);
-            if (quadro != null) {
-                //Coloca o manolo no quadro
-                GameObject itemQuadro = Instantiate(framePrefab);// new GameObject("Item");
-                PistaFrame frame = itemQuadro.GetComponent<PistaFrame>();
-                frame.linhaGroup = linhaGroup;
-                frame.quadro = quadro;
-                frame.originalSlot = selection.originalSlot;
-                
-                itemQuadro.transform.Find("Pista").GetComponent<Image>().sprite = selection.GetComponent<Image>().sprite;
-                itemQuadro.transform.Find("Text").GetComponent<Text>().text = selection.name;
+            if (quadro.mouseOver) {
 
-                //Posiciona ele
-                itemQuadro.transform.SetParent(quadro.content.transform, false);
-                itemQuadro.transform.SetAsFirstSibling();
+                InventoryItem item = pointer.pointerDrag.GetComponent<ItemSlot>().item;
                 Vector3 mouseWorldPos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
                 Vector3 itPos = mouseWorldPos;
                 itPos.z = 0;
-                itemQuadro.transform.position = itPos;
-                itemQuadro.transform.RotateAround(itemQuadro.transform.position, new Vector3(0, 0, 1), Random.Range(-10, 10));
-
-                GameObject pin = Instantiate(pinPrefab);
-                pin.GetComponent<PistaPin>().pista = itemQuadro.transform.Find("Pin").gameObject;
-                pin.transform.SetParent(quadro.content.transform, false);
-                pin.transform.SetAsLastSibling();
-
-                frame.outerPin = pin;
+                InsertPistaFrame(itPos, item);
             }
             else {
                 pointer.pointerDrag.GetComponent<Image>().color = new Color(1, 1, 1, 1);
@@ -174,14 +192,8 @@ public class Inventory : MonoBehaviour
             selection.transform.position = position;
         }
     }
-
-    public void PointerEnterQuadro(Quadro quadro)
-    {
-        this.quadro = quadro;
+    public void CloseDescriptionBox(){
+        descriptionPanel.SetActive(false);
     }
 
-    public void PointerExitQuadro(Quadro quadro)
-    {
-        quadro = null;
-    }
 }

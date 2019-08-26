@@ -130,6 +130,211 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3d4748b9ca850a4890b2387dfe157fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &637829708
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 162993656}
+    m_Modifications:
+    - target: {fileID: 7277678701974216968, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: m_Name
+      value: Catarina
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948241479598367973, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948241479598367973, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948241479598367973, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948241479598367973, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948241479598367973, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948241479598367973, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948241479598367973, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948241479598367973, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948241479598367973, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948241479598367973, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948241479598367973, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 393748280731334981, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4bf624519cabf1a499152d229073abc5,
+        type: 3}
+    - target: {fileID: 393748280731334981, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[0].texts.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[1].texts.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: speechCanvas
+      value: 
+      objectReference: {fileID: 1483544357}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 636359886}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: lupa
+      value: 
+      objectReference: {fileID: 1216552695}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.defaultImage
+      value: catarina-default
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.headBob
+      value: catarina
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[0].texts.Array.data[0].texto
+      value: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[0].texts.Array.data[1].texto
+      value: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[0].texts.Array.data[0].image
+      value: catarina-default
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[0].texts.Array.data[1].image
+      value: catarina-angry
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[0].message
+      value: catarina-default
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[0].pergunta
+      value: O que rolastes?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[0].texts.Array.data[0].owner
+      value: Catarina
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[0].texts.Array.data[1].owner
+      value: Catarina
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[0].enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[1].texts.Array.data[0].texto
+      value: nao eh problema seu
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[1].texts.Array.data[1].texto
+      value: eh msm eh
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[1].texts.Array.data[0].image
+      value: catarina-angry
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[1].texts.Array.data[1].image
+      value: detective-default
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[1].pergunta
+      value: E essa chave de fenda ai
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[1].message
+      value: chave-de-fenda
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[1].texts.Array.data[1].owner
+      value: detetive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151352205928712267, guid: e30920b744d4dce4d8107c9168e7a55e,
+        type: 3}
+      propertyPath: data.dialogos.Array.data[1].texts.Array.data[0].owner
+      value: catarina
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e30920b744d4dce4d8107c9168e7a55e, type: 3}
 --- !u!1001 &897464221
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -389,6 +594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad633952d0e4c104198b1fbb02858a00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 --- !u!212 &393748280423183489
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -650,46 +856,165 @@ MonoBehaviour:
     rotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!61 &6883256478564755420
 BoxCollider2D:
+=======
+--- !u!1001 &1773040648
+PrefabInstance:
+>>>>>>> ccabfbc0dfcb964e3a34a8441e237b22df95bebf
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7277678701208890572}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0000104904175, y: -0.90306854}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 28.94, y: 40.93}
-    newSize: {x: 28.94, y: 40.93}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 21.263903, y: 39.123863}
-  m_EdgeRadius: 0
---- !u!1 &7277678701208890572
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3948241478753347873}
-  - component: {fileID: 393748280423183489}
-  - component: {fileID: 5151352206698235279}
-  - component: {fileID: 6883256478564755420}
-  m_Layer: 0
-  m_Name: Catarina
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_Modification:
+    m_TransformParent: {fileID: 1002634731}
+    m_Modifications:
+    - target: {fileID: 2602953544191078622, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_Name
+      value: Atadura
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078623, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078623, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078623, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078623, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078623, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078623, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078623, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078623, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078623, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078623, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078623, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078618, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9eb970ebf26c35d4c9fcddb27aa051d3,
+        type: 3}
+    - target: {fileID: 2602953544191078618, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 5.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078618, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 4.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078618, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: data.dialogo.texts.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: lupa
+      value: 
+      objectReference: {fileID: 1216552695}
+    - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: speech
+      value: 
+      objectReference: {fileID: 1483544357}
+    - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 636359886}
+    - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: data.dialogo.texts.Array.data[0].texto
+      value: Essa atadura
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: data.dialogo.texts.Array.data[1].texto
+      value: "Ela t\xE1 muito dura kkkkkk"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: data.dialogo.texts.Array.data[0].image
+      value: detective-default
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: data.dialogo.texts.Array.data[1].image
+      value: detective-default
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: data.dialogo.texts.Array.data[0].owner
+      value: Detetive
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: data.dialogo.texts.Array.data[1].owner
+      value: Detetive
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: data.image
+      value: atadura
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: data.displayName
+      value: atadura
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: data.itemId
+      value: atadura
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
+        type: 3}
+      propertyPath: data.itemDescription
+      value: Muito dura kkkkk
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9e4f6afbecbea0f46bef53ae6fa8739a, type: 3}

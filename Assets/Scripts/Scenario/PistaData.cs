@@ -10,7 +10,7 @@ public class PistaData
     public string image; //ID no manager
     public string displayName;
     public string itemId;
-
+    public string itemDescription;
     public List<string> messages;
 
     public Vector3 position;

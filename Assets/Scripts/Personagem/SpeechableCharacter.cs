@@ -42,9 +42,12 @@ public class SpeechableCharacter : MonoBehaviour
     void OnMouseOver(){
         if(Input.GetMouseButtonDown(0) && !manager.mouseOnSeta){ //perguntar se o mouse não tá em cima da seta
             if(data.dialogos.Count > 0){
+<<<<<<< HEAD
 
 
                 
+=======
+>>>>>>> ccabfbc0dfcb964e3a34a8441e237b22df95bebf
                 selectCharacter();
             }
         }
@@ -75,6 +78,7 @@ public class SpeechableCharacter : MonoBehaviour
     }
 
     public void OnMouseEnter() {
+<<<<<<< HEAD
 
         Texture2D mouse = NReadTexture2D;
 
@@ -88,5 +92,32 @@ public class SpeechableCharacter : MonoBehaviour
     }
     public void OnMouseExit() {
         Cursor.SetCursor(null,hotSpot,CursorMode);
+=======
+        if(!speechCanvas.isActiveAndEnabled){
+            bool cRead = true;
+            if(data.dialogos.Count > 0){
+                foreach(Dialogo d in data.dialogos){
+                    foreach(InventoryItem item in GlobalProfile.getInstance().GetItems(manager.textureManager)){
+                        if(d.message == item.itemID){
+                            d.enabled = true;
+                        }
+                    }
+                    if(d.enabled && !d.read){
+                        cRead = false;
+                    }
+                }
+            }
+            if(!cRead){
+                Cursor.SetCursor(ReadTexture2D,hotSpot,CursorMode); // Cursor de novo Texto disponivel      
+            }
+            else{
+                Cursor.SetCursor(NReadTexture2D,hotSpot,CursorMode); // Cursor de Texto base
+            }
+        }
+    }
+    public void OnMouseExit() {
+        if(!speechCanvas.isActiveAndEnabled)
+            Cursor.SetCursor(null,hotSpot,CursorMode);
+>>>>>>> ccabfbc0dfcb964e3a34a8441e237b22df95bebf
     }   
 }

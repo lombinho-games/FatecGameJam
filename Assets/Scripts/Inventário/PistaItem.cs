@@ -28,8 +28,16 @@ public class PistaItem : MonoBehaviour
 
     // Update is called once per frame
     void OnMouseDown(){
+<<<<<<< HEAD
         if(lupa.pressed){
             GlobalProfile.getInstance().addItem(new InventoryItem(data.itemId, data.displayName, spriteRenderer.sprite));
+=======
+        if(!speech.isActiveAndEnabled){
+            //Adicionar ao inventário
+            //Abrir um texto
+            GlobalProfile.getInstance().addItem(new InventoryItem(data.itemId, data.displayName, spriteRenderer.sprite, data.itemDescription));
+            //Destruir item
+>>>>>>> ccabfbc0dfcb964e3a34a8441e237b22df95bebf
             speech.OpenText(data.dialogo.texts);
             Cursor.SetCursor(null, new Vector2(), CursorMode.Auto);
             Destroy(gameObject);
@@ -48,9 +56,11 @@ public class PistaItem : MonoBehaviour
         this.speech = speech;
     }
     private void OnMouseOver() {
-        Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);    
+        if(!speech.isActiveAndEnabled)
+            Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);    
     }
     private void OnMouseExit() {
-        Cursor.SetCursor(null, hotSpot, cursorMode);
+        if(!speech.isActiveAndEnabled)
+            Cursor.SetCursor(null, hotSpot, cursorMode);
     }
 }

@@ -242,7 +242,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad633952d0e4c104198b1fbb02858a00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CursorMode: 0
+  hotSpot: {x: 0, y: 0}
   manager: {fileID: 3611990409394683886}
+  TextureCursor: {fileID: 2800000, guid: 8f03747bab017174a90fad6b918e3af6, type: 3}
+  TextureCursorAdvance: {fileID: 2800000, guid: c0c9cb7f49518244393036dd753dbbd0,
+    type: 3}
+  TextureCursorClose: {fileID: 2800000, guid: 5c460e6a96a4f774b8668a7f442169be, type: 3}
+  CursorChanged: 0
   texts: []
   currentText: 0
   characterImage: {fileID: 3667924363724731268}

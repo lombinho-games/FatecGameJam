@@ -6,8 +6,17 @@ using UnityEngine.UI;
 public class SpeechManager : MonoBehaviour
 {
     // Start is called before the first frame update
-
+    public CursorMode CursorMode = CursorMode.Auto;
+    public Vector2 hotSpot = Vector2.zero;
     public InspectionManager manager;
+
+    public Texture2D TextureCursor;
+
+    public Texture2D TextureCursorAdvance;
+
+    public Texture2D TextureCursorClose;
+
+    public bool CursorChanged;
 
     [HideInInspector]
     public List<TextData> texts;
@@ -58,7 +67,7 @@ public class SpeechManager : MonoBehaviour
 
         if(isTalking){
             if(Input.GetMouseButton(0)){
-                charTimer += Time.deltaTime * 5;
+                charTimer += Time.deltaTime * 5; //Acelera o texto
             }
             else{
                 charTimer += Time.deltaTime;
@@ -73,6 +82,14 @@ public class SpeechManager : MonoBehaviour
 
             canvasText.text = texts[currentText].texto.Substring(0, charactersShown);
 
+            if(canProceed && !CursorChanged){
+                if(currentText+1 >= texts.Count){
+                    EndCursor();
+                }
+                else{
+                    ChangeCursor();
+                }
+            }
             if(Input.GetMouseButtonDown(0) && canProceed){
                 if(BeginText(currentText + 1)){
                    CloseDialog();
@@ -89,8 +106,12 @@ public class SpeechManager : MonoBehaviour
     }
 
     public void OpenCharacterDialog(SpeechableCharacter personagem){
+<<<<<<< HEAD
         Cursor.SetCursor(null, new Vector2(), CursorMode.Auto);
 
+=======
+        Cursor.SetCursor(null,hotSpot,CursorMode);
+>>>>>>> ccabfbc0dfcb964e3a34a8441e237b22df95bebf
         gameObject.SetActive(true);
         personagens.SetActive(false);
         gui.SetActive(false);
@@ -177,6 +198,7 @@ public class SpeechManager : MonoBehaviour
     }
 
     public void OpenText(List<TextData> texts){
+        gui.SetActive(false);
         Destroy(buttonCanvas);
         buttonCanvas = null;
         this.texts = texts;
@@ -185,8 +207,10 @@ public class SpeechManager : MonoBehaviour
         BeginText(0);
     }
 
-    public bool BeginText(int textIndex){
+    public bool BeginText(int textIndex){        
         if(textIndex >= texts.Count) return true;
+        CursorChanged = false;
+        Cursor.SetCursor(TextureCursor,hotSpot,CursorMode);
         currentText = textIndex;
         canvasText.text = "";//texts[currentText];
         charTimer = 0;
@@ -212,5 +236,14 @@ public class SpeechManager : MonoBehaviour
         isTalking = false;
         Destroy(buttonCanvas);
         buttonCanvas = null;
+        Cursor.SetCursor(null,hotSpot,CursorMode);
+    }
+    public void ChangeCursor(){
+        Cursor.SetCursor(TextureCursorAdvance,hotSpot,CursorMode);
+        CursorChanged = true;
+    }
+    public void EndCursor(){
+        Cursor.SetCursor(TextureCursorClose,hotSpot,CursorMode);
+        CursorChanged = true;
     }
 }

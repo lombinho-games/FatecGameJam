@@ -19,11 +19,9 @@ public class InventoryPopulator : MonoBehaviour
     public SlotHolder s1, s2, s3;
 
     void Start()
-    {
+    { /*
         int cont = 0;
-
-        
-       /* foreach(InventoryItem item in GlobalProfile.getInstance().GetItems()){
+        foreach(InventoryItem item in GlobalProfile.getInstance().GetItems()){
             
             GameObject cellItem = new GameObject();
             RectTransform rect = cellItem.AddComponent<RectTransform>();
@@ -49,7 +47,7 @@ public class InventoryPopulator : MonoBehaviour
             img.sprite = item.image;
             cont++;
         }
-        */
+         */
     }
 
     // Update is called once per frame
