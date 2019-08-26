@@ -12,11 +12,40 @@ public class GlobalProfile
         }
         return instance;
     }
-    private GlobalProfile(){}
+    private GlobalProfile(){
+        items = new List<InventoryItem>();
+        messages = new SerializedMessages();
+    }
 
 
     //Instance methods
     List<InventoryItem> items;
+    SerializedMessages messages;
+
+    public void Save()
+    {
+        SaveInventory();
+        SaveGameSystem.SaveGame(messages, "slot0_messages");
+    }
+
+    public void LoadMessages()
+    {
+        if (SaveGameSystem.DoesSaveGameExist("slot0_messages")) {
+            messages = SaveGameSystem.LoadGame("slot0_messages") as SerializedMessages;
+        }
+    }
+
+    public void SendMessage(string message)
+    {
+        if (message != "") {
+            messages.SendMessage(message);
+        }
+    }
+
+    public bool HasReceivedMessage(string message)
+    {
+        return messages.Contains(message);
+    }
 
     public void addItem(InventoryItem item){
         if(items == null){
@@ -26,6 +55,7 @@ public class GlobalProfile
         if (!items.Contains(item)) {
             dirty = true;
             items.Add(item);
+            messages.SendMessage(item.itemID);
         }
     }
 

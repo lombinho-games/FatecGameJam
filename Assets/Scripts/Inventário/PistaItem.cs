@@ -29,12 +29,11 @@ public class PistaItem : MonoBehaviour
     // Update is called once per frame
     void OnMouseDown(){
         if(lupa.pressed){
-            //Adicionar ao inventário
-            //Abrir um texto
             GlobalProfile.getInstance().addItem(new InventoryItem(data.itemId, data.displayName, spriteRenderer.sprite));
-            //Destruir item
             speech.OpenText(data.dialogo.texts);
+            Cursor.SetCursor(null, new Vector2(), CursorMode.Auto);
             Destroy(gameObject);
+            manager.RefreshAllCharacterDialogs();
         }
     }
 

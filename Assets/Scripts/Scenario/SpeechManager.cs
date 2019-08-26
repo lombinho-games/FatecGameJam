@@ -89,6 +89,8 @@ public class SpeechManager : MonoBehaviour
     }
 
     public void OpenCharacterDialog(SpeechableCharacter personagem){
+        Cursor.SetCursor(null, new Vector2(), CursorMode.Auto);
+
         gameObject.SetActive(true);
         personagens.SetActive(false);
         gui.SetActive(false);
@@ -99,6 +101,7 @@ public class SpeechManager : MonoBehaviour
         //Abre o menu de botões
 
         if(buttonCanvas == null){
+
             //Cria o grupo de botões de perguntas
             buttonCanvas = new GameObject("Buttons Canvas");
             RectTransform rect = buttonCanvas.AddComponent<RectTransform>();
@@ -113,8 +116,11 @@ public class SpeechManager : MonoBehaviour
             rect.offsetMax = new Vector2(200, 15 * digs.Count + margin/2f);
 
             for(int i = 0; i < digs.Count; i++){
+
+
                 //Cria cada botão
                 Dialogo dig = digs[i];
+
                 GameObject btn = new GameObject("Button " + i);
                 RectTransform btnRect = btn.AddComponent<RectTransform>();
                 
@@ -127,6 +133,9 @@ public class SpeechManager : MonoBehaviour
                 Button btn_btn = btn.AddComponent<Button>();
                 Image img = btn.AddComponent<Image>();
                 btn_btn.targetGraphic = img;
+
+                img.color = dig.read ? Color.gray : Color.white;
+
                 img.sprite = buttonUp;
                 img.type = Image.Type.Sliced;
                 btn_btn.transition = Selectable.Transition.SpriteSwap;
@@ -137,8 +146,10 @@ public class SpeechManager : MonoBehaviour
                 btn.transform.SetParent(buttonCanvas.transform, false);
 
                 btn_btn.onClick.AddListener( () => {
+                    GlobalProfile.getInstance().SendMessage(dig.message);
                     OpenText(dig.texts);
                     dig.read = true;
+                    manager.RefreshAllCharacterDialogs();
                 });
 
                 //Cria o texto do botão

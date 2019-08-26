@@ -527,6 +527,7 @@ MonoBehaviour:
         image: detective-default
         owner: Detetive
       pergunta: 
+      unlock_message: 
       message: 
       enabled: 0
       read: 0
@@ -609,11 +610,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CursorMode: 0
-  curtorTextures2D: []
+  ReadTexture2D: {fileID: 0}
+  NReadTexture2D: {fileID: 0}
   hotSpot: {x: 0, y: 0}
   speechCanvas: {fileID: 1483544357}
   manager: {fileID: 636359886}
   lupa: {fileID: 1216552695}
+  cRead: 0
   data:
     defaultImage: catarina-default
     headBob: catarina
@@ -625,7 +628,8 @@ MonoBehaviour:
       - texto: SEU BURROOOOOO
         image: catarina-angry
         owner: Catarina
-      pergunta: O que rolastes?
+      pergunta: "Pergunta padr\xE3o"
+      unlock_message: 
       message: catarina-default
       enabled: 1
       read: 0
@@ -637,7 +641,8 @@ MonoBehaviour:
         image: detective-default
         owner: detetive
       pergunta: E essa chave de fenda ai
-      message: chave-de-fenda
+      unlock_message: chave-de-fenda
+      message: catarina-chave
       enabled: 0
       read: 0
     position: {x: 0, y: 0, z: 0}

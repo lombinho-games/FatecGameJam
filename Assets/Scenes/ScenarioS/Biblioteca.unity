@@ -201,6 +201,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c489ffecf77bdb749a45c747d526c143, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: 1511b6a779d785f448d4baf67e341ac6, type: 3}
+  cursorMode: 0
+  hotSpot: {x: 0, y: 0}
   lupa: {fileID: 1211899989}
   speech: {fileID: 451729944}
   manager: {fileID: 1412784564}
@@ -214,8 +217,10 @@ MonoBehaviour:
         image: detective-default
         owner: Detetive
       pergunta: 
+      unlock_message: 
       message: 
       enabled: 0
+      read: 0
     image: chave-de-fenda
     displayName: Chave de fenda
     itemId: chave-de-fenda
@@ -342,6 +347,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c489ffecf77bdb749a45c747d526c143, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: 1511b6a779d785f448d4baf67e341ac6, type: 3}
+  cursorMode: 0
+  hotSpot: {x: 0, y: 0}
   lupa: {fileID: 1211899989}
   speech: {fileID: 451729944}
   manager: {fileID: 1412784564}
@@ -355,8 +363,10 @@ MonoBehaviour:
         image: detective-default
         owner: Detetive
       pergunta: 
+      unlock_message: 
       message: 
       enabled: 0
+      read: 0
     image: rosa-branca
     displayName: Rosa
     itemId: rosa-branca
@@ -763,6 +773,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e815c8b7fc1d64646a087a175cf43031, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CursorMode: 0
+  ReadTexture2D: {fileID: 2800000, guid: afe31887c54d350479bb6841cafe864a, type: 3}
+  NReadTexture2D: {fileID: 2800000, guid: 87676f8789d2209408c73c2c6f8a9ade, type: 3}
+  hotSpot: {x: 0, y: 0}
   speechCanvas: {fileID: 451729944}
   manager: {fileID: 1412784564}
   lupa: {fileID: 1211899989}
@@ -771,25 +785,50 @@ MonoBehaviour:
     headBob: alfred
     dialogos:
     - texts:
-      - texto: O que faz aqui parceiro?
-        image: detective-default
-        owner: Detetive
-      - texto: Como o cu de quem ta lendo
+      - texto: "Texto padr\xE3o do Alfred"
         image: alfred-default
         owner: Alfred
-      pergunta: O que faz aqui?
-      message: alfred-default
+      pergunta: "Pergunta padr\xE3o"
+      unlock_message: 
+      message: default-alfred
       enabled: 1
+      read: 0
     - texts:
-      - texto: "Esta pergunta n\xE3o existe?"
+      - texto: O que acha sobre essa atadura?
         image: detective-default
         owner: Detetive
-      - texto: "Sinceramente, eu n\xE3o sei"
+      pergunta: Pergunta sobre Atadura
+      unlock_message: atadura
+      message: alfred-atadura
+      enabled: 0
+      read: 0
+    - texts:
+      - texto: A catarina disse que estava fazendo o que?
         image: alfred-default
         owner: Alfred
-      pergunta: Esta pergunta nao existe?
-      message: atadura
+      pergunta: Pergunta sobre dialogo X da catarina
+      unlock_message: catarina-default
+      message: alfred-catarina1
       enabled: 0
+      read: 0
+    - texts:
+      - texto: A catarina disse isso sobre a chave?
+        image: alfred-default
+        owner: Alfred
+      pergunta: Mensagem da pista da catarina
+      unlock_message: catarina-chave
+      message: alfred-catarina2
+      enabled: 0
+      read: 0
+    - texts:
+      - texto: Nao acho porra nenhuma
+        image: alfred-default
+        owner: Alfred
+      pergunta: O que tu acha dessa chave de fenda?
+      unlock_message: chave-de-fenda
+      message: alfred-chave
+      enabled: 0
+      read: 0
     position: {x: 0, y: 0, z: 0}
     scale: {x: 0, y: 0, z: 0}
     rotation: {x: 0, y: 0, z: 0, w: 0}

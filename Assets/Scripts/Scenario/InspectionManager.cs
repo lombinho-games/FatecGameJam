@@ -26,6 +26,9 @@ public class InspectionManager : MonoBehaviour
     void Start()
     {
         //Carrega dados do cenário
+
+        GlobalProfile.getInstance().LoadMessages();
+
         if(SaveGameSystem.DoesSaveGameExist("slot0_" + scenarioName)){
             scenarioData = (ScenarioData)SaveGameSystem.LoadGame("slot0_" + scenarioName);
 
@@ -76,6 +79,12 @@ public class InspectionManager : MonoBehaviour
         
     }
 
+    public void RefreshAllCharacterDialogs()
+    {
+        foreach(SpeechableCharacter perso in personagens_folder.transform.GetComponentsInChildren<SpeechableCharacter>()) {
+            perso.RefreshDialogData();
+        }
+    }
     public void ClickOnInventory(){
         if(!lupa.pressed){
             SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);

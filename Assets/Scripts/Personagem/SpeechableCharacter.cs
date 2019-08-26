@@ -11,7 +11,6 @@ public class SpeechableCharacter : MonoBehaviour
     public InspectionManager manager;
     public LupaButton lupa;
     SpriteRenderer spriteRenderer;
-    public bool cRead;
 
     //Data
     public CharacterData data;
@@ -20,8 +19,17 @@ public class SpeechableCharacter : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        RefreshDialogData();
+    }
 
-       
+    public void RefreshDialogData()
+    {
+        foreach (Dialogo d in data.dialogos) {
+            if (GlobalProfile.getInstance().HasReceivedMessage(d.unlock_message)) {
+                Debug.Log("Encontrei a mensagem " + d.unlock_message + ", destravando dialogo " + d.message);
+                d.enabled = true;
+            }
+        }
     }
 
     void Update(){
@@ -35,14 +43,8 @@ public class SpeechableCharacter : MonoBehaviour
         if(Input.GetMouseButtonDown(0) && !manager.mouseOnSeta){ //perguntar se o mouse não tá em cima da seta
             if(data.dialogos.Count > 0){
 
-                foreach(InventoryItem item in GlobalProfile.getInstance().GetItems(manager.textureManager)){
-                    foreach(Dialogo d in data.dialogos){
-                        if(d.message == item.itemID){
-                            d.enabled = true;
-                        }
-                    }
-                }  
 
+                
                 selectCharacter();
             }
         }
@@ -73,21 +75,18 @@ public class SpeechableCharacter : MonoBehaviour
     }
 
     public void OnMouseEnter() {
-         foreach(Dialogo d in data.dialogos){
-             if(d.enabled && !d.read){  
-                cRead = false;
+
+        Texture2D mouse = NReadTexture2D;
+
+         foreach (Dialogo d in data.dialogos){
+             if(d.enabled && !d.read){
+                mouse = ReadTexture2D;
+                break;
              }
          }
-         if(cRead){
-            Cursor.SetCursor(NReadTexture2D,hotSpot,CursorMode);        
-        }
-        else{
-             Cursor.SetCursor(ReadTexture2D,hotSpot,CursorMode);
-        }
-
+        Cursor.SetCursor(mouse, hotSpot, CursorMode);
     }
     public void OnMouseExit() {
         Cursor.SetCursor(null,hotSpot,CursorMode);
-        cRead = true;
     }   
 }
