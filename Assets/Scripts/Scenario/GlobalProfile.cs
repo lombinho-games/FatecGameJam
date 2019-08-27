@@ -12,11 +12,26 @@ public class GlobalProfile
         }
         return instance;
     }
-    private GlobalProfile(){}
+    private GlobalProfile(){
+        items = new List<InventoryItem>();
+        messages = new SerializedMessages();
+    }
 
 
     //Instance methods
     List<InventoryItem> items;
+    SerializedMessages messages;
+
+    public bool HasReceivedMessage(string message)
+    {
+        return messages.Contains(message);
+    }
+
+    public void SendMessage(string message)
+    {
+        if (message.Length == 0) return;
+        messages.SendMessage(message);
+    }
 
     public void addItem(InventoryItem item){
         if(items == null){
@@ -38,7 +53,21 @@ public class GlobalProfile
         return items;
     }
 
-    public void LoadInventory(TextureManager manager)
+    public void SaveGame()
+    {
+        SaveGameSystem.SaveGame(messages, "slot0_messages");
+        SaveInventory();
+    }
+
+    public void LoadGame(TextureManager manager)
+    {
+        if (SaveGameSystem.DoesSaveGameExist("slot0_messages")) {
+            messages = SaveGameSystem.LoadGame("slot0_messages") as SerializedMessages;
+        }
+        LoadInventory(manager);
+    }
+
+    void LoadInventory(TextureManager manager)
     {
         dirty = false;
         InventorySave inventory = SaveGameSystem.LoadGame("slot0_inventory") as InventorySave;
@@ -59,7 +88,7 @@ public class GlobalProfile
         }
     }
 
-    public void SaveInventory()
+    void SaveInventory()
     {
         dirty = false;
         SaveGameSystem.SaveGame(GetSerializableInventory(), "slot0_inventory");

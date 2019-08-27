@@ -19,7 +19,7 @@ public class SpeechableCharacter : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-
+        RefreshDialogData();
        
     }
 
@@ -62,16 +62,26 @@ public class SpeechableCharacter : MonoBehaviour
         this.lupa = lupa;
     }
 
+    public void RefreshDialogData()
+    {
+        foreach (Dialogo d in data.dialogos) {
+            if (GlobalProfile.getInstance().HasReceivedMessage(d.unlock_message)) {
+                d.enabled = true;
+            }
+        }
+    }
+
     public void OnMouseEnter() {
+
+        if (Input.GetMouseButtonDown(0)) {
+            RefreshDialogData();
+        }
+
         if(!speechCanvas.isActiveAndEnabled){
             bool cRead = true;
             if(data.dialogos.Count > 0){
                 foreach(Dialogo d in data.dialogos){
-                    foreach(InventoryItem item in GlobalProfile.getInstance().GetItems(manager.textureManager)){
-                        if(d.message == item.itemID){
-                            d.enabled = true;
-                        }
-                    }
+
                     if(d.enabled && !d.read){
                         cRead = false;
                     }

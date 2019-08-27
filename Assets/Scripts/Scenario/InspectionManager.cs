@@ -25,6 +25,7 @@ public class InspectionManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GlobalProfile.getInstance().LoadGame(textureManager);
         //Carrega dados do cenário
         if(SaveGameSystem.DoesSaveGameExist("slot0_" + scenarioName)){
             scenarioData = (ScenarioData)SaveGameSystem.LoadGame("slot0_" + scenarioName);
@@ -67,6 +68,15 @@ public class InspectionManager : MonoBehaviour
 
         //string output = JsonUtility.ToJson(CreateScenarioData(),true);
         //Debug.Log(output);
+
+    }
+
+    public void RefreshAllCharacterDialogData()
+    {
+        foreach(SpeechableCharacter character in personagens_folder.transform.GetComponentsInChildren<SpeechableCharacter>()) {
+            character.RefreshDialogData();
+        }
+        GlobalProfile.getInstance().SaveGame();
 
     }
 

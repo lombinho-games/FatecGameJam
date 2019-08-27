@@ -106,6 +106,9 @@ public class SpeechManager : MonoBehaviour
     }
 
     public void OpenCharacterDialog(SpeechableCharacter personagem){
+        GlobalProfile.getInstance().SaveGame();
+
+
         Cursor.SetCursor(null,hotSpot,CursorMode);
         gameObject.SetActive(true);
         personagens.SetActive(false);
@@ -144,6 +147,7 @@ public class SpeechManager : MonoBehaviour
 
                 Button btn_btn = btn.AddComponent<Button>();
                 Image img = btn.AddComponent<Image>();
+                img.color = dig.read ? Color.gray : Color.white;
                 btn_btn.targetGraphic = img;
                 img.sprite = buttonUp;
                 img.type = Image.Type.Sliced;
@@ -157,6 +161,8 @@ public class SpeechManager : MonoBehaviour
                 btn_btn.onClick.AddListener( () => {
                     OpenText(dig.texts);
                     dig.read = true;
+                    GlobalProfile.getInstance().SendMessage(dig.id);
+                    manager.RefreshAllCharacterDialogData();
                 });
 
                 //Cria o texto do botão
