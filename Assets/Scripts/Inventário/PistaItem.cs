@@ -7,7 +7,7 @@ public class PistaItem : MonoBehaviour
     public Texture2D cursorTexture;
     public CursorMode cursorMode = CursorMode.Auto;
     public Vector2 hotSpot = Vector2.zero;
-    public LupaButton lupa;
+    
     public SpeechManager speech;
     public InspectionManager manager;
     SpriteRenderer spriteRenderer;
@@ -40,14 +40,13 @@ public class PistaItem : MonoBehaviour
         }
     }
 
-    public void LoadData(PistaData data, LupaButton lupa, SpeechManager speech, InspectionManager manager){
+    public void LoadData(PistaData data, SpeechManager speech, InspectionManager manager){
         GetComponent<SpriteRenderer>().sprite = manager.textureManager.GetSpritePista(data.image);
         this.manager = manager;
         this.data = data;
         transform.position = data.position;
         transform.localScale = data.scale;
         transform.rotation = data.rotation;
-        this.lupa = lupa;
         this.speech = speech;
     }
     private void OnMouseOver() {

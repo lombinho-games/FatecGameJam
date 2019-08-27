@@ -17,7 +17,6 @@ public class InspectionManager : MonoBehaviour
     public TextureManager textureManager;
 
     public string scenarioName;
-    public LupaButton lupa;
     public SpeechManager speechManager;
     ScenarioData scenarioData;
     [HideInInspector]
@@ -45,7 +44,7 @@ public class InspectionManager : MonoBehaviour
                 for(int i = 0; i < scenarioData.characters.Count; i ++){
                     GameObject character = Instantiate(personagemPrefab);
                     character.transform.SetParent(personagens_folder.transform, false);
-                    character.GetComponent<SpeechableCharacter>().LoadData(scenarioData.characters[i], speechManager, this, lupa);
+                    character.GetComponent<SpeechableCharacter>().LoadData(scenarioData.characters[i], speechManager, this);
                 }
 
                 //Limpando pistas e instanciando de novo
@@ -56,7 +55,7 @@ public class InspectionManager : MonoBehaviour
                 for(int i = 0; i < scenarioData.pistas.Count; i ++){
                     GameObject pista = Instantiate(pistaPrefab);
                     pista.transform.SetParent(pistas_folder.transform, false);
-                    pista.GetComponent<PistaItem>().LoadData(scenarioData.pistas[i], lupa, speechManager, this);
+                    pista.GetComponent<PistaItem>().LoadData(scenarioData.pistas[i], speechManager, this);
                 }
 
                 //TODO: limpar as pastas e instanciar a galera;
@@ -86,10 +85,8 @@ public class InspectionManager : MonoBehaviour
         
     }
 
-    public void ClickOnInventory(){
-        if(!lupa.pressed){
-            SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);
-        }
+    public void ClickOnInventory(){ 
+        SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);
     }
 
     public void SetaEnter(){
