@@ -345,7 +345,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad633952d0e4c104198b1fbb02858a00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
 --- !u!1 &905135016
 GameObject:
   m_ObjectHideFlags: 0
@@ -527,13 +526,8 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1207380695
 BoxCollider2D:
-=======
---- !u!1001 &814643884
-PrefabInstance:
->>>>>>> ccabfbc0dfcb964e3a34a8441e237b22df95bebf
   m_ObjectHideFlags: 0
   serializedVersion: 2
-<<<<<<< HEAD
   m_Size: {x: 5, y: 2.8754644}
   m_EdgeRadius: 0
 --- !u!114 &1207380696
@@ -623,7 +617,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-=======
   m_Modification:
     m_TransformParent: {fileID: 1836714121}
     m_Modifications:
@@ -780,7 +773,6 @@ SpriteRenderer:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e4f6afbecbea0f46bef53ae6fa8739a, type: 3}
->>>>>>> ccabfbc0dfcb964e3a34a8441e237b22df95bebf
 --- !u!114 &1211899989 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6782741223169554925, guid: dfc79180924da2340ab88c61091fce5a,
@@ -1218,7 +1210,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1951008846}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
 --- !u!212 &393748282223407528
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1397,5 +1388,3 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-=======
->>>>>>> ccabfbc0dfcb964e3a34a8441e237b22df95bebf

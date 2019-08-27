@@ -106,12 +106,7 @@ public class SpeechManager : MonoBehaviour
     }
 
     public void OpenCharacterDialog(SpeechableCharacter personagem){
-<<<<<<< HEAD
         Cursor.SetCursor(null, new Vector2(), CursorMode.Auto);
-
-=======
-        Cursor.SetCursor(null,hotSpot,CursorMode);
->>>>>>> ccabfbc0dfcb964e3a34a8441e237b22df95bebf
         gameObject.SetActive(true);
         personagens.SetActive(false);
         gui.SetActive(false);

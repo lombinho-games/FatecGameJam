@@ -594,7 +594,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad633952d0e4c104198b1fbb02858a00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
 --- !u!212 &393748280423183489
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -856,10 +855,8 @@ MonoBehaviour:
     rotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!61 &6883256478564755420
 BoxCollider2D:
-=======
 --- !u!1001 &1773040648
 PrefabInstance:
->>>>>>> ccabfbc0dfcb964e3a34a8441e237b22df95bebf
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
