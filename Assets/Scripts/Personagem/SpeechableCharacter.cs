@@ -9,6 +9,7 @@ public class SpeechableCharacter : MonoBehaviour
     public Vector2 hotSpot = Vector2.zero;
     public SpeechManager speechCanvas;
     public InspectionManager manager;
+    public LupaButton lupa;
     SpriteRenderer spriteRenderer;
 
     //Data
@@ -38,7 +39,7 @@ public class SpeechableCharacter : MonoBehaviour
     }
 
     public void selectCharacter(){
-        if(!speechCanvas.gameObject.activeInHierarchy){
+        if(!speechCanvas.gameObject.activeInHierarchy && !lupa.pressed){
             //Setar os valores do canvas
             SpeechManager sm = speechCanvas.GetComponent<SpeechManager>();
             sm.OpenCharacterDialog(this);
@@ -50,7 +51,7 @@ public class SpeechableCharacter : MonoBehaviour
             where item.enabled select item).ToList();
     }
 
-    public void LoadData(CharacterData data, SpeechManager canvas, InspectionManager manager){
+    public void LoadData(CharacterData data, SpeechManager canvas, InspectionManager manager, LupaButton lupa){
         GetComponent<SpriteRenderer>().sprite = manager.textureManager.GetSpritePose(data.defaultImage);
         this.data = data;
         transform.position = data.position;
@@ -58,6 +59,7 @@ public class SpeechableCharacter : MonoBehaviour
         transform.rotation = data.rotation;
         this.speechCanvas = canvas;
         this.manager = manager;
+        this.lupa = lupa;
     }
 
     public void RefreshDialogData()

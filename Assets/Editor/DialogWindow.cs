@@ -57,6 +57,7 @@ public class DialogWindow : EditorWindow
     }
 
     public void OpenPistaDialogEditor(PistaItem pista){
+        pista.lupa = (LupaButton) EditorGUILayout.ObjectField("Lupa", pista.lupa, typeof(LupaButton), true);
         pista.speech = (SpeechManager) EditorGUILayout.ObjectField("Speech Canvas", pista.speech, typeof(SpeechManager), true);
         pista.data.displayName = EditorGUILayout.TextField("Nome Display", pista.data.displayName);
         pista.data.itemId = EditorGUILayout.TextField("ID do item", pista.data.itemId);
@@ -108,6 +109,7 @@ public class DialogWindow : EditorWindow
     public void OpenCharacterDialogEditor(SpeechableCharacter personagem){
             personagem.speechCanvas = (SpeechManager) EditorGUILayout.ObjectField("Speech Canvas", personagem.speechCanvas, typeof(SpeechManager), true);
             personagem.manager = (InspectionManager) EditorGUILayout.ObjectField("Manager", personagem.manager, typeof(InspectionManager), true);
+            personagem.lupa = (LupaButton) EditorGUILayout.ObjectField("Lupa", personagem.lupa, typeof(LupaButton), true);
             //Busca a lista
             string[] pistaKeys = personagem.manager.textureManager.getPistaKeys();
             string[] poseKeys = personagem.manager.textureManager.getPoseKeys();
