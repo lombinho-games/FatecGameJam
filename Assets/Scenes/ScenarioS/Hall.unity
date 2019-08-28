@@ -180,7 +180,7 @@ PrefabInstance:
     - target: {fileID: 5525538405274900938, guid: 71143aff72b1a1a439482d357f713421,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5525538405274900938, guid: 71143aff72b1a1a439482d357f713421,
         type: 3}
@@ -200,12 +200,12 @@ PrefabInstance:
     - target: {fileID: 5525538405274900938, guid: 71143aff72b1a1a439482d357f713421,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5525538405274900938, guid: 71143aff72b1a1a439482d357f713421,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -4
+      value: -18
       objectReference: {fileID: 0}
     - target: {fileID: 5525538405274900938, guid: 71143aff72b1a1a439482d357f713421,
         type: 3}
@@ -247,6 +247,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5525538405274900938, guid: 71143aff72b1a1a439482d357f713421,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.56759405
+      objectReference: {fileID: 0}
+    - target: {fileID: 5525538405274900938, guid: 71143aff72b1a1a439482d357f713421,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.56759405
+      objectReference: {fileID: 0}
+    - target: {fileID: 5525538405274900938, guid: 71143aff72b1a1a439482d357f713421,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.56759405
+      objectReference: {fileID: 0}
     - target: {fileID: 5525538403906270178, guid: 71143aff72b1a1a439482d357f713421,
         type: 3}
       propertyPath: m_Text
@@ -262,6 +277,36 @@ PrefabInstance:
       propertyPath: manager
       value: 
       objectReference: {fileID: 636359886}
+    - target: {fileID: 1992283615606732633, guid: 71143aff72b1a1a439482d357f713421,
+        type: 3}
+      propertyPath: speech
+      value: 
+      objectReference: {fileID: 1483544357}
+    - target: {fileID: 1992283615606732633, guid: 71143aff72b1a1a439482d357f713421,
+        type: 3}
+      propertyPath: tCursor
+      value: 
+      objectReference: {fileID: 2800000, guid: b62476ce8f943764eae3492ad7f63729, type: 3}
+    - target: {fileID: 4250880248018030473, guid: 71143aff72b1a1a439482d357f713421,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -39.27957
+      objectReference: {fileID: 0}
+    - target: {fileID: 4250880248018030473, guid: 71143aff72b1a1a439482d357f713421,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 373.1637
+      objectReference: {fileID: 0}
+    - target: {fileID: 4250880248018030473, guid: 71143aff72b1a1a439482d357f713421,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -1.2399292
+      objectReference: {fileID: 0}
+    - target: {fileID: 4250880248018030473, guid: 71143aff72b1a1a439482d357f713421,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 219.95917
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71143aff72b1a1a439482d357f713421, type: 3}
 --- !u!1001 &1002634729
@@ -339,7 +384,7 @@ PrefabInstance:
     - target: {fileID: 1865133937126047090, guid: dfc79180924da2340ab88c61091fce5a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2132464284636721919, guid: dfc79180924da2340ab88c61091fce5a,
         type: 3}
@@ -355,7 +400,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: dfc79180924da2340ab88c61091fce5a, type: 3}
 --- !u!224 &1002634730 stripped
 RectTransform:
-  m_CorrespondingSourceObject: {fileID: 6782741223735394841, guid: dfc79180924da2340ab88c61091fce5a,
+  m_CorrespondingSourceObject: {fileID: 1865133937126047090, guid: dfc79180924da2340ab88c61091fce5a,
     type: 3}
   m_PrefabInstance: {fileID: 1002634729}
   m_PrefabAsset: {fileID: 0}
@@ -365,18 +410,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1002634729}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1216552695 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6782741223169554925, guid: dfc79180924da2340ab88c61091fce5a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1002634729}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea5cf309ce112554fbac743e92790102, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1483544357 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5075874318973852194, guid: dfc79180924da2340ab88c61091fce5a,
@@ -486,7 +519,7 @@ PrefabInstance:
         type: 3}
       propertyPath: lupa
       value: 
-      objectReference: {fileID: 1216552695}
+      objectReference: {fileID: 0}
     - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
         type: 3}
       propertyPath: speech
@@ -629,7 +662,6 @@ MonoBehaviour:
   hotSpot: {x: 0, y: 0}
   speechCanvas: {fileID: 1483544357}
   manager: {fileID: 636359886}
-  lupa: {fileID: 1216552695}
   data:
     defaultImage: catarina-default
     headBob: catarina

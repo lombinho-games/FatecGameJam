@@ -5,7 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class ExitPoint : MonoBehaviour
 {
+    public Texture2D tCursor;
+    public CursorMode cursorMode = CursorMode.Auto;
+    public Vector2 hotSpot = Vector2.zero;
     public InspectionManager manager;
+    public SpeechManager speech;
     public enum Scenario : int{
         Hall = 2,
         Biblioteca = 1
@@ -15,7 +19,10 @@ public class ExitPoint : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    {  
+        foreach (Transform t in transform){
+          t.gameObject.SetActive(false);
+        }
 
     }
 
@@ -24,13 +31,12 @@ public class ExitPoint : MonoBehaviour
     {
         
     }
-
     public void Exit(){
         //TODO: Salva cenário
         ScenarioData data = manager.CreateScenarioData();
         bool succ = SaveGameSystem.SaveGame(data, "slot0_" + manager.scenarioName);
         GlobalProfile.getInstance().SaveGame();
-
+        Cursor.SetCursor(null, hotSpot, cursorMode);
         SceneManager.LoadScene((int)exitPoint);
     }
 
@@ -49,5 +55,21 @@ public class ExitPoint : MonoBehaviour
         data.scale = transform.localScale;
         data.rotation = transform.rotation;
         return data;
+    }
+    public void CursorEnter() {
+        if(!speech.isActiveAndEnabled){
+            Cursor.SetCursor(tCursor, hotSpot, cursorMode);
+            foreach (Transform t in transform){
+                t.gameObject.SetActive(true);
+            }
+        }
+    }
+    public void CursorExit() {
+        if(!speech.isActiveAndEnabled){
+            Cursor.SetCursor(null, hotSpot, cursorMode);
+            foreach (Transform t in transform){
+                t.gameObject.SetActive(false);
+            }
+        }
     }
 }

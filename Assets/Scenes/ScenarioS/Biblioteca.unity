@@ -227,7 +227,7 @@ PrefabInstance:
         type: 3}
       propertyPath: lupa
       value: 
-      objectReference: {fileID: 1211899989}
+      objectReference: {fileID: 0}
     - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
         type: 3}
       propertyPath: speech
@@ -290,18 +290,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e4f6afbecbea0f46bef53ae6fa8739a, type: 3}
---- !u!114 &1211899989 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6782741223169554925, guid: dfc79180924da2340ab88c61091fce5a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1951008846}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea5cf309ce112554fbac743e92790102, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1266523151
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -399,7 +387,7 @@ PrefabInstance:
         type: 3}
       propertyPath: lupa
       value: 
-      objectReference: {fileID: 1211899989}
+      objectReference: {fileID: 0}
     - target: {fileID: 2602953544191078621, guid: 9e4f6afbecbea0f46bef53ae6fa8739a,
         type: 3}
       propertyPath: speech
@@ -544,12 +532,12 @@ PrefabInstance:
     - target: {fileID: 5525538405274900938, guid: 71143aff72b1a1a439482d357f713421,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 598
+      value: 657
       objectReference: {fileID: 0}
     - target: {fileID: 5525538405274900938, guid: 71143aff72b1a1a439482d357f713421,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -7
+      value: -75
       objectReference: {fileID: 0}
     - target: {fileID: 5525538405274900938, guid: 71143aff72b1a1a439482d357f713421,
         type: 3}
@@ -608,6 +596,36 @@ PrefabInstance:
       propertyPath: manager
       value: 
       objectReference: {fileID: 1412784564}
+    - target: {fileID: 1992283615606732633, guid: 71143aff72b1a1a439482d357f713421,
+        type: 3}
+      propertyPath: tCursor
+      value: 
+      objectReference: {fileID: 2800000, guid: 567f93b97735d7249b1b9121d2d4ded8, type: 3}
+    - target: {fileID: 1992283615606732633, guid: 71143aff72b1a1a439482d357f713421,
+        type: 3}
+      propertyPath: speech
+      value: 
+      objectReference: {fileID: 451729944}
+    - target: {fileID: 4250880248018030473, guid: 71143aff72b1a1a439482d357f713421,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -17.436462
+      objectReference: {fileID: 0}
+    - target: {fileID: 4250880248018030473, guid: 71143aff72b1a1a439482d357f713421,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 502.5487
+      objectReference: {fileID: 0}
+    - target: {fileID: 4250880248018030473, guid: 71143aff72b1a1a439482d357f713421,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -26.493416
+      objectReference: {fileID: 0}
+    - target: {fileID: 4250880248018030473, guid: 71143aff72b1a1a439482d357f713421,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 295.71808
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71143aff72b1a1a439482d357f713421, type: 3}
 --- !u!4 &1836714121 stripped
@@ -807,7 +825,6 @@ MonoBehaviour:
   hotSpot: {x: 0, y: 0}
   speechCanvas: {fileID: 451729944}
   manager: {fileID: 1412784564}
-  lupa: {fileID: 1211899989}
   data:
     defaultImage: alfred-default
     headBob: alfred
