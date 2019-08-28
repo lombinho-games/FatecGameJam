@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ScenarioS/Hall.unity
     guid: a35574eaeb67c31488fecf81c0545b75
+  - enabled: 1
+    path: Assets/Scenes/ScenarioS/Sala de Estar.unity
+    guid: 5f8292350f9e5004d9e53958ca636462
+  - enabled: 1
+    path: Assets/Scenes/ScenarioS/Suite.unity
+    guid: 9a72b418cf836b64ab316092eb8b6a5d
   m_configObjects: {}
