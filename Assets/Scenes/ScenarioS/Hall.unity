@@ -401,11 +401,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.56759405
       objectReference: {fileID: 0}
-    - target: {fileID: 5525538403906270178, guid: 71143aff72b1a1a439482d357f713421,
-        type: 3}
-      propertyPath: m_Text
-      value: Biblioteca
-      objectReference: {fileID: 0}
     - target: {fileID: 1992283615606732633, guid: 71143aff72b1a1a439482d357f713421,
         type: 3}
       propertyPath: exitPoint
@@ -426,6 +421,11 @@ PrefabInstance:
       propertyPath: tCursor
       value: 
       objectReference: {fileID: 2800000, guid: b62476ce8f943764eae3492ad7f63729, type: 3}
+    - target: {fileID: 5525538403906270178, guid: 71143aff72b1a1a439482d357f713421,
+        type: 3}
+      propertyPath: m_Text
+      value: Biblioteca
+      objectReference: {fileID: 0}
     - target: {fileID: 4250880248018030473, guid: 71143aff72b1a1a439482d357f713421,
         type: 3}
       propertyPath: m_Offset.y
@@ -684,6 +684,26 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1992283615606732633, guid: 71143aff72b1a1a439482d357f713421,
+        type: 3}
+      propertyPath: exitPoint
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992283615606732633, guid: 71143aff72b1a1a439482d357f713421,
+        type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 636359886}
+    - target: {fileID: 1992283615606732633, guid: 71143aff72b1a1a439482d357f713421,
+        type: 3}
+      propertyPath: speech
+      value: 
+      objectReference: {fileID: 1483544357}
+    - target: {fileID: 1992283615606732633, guid: 71143aff72b1a1a439482d357f713421,
+        type: 3}
+      propertyPath: tCursor
+      value: 
+      objectReference: {fileID: 2800000, guid: 567f93b97735d7249b1b9121d2d4ded8, type: 3}
     - target: {fileID: 5525538403906270178, guid: 71143aff72b1a1a439482d357f713421,
         type: 3}
       propertyPath: m_Text
@@ -711,26 +731,6 @@ PrefabInstance:
       propertyPath: m_Color.g
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1992283615606732633, guid: 71143aff72b1a1a439482d357f713421,
-        type: 3}
-      propertyPath: exitPoint
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1992283615606732633, guid: 71143aff72b1a1a439482d357f713421,
-        type: 3}
-      propertyPath: manager
-      value: 
-      objectReference: {fileID: 636359886}
-    - target: {fileID: 1992283615606732633, guid: 71143aff72b1a1a439482d357f713421,
-        type: 3}
-      propertyPath: speech
-      value: 
-      objectReference: {fileID: 1483544357}
-    - target: {fileID: 1992283615606732633, guid: 71143aff72b1a1a439482d357f713421,
-        type: 3}
-      propertyPath: tCursor
-      value: 
-      objectReference: {fileID: 2800000, guid: 567f93b97735d7249b1b9121d2d4ded8, type: 3}
     - target: {fileID: 5525538403906270179, guid: 71143aff72b1a1a439482d357f713421,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -913,13 +913,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e4f6afbecbea0f46bef53ae6fa8739a, type: 3}
---- !u!212 &393748280228313865
+--- !u!212 &393748280276569045
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7277678701404087108}
+  m_GameObject: {fileID: 7277678701355881368}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -961,27 +961,206 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &3948241478960604841
-Transform:
+--- !u!61 &2602953544859282424
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7277678701404087108}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.54, y: -1.46, z: 9}
-  m_LocalScale: {x: 0.18312, y: 0.18312, z: 0.18312}
-  m_Children: []
-  m_Father: {fileID: 162993656}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5151352206498908679
+  m_GameObject: {fileID: 2602953544859282426}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 1
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.2, y: 4.61}
+    newSize: {x: 6.55, y: 3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5, y: 5}
+  m_EdgeRadius: 0
+--- !u!114 &2602953544859282425
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7277678701404087108}
+  m_GameObject: {fileID: 2602953544859282426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c489ffecf77bdb749a45c747d526c143, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: 1511b6a779d785f448d4baf67e341ac6, type: 3}
+  cursorMode: 0
+  hotSpot: {x: 0, y: 0}
+  speech: {fileID: 1483544357}
+  manager: {fileID: 636359886}
+  data:
+    dialogo:
+      texts:
+      - texto: dasuidhasuid
+        image: detective-default
+        owner: Detetive
+      - texto: fnajskfnaskj
+        image: detective-default
+        owner: Detetive
+      pergunta: 
+      id: 
+      unlock_message: 
+      enabled: 0
+      read: 0
+    image: atadura
+    displayName: Atadura
+    itemId: Atadura
+    itemDescription: "\xE9 uma atadura, achei no meio da escada, algu\xE9m deixou
+      ali."
+    messages: []
+    position: {x: 0, y: 0, z: 0}
+    scale: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &2602953544859282426
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2602953544859282427}
+  - component: {fileID: 2602953544859282430}
+  - component: {fileID: 2602953544859282425}
+  - component: {fileID: 2602953544859282424}
+  - component: {fileID: 3781140121781115572}
+  m_Layer: 0
+  m_Name: PistaDefault
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2602953544859282427
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2602953544859282426}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.83, y: 2.34, z: -9}
+  m_LocalScale: {x: 0.13734, y: 0.13734, z: 0.6867}
+  m_Children: []
+  m_Father: {fileID: 1002634731}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &2602953544859282430
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2602953544859282426}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 21300000, guid: 9eb970ebf26c35d4c9fcddb27aa051d3, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 6.55, y: 3}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &3781140121781115572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2602953544859282426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2602953544859282425}
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 0
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!4 &3948241478908335733
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7277678701355881368}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.81, y: -1.29, z: 9}
+  m_LocalScale: {x: 0.18312, y: 0.18312, z: 0.18312}
+  m_Children: []
+  m_Father: {fileID: 162993656}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5151352206282816219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7277678701355881368}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e815c8b7fc1d64646a087a175cf43031, type: 3}
@@ -998,39 +1177,45 @@ MonoBehaviour:
     headBob: catarina
     dialogos:
     - texts:
-      - texto: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        image: catarina-default
-        owner: Catarina
-      - texto: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+      - texto: RadaRadaRadaRadaRadaRadaRadaRadaRada RadaRada RadaRada
+        image: detective-default
+        owner: Detetive
+      - texto: "Que merda voc\xEA ta falando?"
         image: catarina-angry
         owner: Catarina
-      pergunta: O que rolastes?
-      id: catarina-default
+      - texto: "Desculpe, for\xE7a do habito"
+        image: detective-default
+        owner: Detetive
+      - texto: Louca!
+        image: catarina-angry
+        owner: Catarina
+      pergunta: "O que voc\xEA estava fazendo no horario do ocorrido?"
+      id: catarina-Pd1
       unlock_message: 
       enabled: 1
       read: 0
     - texts:
-      - texto: nao eh problema seu
-        image: catarina-angry
-        owner: catarina
-      - texto: eh msm eh
+      - texto: Oh, qual da atadura?
         image: detective-default
-        owner: detetive
-      pergunta: E essa chave de fenda ai
-      id: catarina-chave
-      unlock_message: chave-de-fenda
+        owner: Detetive
+      - texto: "Sei l\xE1 porra"
+        image: catarina-angry
+        owner: Catarina
+      pergunta: O que era aquela atadura na escada?
+      id: catarina-Pb1
+      unlock_message: Atadura
       enabled: 0
       read: 0
     position: {x: 0, y: 0, z: 0}
     scale: {x: 0, y: 0, z: 0}
     rotation: {x: 0, y: 0, z: 0, w: 0}
---- !u!61 &6883256478227277908
+--- !u!61 &6883256478443444360
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7277678701404087108}
+  m_GameObject: {fileID: 7277678701355881368}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -1050,7 +1235,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 21.263903, y: 39.123863}
   m_EdgeRadius: 0
---- !u!1 &7277678701404087108
+--- !u!1 &7277678701355881368
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1058,10 +1243,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3948241478960604841}
-  - component: {fileID: 393748280228313865}
-  - component: {fileID: 5151352206498908679}
-  - component: {fileID: 6883256478227277908}
+  - component: {fileID: 3948241478908335733}
+  - component: {fileID: 393748280276569045}
+  - component: {fileID: 5151352206282816219}
+  - component: {fileID: 6883256478443444360}
   m_Layer: 0
   m_Name: Catarina
   m_TagString: Untagged
