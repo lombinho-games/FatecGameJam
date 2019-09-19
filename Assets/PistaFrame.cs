@@ -45,7 +45,7 @@ public class PistaFrame : MonoBehaviour
     public void Click()
     {
         if(quadro.creatingConnection != null) {// Se eu clico com conexão
-            if(quadro.creatingConnection.objectA == gameObject) { //Conectando comigo msm
+            if(quadro.creatingConnection.objectA == outerPin) { //Conectando comigo msm
                 Destroy(quadro.creatingConnection.gameObject);
                 quadro.creatingConnection = null;
             }
