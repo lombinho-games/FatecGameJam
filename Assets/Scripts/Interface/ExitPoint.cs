@@ -11,6 +11,8 @@ public class ExitPoint : MonoBehaviour
     public InspectionManager manager;
     public SpeechManager speech;
     public enum Scenario : int{
+        Banheiro_Suite = 6,
+        Corredor = 5,
         Suite = 4,
         Sala_de_Estar = 3,
         Hall = 2,
