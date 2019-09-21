@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scenarios/Suite.unity
     guid: 9a72b418cf836b64ab316092eb8b6a5d
+  - enabled: 1
+    path: Assets/Scenes/ScenarioS/Corredor.unity
+    guid: 48e332f39e724584fba4cd4c71147c6c
+  - enabled: 1
+    path: Assets/Scenes/ScenarioS/Banheiro - Suite.unity
+    guid: 7a70623254d110c4680dc3c7da62017e
   m_configObjects: {}
