@@ -605,7 +605,6 @@ MonoBehaviour:
   exits_folder: {fileID: 2179302160700208103}
   textureManager: {fileID: 11400000, guid: 165dd8d4bb439664582ca39a741ac8e9, type: 2}
   scenarioName: 
-  lupa: {fileID: 0}
   speechManager: {fileID: 5075874318973852194}
   mouseOnSeta: 0
 --- !u!1 &6350313903456268823
@@ -1217,7 +1216,7 @@ GameObject:
   - component: {fileID: 6782741223735394847}
   - component: {fileID: 6782741223735394844}
   m_Layer: 0
-  m_Name: Hall
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
