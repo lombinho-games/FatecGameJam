@@ -12,8 +12,6 @@ public class SlotUI : MonoBehaviour
     public Text tempoDeJogoText;
     public Image detetiveImage;
     public Image cenarioImage;
-
-    public Text idText;
     
 
     [Header("Propriedades")]
@@ -41,8 +39,6 @@ public class SlotUI : MonoBehaviour
 
         DateTime tempoJogoDate = new DateTime(tempoDeJogo);
         tempoDeJogoText.text = tempoJogoDate.Hour + ":" + tempoJogoDate.Minute + ":" + tempoJogoDate.Second;
-
-        idText.text = id + "";
 
         if(detetive != null)
             detetiveImage.sprite = detetive;

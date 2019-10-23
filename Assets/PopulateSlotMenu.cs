@@ -42,6 +42,8 @@ public class PopulateSlotMenu : MonoBehaviour
     }
 
     public void CreateNewCase(){
+        Debug.Log("Creating new Case");
+
         Slot newSlot = new Slot(GlobalProfile.gameSlots.NextID(), 2/* ID do Hall */, DateTime.Now, new DateTime());
         GlobalProfile.gameSlots.AddSlotToList(newSlot);
         SaveGameSystem.SaveGame(GlobalProfile.gameSlots, "slots");
