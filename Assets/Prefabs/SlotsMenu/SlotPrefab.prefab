@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 199.5, y: 43.9}
+  m_SizeDelta: {x: 199.5, y: 52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1795811242713296791
 CanvasRenderer:
@@ -66,8 +66,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_Font: {fileID: 12800000, guid: 1c48753265f58554a84e964119983583, type: 3}
+    m_FontSize: 38
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 4
@@ -188,7 +188,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 199.5, y: 43.9}
+  m_SizeDelta: {x: 199.5, y: 52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1795811242922522044
 CanvasRenderer:
@@ -219,8 +219,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_Font: {fileID: 12800000, guid: 1c48753265f58554a84e964119983583, type: 3}
+    m_FontSize: 38
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 4
@@ -341,7 +341,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 199.5, y: 43.9}
+  m_SizeDelta: {x: 199.5, y: 52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1795811243698940479
 CanvasRenderer:
@@ -372,8 +372,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_Font: {fileID: 12800000, guid: 1c48753265f58554a84e964119983583, type: 3}
+    m_FontSize: 38
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 4
@@ -421,7 +421,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00050735474, y: 0}
+  m_AnchoredPosition: {x: 0.0005187988, y: 0}
   m_SizeDelta: {x: -280.001, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1795811244248736687
@@ -487,7 +487,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 837.1, y: 540}
-  m_SizeDelta: {x: 544.5, y: 150}
+  m_SizeDelta: {x: 544.5, y: 192.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1795811244409448361
 CanvasRenderer:
@@ -573,6 +573,7 @@ MonoBehaviour:
   tempoDeJogo: 0
   detetive: {fileID: 0}
   cenarioSprite: {fileID: 0}
+  populate: {fileID: 0}
 --- !u!1 &5573594292424911775
 GameObject:
   m_ObjectHideFlags: 0
