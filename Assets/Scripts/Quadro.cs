@@ -25,8 +25,8 @@ public class Quadro : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(SaveGameSystem.DoesSaveGameExist("slot0_quadro")){
-            LoadQuadroData(SaveGameSystem.LoadGame("slot0_quadro") as QuadroData);
+        if(SaveGameSystem.DoesSaveGameExist("slot"+GlobalProfile.Slot+"_quadro")){
+            LoadQuadroData(SaveGameSystem.LoadGame("slot"+GlobalProfile.Slot+"_quadro") as QuadroData);
         }
     }
 
@@ -83,7 +83,7 @@ public class Quadro : MonoBehaviour
 
     public void SaveQuadro(){
         QuadroData data = CreateQuadroData();
-        SaveGameSystem.SaveGame(data, "slot0_quadro");
+        SaveGameSystem.SaveGame(data, "slot"+GlobalProfile.Slot+"_quadro");
     }
 
     public QuadroData CreateQuadroData(){

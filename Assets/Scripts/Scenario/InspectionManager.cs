@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class InspectionManager : MonoBehaviour
 {
-
     //Prefabs
     public GameObject personagemPrefab;
     public GameObject pistaPrefab;
@@ -15,8 +14,6 @@ public class InspectionManager : MonoBehaviour
     public GameObject pistas_folder;
     public GameObject exits_folder;
     public TextureManager textureManager;
-
-    public string scenarioName;
     public SpeechManager speechManager;
     ScenarioData scenarioData;
     [HideInInspector]
@@ -24,13 +21,16 @@ public class InspectionManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         GlobalProfile.getInstance().LoadGame(textureManager);
+        GlobalProfile.getInstance().SaveGame();
+        string scenarioName = GlobalProfile.GetCurrentSceneName();
         //Carrega dados do cenário
-        if(SaveGameSystem.DoesSaveGameExist("slot0_" + scenarioName)){
-            scenarioData = (ScenarioData)SaveGameSystem.LoadGame("slot0_" + scenarioName);
+        if(SaveGameSystem.DoesSaveGameExist("slot"+GlobalProfile.Slot+"_" + scenarioName)){
+            scenarioData = (ScenarioData)SaveGameSystem.LoadGame("slot"+GlobalProfile.Slot+"_" + scenarioName);
 
             if(scenarioData == null){
-                Debug.Log("Arquivo slot0_" + scenarioName + " com problemas ao ser carregado");
+                Debug.Log("Arquivo slot"+GlobalProfile.Slot+"_" + scenarioName + " com problemas ao ser carregado");
             }
             else{
                 Debug.Log("Carreguei os dados de cenário " + scenarioName);
@@ -62,7 +62,7 @@ public class InspectionManager : MonoBehaviour
             }
         }
         else{
-            Debug.Log("Arquivo slot0_" + scenarioName + " não foi encontrado");
+            Debug.Log("Arquivo slot"+GlobalProfile.Slot+"_" + scenarioName + " não foi encontrado");
         }
 
         //string output = JsonUtility.ToJson(CreateScenarioData(),true);
