@@ -22,6 +22,8 @@ public class SlotUI : MonoBehaviour
     public Sprite detetive;
     public Sprite cenarioSprite;
 
+    public PopulateSlotMenu populate;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +36,6 @@ public class SlotUI : MonoBehaviour
         DateTime dataInicioDate = new DateTime(dataInicio);
         dataInicioText.text = dataInicioDate.Day + "/" + dataInicioDate.Month + "/" + dataInicioDate.Year;
 
-        Debug.Log("Nome da cena: " + GetSceneNameByPath(SceneUtility.GetScenePathByBuildIndex(cenario)));
         cenarioText.text = GetSceneNameByPath(SceneUtility.GetScenePathByBuildIndex(cenario));
 
         DateTime tempoJogoDate = new DateTime(tempoDeJogo);
@@ -43,7 +44,7 @@ public class SlotUI : MonoBehaviour
         if(detetive != null)
             detetiveImage.sprite = detetive;
         if(cenarioSprite != null)
-        cenarioImage.sprite = cenarioSprite;
+            cenarioImage.sprite = cenarioSprite;
     }
 
     public string GetSceneNameByPath(string sceneName){
@@ -74,6 +75,10 @@ public class SlotUI : MonoBehaviour
         if(SaveGameSystem.DoesSaveGameExist("slot" + id + "_messages")){
             SaveGameSystem.DeleteSaveGame("slot" + id + "_messages");
         }
+
+        
+        populate.RemovePage(this);
+        
 
     }
 }
