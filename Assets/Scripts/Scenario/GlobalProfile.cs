@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GlobalProfile
 {
+    public static int Slot = -1;
+    public static SlotsData gameSlots;
     static GlobalProfile instance;
     static bool dirty = false;
     public static GlobalProfile getInstance(){
@@ -55,14 +58,25 @@ public class GlobalProfile
 
     public void SaveGame()
     {
-        SaveGameSystem.SaveGame(messages, "slot0_messages");
+        SaveGameSystem.SaveGame(messages, "slot"+Slot+"_messages");
+        gameSlots.Slots[Slot].scenario = SceneManager.GetActiveScene().buildIndex;
+        SaveGameSystem.SaveGame(gameSlots, "slots");
         SaveInventory();
+    }
+
+    public static string GetSceneNameByPath(string sceneName){
+        string[] ped = sceneName.Split(new char[] {'/'});
+        return ped[ped.Length-1].Split(new char[] {'.'})[0];
+    }
+
+    public static string GetCurrentSceneName(){
+        return GetSceneNameByPath(SceneUtility.GetScenePathByBuildIndex(SceneManager.GetActiveScene().buildIndex));
     }
 
     public void LoadGame(TextureManager manager)
     {
-        if (SaveGameSystem.DoesSaveGameExist("slot0_messages")) {
-            messages = SaveGameSystem.LoadGame("slot0_messages") as SerializedMessages;
+        if (SaveGameSystem.DoesSaveGameExist("slot"+Slot+"_messages")) {
+            messages = SaveGameSystem.LoadGame("slot"+Slot+"_messages") as SerializedMessages;
         }
         LoadInventory(manager);
     }
@@ -70,7 +84,7 @@ public class GlobalProfile
     void LoadInventory(TextureManager manager)
     {
         dirty = false;
-        InventorySave inventory = SaveGameSystem.LoadGame("slot0_inventory") as InventorySave;
+        InventorySave inventory = SaveGameSystem.LoadGame("slot"+Slot+"_inventory") as InventorySave;
         if (inventory == null) return;
 
         if (items == null) items = new List<InventoryItem>();
@@ -91,7 +105,7 @@ public class GlobalProfile
     void SaveInventory()
     {
         dirty = false;
-        SaveGameSystem.SaveGame(GetSerializableInventory(), "slot0_inventory");
+        SaveGameSystem.SaveGame(GetSerializableInventory(), "slot"+Slot+"_inventory");
     }
 
     public InventorySave GetSerializableInventory()

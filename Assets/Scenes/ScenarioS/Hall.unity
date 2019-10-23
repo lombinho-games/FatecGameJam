@@ -465,6 +465,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scenario
       objectReference: {fileID: 0}
+    - target: {fileID: 1865133937126047090, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611990409394683886, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: scenarioName
+      value: Hall
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611990409394683886, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: Slot
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5138305931716355625, guid: dfc79180924da2340ab88c61091fce5a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -526,16 +541,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: ea35c60e829470e438c078ce5be28575,
         type: 3}
-    - target: {fileID: 1865133937126047090, guid: dfc79180924da2340ab88c61091fce5a,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3611990409394683886, guid: dfc79180924da2340ab88c61091fce5a,
-        type: 3}
-      propertyPath: scenarioName
-      value: Hall
-      objectReference: {fileID: 0}
     - target: {fileID: 2132464284636721919, guid: dfc79180924da2340ab88c61091fce5a,
         type: 3}
       propertyPath: m_LocalPosition.z
