@@ -465,11 +465,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scenario
       objectReference: {fileID: 0}
-    - target: {fileID: 1865133937126047090, guid: dfc79180924da2340ab88c61091fce5a,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3611990409394683886, guid: dfc79180924da2340ab88c61091fce5a,
         type: 3}
       propertyPath: scenarioName
@@ -479,6 +474,11 @@ PrefabInstance:
         type: 3}
       propertyPath: Slot
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1865133937126047090, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5138305931716355625, guid: dfc79180924da2340ab88c61091fce5a,
         type: 3}
@@ -547,6 +547,11 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1942700919967388219, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3124369890579125632, guid: dfc79180924da2340ab88c61091fce5a,
         type: 3}
       propertyPath: m_IsActive
       value: 0

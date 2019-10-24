@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Introduction.unity
     guid: 215a750e0aa4a564791bc08a73ee1a9e
   - enabled: 1
-    path: Assets/Scenes/Scenarios/Biblioteca.unity
-    guid: 6095a2498e28953419cbcf6d23f6d550
-  - enabled: 1
     path: Assets/Scenes/Scenarios/Hall.unity
     guid: a35574eaeb67c31488fecf81c0545b75
   - enabled: 1
@@ -21,9 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Scenarios/Suite.unity
     guid: 9a72b418cf836b64ab316092eb8b6a5d
   - enabled: 1
-    path: Assets/Scenes/ScenarioS/Corredor.unity
+    path: Assets/Scenes/Scenarios/Corredor.unity
     guid: 48e332f39e724584fba4cd4c71147c6c
   - enabled: 1
-    path: Assets/Scenes/ScenarioS/Banheiro - Suite.unity
+    path: Assets/Scenes/Scenarios/Banheiro - Suite.unity
     guid: 7a70623254d110c4680dc3c7da62017e
   m_configObjects: {}
