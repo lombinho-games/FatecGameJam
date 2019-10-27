@@ -525,10 +525,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 584547499}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8d7d41ef7ee0f24aa60474ea9357415, type: 3}
+  m_Script: {fileID: 11500000, guid: 90706e13c34439c45b039590ac1850ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originalSlot: {fileID: 0}
 --- !u!1 &610311106
 GameObject:
   m_ObjectHideFlags: 0
@@ -1067,7 +1066,7 @@ MonoBehaviour:
   content: {fileID: 1037475793}
   manager: {fileID: 11400000, guid: 165dd8d4bb439664582ca39a741ac8e9, type: 2}
   slotSprite: {fileID: 21300000, guid: 0c25a0ce3a932ac45a6bf60e658a3447, type: 3}
-  selection: {fileID: 584547503}
+  selection: {fileID: 0}
   mainCamera: {fileID: 1288571366}
   framePrefab: {fileID: 3234482016392466691, guid: aa54df82cfe59b348867456a2c524676,
     type: 3}
@@ -1289,7 +1288,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -0.000004832782, y: 0.00002490716}
+  m_AnchoredPosition: {x: -0.000004832782, y: -0.000036127996}
   m_SizeDelta: {x: 700, y: 436.8}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1258990852

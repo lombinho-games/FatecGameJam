@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5525538403906270179
 RectTransform:
   m_ObjectHideFlags: 0
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 1992283615606732633}
   - component: {fileID: 7121277426797746847}
   m_Layer: 0
-  m_Name: Saida_Default
+  m_Name: SaidaDefault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -224,13 +224,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 308495325a7c1264585ad61d9a6d9690, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Slot: 0
-  tCursor: {fileID: 0}
+  tCursor: {fileID: 2800000, guid: 9dd1574ce29d16e4fa091c3aabb7d53f, type: 3}
   cursorMode: 0
   hotSpot: {x: 0, y: 0}
   manager: {fileID: 0}
   speech: {fileID: 0}
-  exitPoint: 0
+  childText: {fileID: 5525538403906270178}
+  cursorUp: {fileID: 2800000, guid: 567f93b97735d7249b1b9121d2d4ded8, type: 3}
+  cursorDown: {fileID: 2800000, guid: 9dd1574ce29d16e4fa091c3aabb7d53f, type: 3}
+  cursorLeft: {fileID: 2800000, guid: 9dd1574ce29d16e4fa091c3aabb7d53f, type: 3}
+  cursorRight: {fileID: 2800000, guid: 567f93b97735d7249b1b9121d2d4ded8, type: 3}
+  isUI: 0
+  data:
+    title: 
+    iCursor: 0
+    exitPoint: 0
+    enabled: 0
+    position: {x: -31.399994, y: 142.8, z: 0}
+    scale: {x: 0.567594, y: 0.567594, z: 0.567594}
+    rotation: {x: -0, y: -0, z: -0, w: 1}
 --- !u!114 &7121277426797746847
 MonoBehaviour:
   m_ObjectHideFlags: 0

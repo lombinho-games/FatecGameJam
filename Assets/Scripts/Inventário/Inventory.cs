@@ -9,7 +9,7 @@ public class Inventory : MonoBehaviour
     public GameObject content;
     public TextureManager manager;
     public Sprite slotSprite;
-    public ItemSelection selection;
+    public ParametrizeObject selection;
     public Camera mainCamera;
     public GameObject framePrefab;
     public GameObject pinPrefab;
@@ -111,9 +111,10 @@ public class Inventory : MonoBehaviour
             selection.GetComponent<Image>().sprite = pointer.pointerDrag.GetComponent<Image>().sprite;
             selection.name = pointer.pointerDrag.name;
 
-            selection.originalSlot = pointer.pointerDrag;
+            selection.setParameter("originalSlot", pointer.pointerDrag);
 
             selection.gameObject.SetActive(true);
+
         }
     }
 

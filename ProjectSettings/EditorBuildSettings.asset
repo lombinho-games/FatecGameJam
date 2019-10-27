@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Introduction.unity
+    path: Assets/Scenes/Interfaces/Introduction.unity
     guid: 215a750e0aa4a564791bc08a73ee1a9e
   - enabled: 1
     path: Assets/Scenes/Scenarios/Hall.unity
@@ -23,4 +23,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scenarios/Banheiro - Suite.unity
     guid: 7a70623254d110c4680dc3c7da62017e
+  - enabled: 1
+    path: Assets/Scenes/Scenarios/Biblioteca.unity
+    guid: 6095a2498e28953419cbcf6d23f6d550
+  - enabled: 1
+    path: Assets/Scenes/Scenarios/Sala de Jantar.unity
+    guid: d980ef0adc017494fa2a1d8051806944
+  - enabled: 1
+    path: Assets/Scenes/Scenarios/Cozinha.unity
+    guid: 2c7e27b1d9a8c1a47bf4042723ee0bc5
   m_configObjects: {}

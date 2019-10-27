@@ -60,6 +60,14 @@ public class SpeechableCharacter : MonoBehaviour
         this.manager = manager;
     }
 
+    public void ReceiveMessage(string message){
+        foreach (Dialogo d in data.dialogos) {
+            if (message == d.unlock_message) {
+                d.enabled = true;
+            }
+        }
+    }
+
     public void RefreshDialogData()
     {
         foreach (Dialogo d in data.dialogos) {

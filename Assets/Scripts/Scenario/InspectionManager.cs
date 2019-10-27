@@ -8,6 +8,7 @@ public class InspectionManager : MonoBehaviour
     //Prefabs
     public GameObject personagemPrefab;
     public GameObject pistaPrefab;
+    public GameObject exitPrefab;
 
     //Grupos
     public GameObject personagens_folder;
@@ -58,7 +59,17 @@ public class InspectionManager : MonoBehaviour
                     pista.GetComponent<PistaItem>().LoadData(scenarioData.pistas[i], speechManager, this);
                 }
 
-                //TODO: limpar as pastas e instanciar a galera;
+                //Limpando exits e instanciando de novo
+                foreach(Transform child in exits_folder.transform){
+                    GameObject.Destroy(child.gameObject);
+                }
+
+                for(int i = 0; i < scenarioData.exits.Count; i ++){
+                    GameObject exit = Instantiate(exitPrefab);
+                    exit.transform.SetParent(exits_folder.transform, false);
+                    exit.GetComponent<ExitPoint>().LoadData(scenarioData.exits[i], this, speechManager);
+                }
+
             }
         }
         else{
@@ -68,6 +79,19 @@ public class InspectionManager : MonoBehaviour
         //string output = JsonUtility.ToJson(CreateScenarioData(),true);
         //Debug.Log(output);
 
+    }
+
+    public void PropagateMessage(string message){
+        //Propaga pros persoangens
+        SpeechableCharacter[] characters = (SpeechableCharacter[]) GameObject.FindObjectsOfType(typeof(SpeechableCharacter));
+        foreach(SpeechableCharacter c in characters){
+            c.ReceiveMessage(message);
+        }
+
+        ExitPoint[] points = (ExitPoint[]) GameObject.FindObjectsOfType(typeof(ExitPoint));
+        foreach(ExitPoint e in points){
+            e.ReceiveMessage(message);
+        }
     }
 
     public void RefreshAllCharacterDialogData()
@@ -112,7 +136,7 @@ public class InspectionManager : MonoBehaviour
         }
         //Itera por todos os exits
         foreach(Transform obj in exits_folder.transform){
-           // data.exits.Add(obj.GetComponent<ExitPoint>().GetData());
+           data.exits.Add(obj.GetComponent<ExitPoint>().GetData());
         }
 
         return data;

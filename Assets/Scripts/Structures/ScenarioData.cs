@@ -10,13 +10,13 @@ public class ScenarioData : SaveGame
     [SerializeField]
     public List<PistaData> pistas;
 
-    
-    //[SerializeField]
-    //public List<ExitData> exits;
+    [SerializeField]
+    public List<ExitData> exits;
+
     public ScenarioData(){
         characters = new List<CharacterData>();
         pistas = new List<PistaData>();
-        //exits = new List<ExitData>();
+        exits = new List<ExitData>();
     }
 
 }

@@ -20,7 +20,6 @@ public class GlobalProfile
         messages = new SerializedMessages();
     }
 
-
     //Instance methods
     List<InventoryItem> items;
     SerializedMessages messages;
@@ -33,7 +32,13 @@ public class GlobalProfile
     public void SendMessage(string message)
     {
         if (message.Length == 0) return;
+
         messages.SendMessage(message);
+
+        InspectionManager manager = (InspectionManager)GameObject.FindObjectOfType(typeof(InspectionManager));
+        if(manager == null) return;
+
+        manager.PropagateMessage(message);
     }
 
     public void addItem(InventoryItem item){
