@@ -7,6 +7,7 @@ public class IncrementTime : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GlobalProfile.Slot = -1;
         DontDestroyOnLoad(gameObject);
     }
 

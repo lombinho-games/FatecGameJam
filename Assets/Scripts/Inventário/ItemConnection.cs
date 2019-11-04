@@ -7,31 +7,28 @@ using UnityEngine.UI;
 public class ItemConnection : MaskableGraphic
 {
 
-    public enum ConnectorName{
-        Conector1,
-        Conector2,
-        Conector3,
-        Conector4,
-        Conector5,
-        Conector6
-    }
-
+    public static string[] connectors = new string[]{
+        "Estava em",
+        "Não estava em",
+        "Porque"
+    };
 
     public GameObject objectA;
     public GameObject objectB;
     public InventoryItemMenu menu;
-    public ConnectorName connector = ConnectorName.Conector1;
+    public string connector = "Estava em";
     public GameObject textObject;
     public GameObject connectorSelector;
-
     Color currentColor;
-
     public float width;
     public bool isOnMouse;
 
     Vector2[] corners = new Vector2[4];
 
-    LineRenderer lineRenderer;
+    Color colorDefault = new Color(227/255f, 208/255f, 117/255f, 1);
+    Color correctColor = new Color(108/255f, 188/255f, 36/255f, 1);
+    Color wrongColor = new Color(255/255f, 116/255f, 57/255f, 1);
+    public int status = 0;
 
     protected override void OnPopulateMesh(VertexHelper vh)
     {
@@ -78,6 +75,14 @@ public class ItemConnection : MaskableGraphic
         return vec;
     }
 
+    public PistaFrame GetPistaA(){
+        return objectA.GetComponent<PistaPin>().pista.transform.parent.GetComponent<PistaFrame>();
+    }
+
+    public PistaFrame GetPistaB(){
+        return objectB.GetComponent<PistaPin>().pista.transform.parent.GetComponent<PistaFrame>();
+    }
+
     public bool IsPointInPolygon(Vector2 point, Vector2[] polygon)
     {
         int polygonLength = polygon.Length, i = 0;
@@ -104,13 +109,15 @@ public class ItemConnection : MaskableGraphic
     // Start is called before the first frame update
     protected override void Start()
     {
-        lineRenderer = GetComponent<LineRenderer>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         SetAllDirty();
+
+        color = status == 0 ? colorDefault : (status == 1 ? correctColor : wrongColor);
 
         currentColor = color;
 
@@ -121,12 +128,12 @@ public class ItemConnection : MaskableGraphic
             currentColor = Color.red;
 
             if (Input.GetMouseButtonDown(0)) {
-                menu.OpenMenu(null, null, this, false, false, true);
+                menu.OpenMenu(null, null, this, false, false, status == 0);
             }
         }
 
         if(objectA != null && objectB != null){
-            textObject.GetComponent<Text>().text = connector.ToString();
+            textObject.GetComponent<Text>().text = connector;
             textObject.transform.position = (objectB.transform.position + objectA.transform.position)/2f;
         }
     }

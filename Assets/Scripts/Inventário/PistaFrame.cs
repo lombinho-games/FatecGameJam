@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PistaFrame : MonoBehaviour
 {
@@ -11,16 +12,20 @@ public class PistaFrame : MonoBehaviour
     public InventoryItem item;
     public bool draggin;
 
+    public bool selected = false;
+
+    Image image;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        image = GetComponent<Image>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        image.color = selected ? Color.blue : Color.white;
     }
 
     public void FrameDrag()
@@ -77,8 +82,11 @@ public class PistaFrame : MonoBehaviour
             }
 
         }
-        else {
-            if (!draggin && !quadro.menu.gameObject.activeInHierarchy) {
+        else if (quadro.checkSelection){ //Se tá com seleção de check ativado
+            selected = !selected;
+        }
+        else{
+            if (!draggin) {
                 quadro.OpenMenu(this, originalSlot);
             }
         }

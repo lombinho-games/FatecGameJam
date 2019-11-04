@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class InspectionManager : MonoBehaviour
 {
@@ -10,33 +11,34 @@ public class InspectionManager : MonoBehaviour
     public GameObject pistaPrefab;
     public GameObject exitPrefab;
 
+    public string cenario_pista;
+    [TextArea]
+    public string cenario_desc;
+
     //Grupos
     public GameObject personagens_folder;
     public GameObject pistas_folder;
     public GameObject exits_folder;
     public TextureManager textureManager;
     public SpeechManager speechManager;
+
+    public FadeEffect fadeEffect;
     ScenarioData scenarioData;
     [HideInInspector]
     public bool mouseOnSeta;
     // Start is called before the first frame update
     void Start()
     {
+        string scenarioName = GlobalProfile.GetCurrentSceneName();
 
         GlobalProfile.getInstance().LoadGame(textureManager);
+        GlobalProfile.getInstance().addItem(new InventoryItem(cenario_pista, scenarioName, textureManager.GetSpritePista(cenario_pista), cenario_desc));
         GlobalProfile.getInstance().SaveGame();
-        string scenarioName = GlobalProfile.GetCurrentSceneName();
         //Carrega dados do cenário
         if(SaveGameSystem.DoesSaveGameExist("slot"+GlobalProfile.Slot+"_" + scenarioName)){
             scenarioData = (ScenarioData)SaveGameSystem.LoadGame("slot"+GlobalProfile.Slot+"_" + scenarioName);
 
-            if(scenarioData == null){
-                Debug.Log("Arquivo slot"+GlobalProfile.Slot+"_" + scenarioName + " com problemas ao ser carregado");
-            }
-            else{
-                Debug.Log("Carreguei os dados de cenário " + scenarioName);
-                Debug.Log("Achei " + scenarioData.characters.Count + " personagens e " + scenarioData.pistas.Count + " pistas");
-                
+            if(scenarioData != null){
                 //Limpando os personagens e instanciando de novo
                 foreach (Transform child in personagens_folder.transform) {
                     GameObject.Destroy(child.gameObject);
@@ -72,8 +74,10 @@ public class InspectionManager : MonoBehaviour
 
             }
         }
-        else{
-            Debug.Log("Arquivo slot"+GlobalProfile.Slot+"_" + scenarioName + " não foi encontrado");
+
+
+        if(GlobalProfile.getInstance().dialogIgnition != null){
+            speechManager.OpenText(GlobalProfile.getInstance().dialogIgnition);
         }
 
         //string output = JsonUtility.ToJson(CreateScenarioData(),true);
@@ -99,7 +103,7 @@ public class InspectionManager : MonoBehaviour
         foreach(SpeechableCharacter character in personagens_folder.transform.GetComponentsInChildren<SpeechableCharacter>()) {
             character.RefreshDialogData();
         }
-        GlobalProfile.getInstance().SaveGame();
+        SaveGame();
 
     }
 
@@ -109,8 +113,16 @@ public class InspectionManager : MonoBehaviour
         
     }
 
+    public void SaveGame(){
+        ScenarioData data = CreateScenarioData();
+        bool succ = SaveGameSystem.SaveGame(data, "slot"+GlobalProfile.Slot+"_"+ GlobalProfile.GetCurrentSceneName());
+        GlobalProfile.getInstance().SaveGame();
+    }
+
     public void ClickOnInventory(){ 
-        SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);
+        SaveGame();
+        GlobalProfile.getInstance().lastScenarioBeforeInventory = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(2);
     }
 
     public void SetaEnter(){

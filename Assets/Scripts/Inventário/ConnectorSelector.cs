@@ -18,13 +18,13 @@ public class ConnectorSelector : MonoBehaviour
         GameObject template = transform.GetChild(0).gameObject;
 
 
-        foreach(ItemConnection.ConnectorName conn in Enum.GetValues(typeof(ItemConnection.ConnectorName))){
+        foreach(string conn in ItemConnection.connectors){
 
             GameObject obj = Instantiate(template);
             obj.transform.position = gameObject.transform.position + new Vector3(0, (transform.childCount-1) * -100, 0);
             RectTransform rect = obj.GetComponent<RectTransform>();
             Text text = obj.GetComponent<Text>();
-            text.text = conn.ToString();
+            text.text = conn;
 
             EventTrigger et = obj.AddComponent<EventTrigger>();
             EventTrigger.Entry entry = new EventTrigger.Entry();

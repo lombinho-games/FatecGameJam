@@ -312,21 +312,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 3181ed4805cc42141bef86da40c0e477,
         type: 3}
-    - target: {fileID: 6782741222782814037, guid: dfc79180924da2340ab88c61091fce5a,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -17.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 6782741224183856819, guid: dfc79180924da2340ab88c61091fce5a,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 17.26
-      objectReference: {fileID: 0}
-    - target: {fileID: 6782741223735394845, guid: dfc79180924da2340ab88c61091fce5a,
-        type: 3}
-      propertyPath: m_Name
-      value: Sala de Estar
-      objectReference: {fileID: 0}
     - target: {fileID: 6782741223159566735, guid: dfc79180924da2340ab88c61091fce5a,
         type: 3}
       propertyPath: m_RootOrder
@@ -352,6 +337,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4310204084697313015, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4310204084697313015, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3124369890579125633, guid: dfc79180924da2340ab88c61091fce5a,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -372,16 +367,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4310204084697313015, guid: dfc79180924da2340ab88c61091fce5a,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4310204084697313015, guid: dfc79180924da2340ab88c61091fce5a,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2485829451886367990, guid: dfc79180924da2340ab88c61091fce5a,
         type: 3}
       propertyPath: exitPoint
@@ -390,7 +375,22 @@ PrefabInstance:
     - target: {fileID: 2485829451886367990, guid: dfc79180924da2340ab88c61091fce5a,
         type: 3}
       propertyPath: data.exitPoint
-      value: 7
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6782741222782814037, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -17.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 6782741224183856819, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 17.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 6782741223735394845, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_Name
+      value: Sala de Estar
       objectReference: {fileID: 0}
     - target: {fileID: 6782741223736257915, guid: dfc79180924da2340ab88c61091fce5a,
         type: 3}

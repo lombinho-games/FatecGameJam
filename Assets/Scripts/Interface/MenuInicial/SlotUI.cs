@@ -12,6 +12,7 @@ public class SlotUI : MonoBehaviour
     public Text tempoDeJogoText;
     public Image detetiveImage;
     public Image cenarioImage;
+    public FadeEffect fadeEffect;
     
 
     [Header("Propriedades")]
@@ -54,7 +55,7 @@ public class SlotUI : MonoBehaviour
 
     public void LoadGame(){
         GlobalProfile.Slot = id;
-        SceneManager.LoadScene(cenario);
+        fadeEffect.ExitScene(cenario);
     }
 
     public void DeleteSave(){

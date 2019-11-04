@@ -5,10 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class GlobalProfile
 {
-    public static int Slot = -1;
+    public static int Slot = 0;
     public static SlotsData gameSlots;
     static GlobalProfile instance;
     static bool dirty = false;
+    public int lastScenarioBeforeInventory = 0;
+    public List<TextData> dialogIgnition;
+
     public static GlobalProfile getInstance(){
         if(instance == null){
             instance = new GlobalProfile();
@@ -46,10 +49,19 @@ public class GlobalProfile
             items = new List<InventoryItem>();
         }
 
-        if (!items.Contains(item)) {
+        if (!ContainsItem(item.itemID)) {
             dirty = true;
             items.Add(item);
         }
+    }
+
+    public bool ContainsItem(string id){
+        for(int i = 0; i < items.Count; i ++){
+            if(items[i].itemID == id){
+                return true;
+            }
+        }
+        return false;
     }
 
     public List<InventoryItem> GetItems(TextureManager manager){
@@ -96,18 +108,19 @@ public class GlobalProfile
 
         items.Clear();
         for(int i = 0; i < inventory.displayName.Count; i++) {
+            Sprite sp = manager.GetSpritePista(inventory.items[i]);
             items.Add(
                 new InventoryItem(
                     inventory.items[i],
                     inventory.displayName[i],
-                    manager.GetSpritePista(inventory.items[i]),
+                    sp,
                     inventory.descriptions[i]
                     )
                 );
         }
     }
 
-    void SaveInventory()
+    public void SaveInventory()
     {
         dirty = false;
         SaveGameSystem.SaveGame(GetSerializableInventory(), "slot"+Slot+"_inventory");

@@ -297,7 +297,7 @@ PrefabInstance:
     - target: {fileID: 1992283615606732633, guid: 71143aff72b1a1a439482d357f713421,
         type: 3}
       propertyPath: data.exitPoint
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1992283615606732633, guid: 71143aff72b1a1a439482d357f713421,
         type: 3}
@@ -516,12 +516,17 @@ PrefabInstance:
     - target: {fileID: 1992283615606732633, guid: 71143aff72b1a1a439482d357f713421,
         type: 3}
       propertyPath: data.exitPoint
-      value: 7
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1992283615606732633, guid: 71143aff72b1a1a439482d357f713421,
         type: 3}
       propertyPath: data.title
       value: Jardim dos Fundos
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992283615606732633, guid: 71143aff72b1a1a439482d357f713421,
+        type: 3}
+      propertyPath: data.unlockMessage
+      value: greyce-penas
       objectReference: {fileID: 0}
     - target: {fileID: 5525538403906270178, guid: 71143aff72b1a1a439482d357f713421,
         type: 3}
@@ -643,6 +648,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3124369890579125632, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4310204084697313015, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4310204084697313015, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3124369890579125633, guid: dfc79180924da2340ab88c61091fce5a,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -663,20 +683,25 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50.85
       objectReference: {fileID: 0}
-    - target: {fileID: 3124369890579125632, guid: dfc79180924da2340ab88c61091fce5a,
+    - target: {fileID: 3611990409394683886, guid: dfc79180924da2340ab88c61091fce5a,
         type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      propertyPath: cenario_pista
+      value: cozinha
       objectReference: {fileID: 0}
-    - target: {fileID: 4310204084697313015, guid: dfc79180924da2340ab88c61091fce5a,
+    - target: {fileID: 3611990409394683886, guid: dfc79180924da2340ab88c61091fce5a,
         type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
+      propertyPath: cenario_desc
+      value: A cozinha da casa, onde Greyce disse que estava durante o roubo
       objectReference: {fileID: 0}
-    - target: {fileID: 4310204084697313015, guid: dfc79180924da2340ab88c61091fce5a,
+    - target: {fileID: 6782741222782814037, guid: dfc79180924da2340ab88c61091fce5a,
         type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
+      propertyPath: m_LocalPosition.x
+      value: -17.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6782741224183856819, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 17.21
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfc79180924da2340ab88c61091fce5a, type: 3}
@@ -707,6 +732,18 @@ MonoBehaviour:
 --- !u!224 &1361075256 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1865133937126047090, guid: dfc79180924da2340ab88c61091fce5a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1361075253}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1361075257 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6835793519311927559, guid: dfc79180924da2340ab88c61091fce5a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1361075253}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1361075258 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7882725434689650584, guid: dfc79180924da2340ab88c61091fce5a,
     type: 3}
   m_PrefabInstance: {fileID: 1361075253}
   m_PrefabAsset: {fileID: 0}
@@ -929,3 +966,442 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71143aff72b1a1a439482d357f713421, type: 3}
+--- !u!212 &393748280248742024
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7277678701365799109}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 0305e265373d57b40b75d2c6a3b79a7e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 28.939999, y: 43.57}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &3428201974702355968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4608775702768961358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4608775702768961357}
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 0
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!4 &3948241478981037352
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7277678701365799109}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.41, y: -1.22, z: 9}
+  m_LocalScale: {x: 0.18312, y: 0.18312, z: 0.18312}
+  m_Children: []
+  m_Father: {fileID: 1361075258}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &4608775702768961354
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4608775702768961358}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 21300000, guid: 2fd8c5d33ae6f434bb7f57f03390cc04, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 5.2, y: 6.6}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!61 &4608775702768961356
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4608775702768961358}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 1
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.2, y: 6.6}
+    newSize: {x: 5.2, y: 6.6}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5, y: 5}
+  m_EdgeRadius: 0
+--- !u!114 &4608775702768961357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4608775702768961358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c489ffecf77bdb749a45c747d526c143, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: 1511b6a779d785f448d4baf67e341ac6, type: 3}
+  cursorMode: 0
+  hotSpot: {x: 0, y: 0}
+  speech: {fileID: 1361075254}
+  manager: {fileID: 1361075255}
+  data:
+    dialogo:
+      texts:
+      - texto: "Que temperos s\xE3o esses?"
+        image: detective-default
+        owner: Detetive
+      - texto: "S\xE3o p\xE1prica e cominho, temperos que eu preciso para fazer a
+          comida"
+        image: greyce-default
+        owner: Greyce
+      pergunta: 
+      id: 
+      unlock_message: 
+      enabled: 0
+      read: 0
+    image: tempero
+    displayName: Temperos
+    itemId: tempero
+    itemDescription: "Temperos rec\xE8m comprados pela Catarina, que havia ido no
+      mercado comprar comida"
+    messages: []
+    position: {x: 0, y: 0, z: 0}
+    scale: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &4608775702768961358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4608775702768961359}
+  - component: {fileID: 4608775702768961354}
+  - component: {fileID: 4608775702768961357}
+  - component: {fileID: 4608775702768961356}
+  - component: {fileID: 3428201974702355968}
+  m_Layer: 0
+  m_Name: Temperos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4608775702768961359
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4608775702768961358}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.18, y: -0.72, z: -9}
+  m_LocalScale: {x: 0.13734, y: 0.13734, z: 0.6867}
+  m_Children: []
+  m_Father: {fileID: 1361075257}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5151352206536114566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7277678701365799109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e815c8b7fc1d64646a087a175cf43031, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CursorMode: 0
+  ReadTexture2D: {fileID: 2800000, guid: afe31887c54d350479bb6841cafe864a, type: 3}
+  NReadTexture2D: {fileID: 2800000, guid: 87676f8789d2209408c73c2c6f8a9ade, type: 3}
+  hotSpot: {x: 0, y: 0}
+  speechCanvas: {fileID: 1361075254}
+  manager: {fileID: 1361075255}
+  data:
+    displayName: Greyce
+    id: greyce
+    description: 'Greyce, a cozinheira.
+
+      Disse que estava na cozinha fazendo comida enquanto ocorreu o roubo'
+    defaultImage: greyce-default
+    headBob: greyce
+    dialogos:
+    - texts:
+      - texto: O que aconteceu?
+        image: detective-default
+        owner: Detetive
+      - texto: "Parece que dona Catarina foi roubada. Ela est\xE1 desesperada"
+        image: greyce-default
+        owner: Greyce
+      - texto: "E voc\xEA viu quem roubou?"
+        image: detective-default
+        owner: Detetive
+      - texto: "N\xE3o vi, estava aqui na cozinha fazendo comida"
+        image: greyce-default
+        owner: Greyce
+      pergunta: O que aconteceu?
+      id: greyce-default
+      unlock_message: 
+      enabled: 1
+      read: 0
+    - texts:
+      - texto: "Esses temperos foram comprados agora n\xE3o \xE9 mesmo?"
+        image: detective-default
+        owner: Detetive
+      - texto: Sim, foram comprados pela dona catarina
+        image: greyce-default
+        owner: Greyce
+      - texto: "Assim como algumas outras coisas que dona Catarina estava comprando
+          no mercado para que voc\xEA possa fazer comida"
+        image: detective-default
+        owner: Detetive
+      - texto: Bom... sim
+        image: greyce-default
+        owner: Greyce
+      - texto: "Portanto significa que no momento em que dona catarina estava fora,
+          n\xE3o havia comida em casa para ser feita"
+        image: detective-default
+        owner: Detetive
+      - texto: "Ent\xE3o, como voc\xEA estava fazendo comida no momento do roubo,
+          se n\xE3o havia comida em casa?"
+        image: detective-default
+        owner: Detetive
+      - texto: Err... Havia comida em casa. Um pouco que tinha sobrado, eu estava
+          preparando para o jantar
+        image: greyce-default
+        owner: Greyce
+      - texto: "N\xE3o faz sentido, porque voc\xEA se preocuparia em fazer um resto
+          de comida que havia, se sabia que dona Catarina estava no mercado comprando
+          mais?"
+        image: detective-default
+        owner: Detetive
+      - texto: "N\xE3o faria mais sentido se voc\xEA esperasse que ela voltasse?"
+        image: detective-default
+        owner: Detetive
+      - texto: "Olha, n\xE3o tente me acusar de algo que n\xE3o sabe Detetive, eu
+          estava fazendo comida no momento, se quiser, pode perguntar ao Jardineiro,
+          ele estava aqui o tempo todo, ele pode confirmar que em nenhum momento eu
+          sa\xED desta cozinha"
+        image: greyce-closed
+        owner: Greyce
+      - texto: Hmm... tudo bem, irei falar com o Jardineiro, talvez ele possa me explicar
+          mais detalhes
+        image: detective-default
+        owner: Detetive
+      pergunta: Perguntar sobre temperos
+      id: greyce-contradiction
+      unlock_message: greyce-tempero-contradiction
+      enabled: 0
+      read: 0
+    - texts:
+      - texto: "Encontrei essas penas de Galinha pr\xF3ximo do arm\xE1rio de Dona
+          Catarina, onde ela guardava as j\xF3ias. Voc\xEA tem alguma iinforma\xE7\xE3o
+          sobre isso?"
+        image: detective-default
+        owner: Detetive
+      - texto: Penas de galinha? No quarto de Dona Catarina?
+        image: greyce-default
+        owner: Greyce
+      - texto: "Me parece bem esquisito, n\xE3o fa\xE7o ideia de como elas foram parar
+          l\xE1"
+        image: greyce-closed
+        owner: Greyce
+      - texto: "De fato eu depenei uma galinha hoje mais cedo para fazer frango, por\xE9m
+          eu n\xE3o ousaria entrar no quarto de Dona Catarina, e ainda mais sujar
+          sua estante com essas penas"
+        image: greyce-default
+        owner: Greyce
+      - texto: Entendo... Vou investigar mais a respeito disso
+        image: detective-default
+        owner: Detetive
+      - texto: "Vou abrir o port\xE3o do Jardim dos Fundos para voc\xEA. Assim pode
+          pedir ajuda ao Alfred"
+        image: greyce-default
+        owner: Greyce
+      pergunta: Perguntar sobre Penas
+      id: greyce-penas
+      unlock_message: penas-de-galinha
+      enabled: 0
+      read: 0
+    - texts:
+      - texto: Encontrei este livro da Caligrafia no Jardim dos fundos
+        image: detective-default
+        owner: Detetive
+      - texto: Sabe a quem ele pertence?
+        image: detective-default
+        owner: Detetive
+      - texto: "... N\xE3o sei"
+        image: greyce-default
+        owner: Greyce
+      - texto: Talvez seja de um dos filhos pequenos da Catarina
+        image: greyce-default
+        owner: Greyce
+      - texto: Certo...
+        image: detective-default
+        owner: Detetive
+      - texto: "(N\xE3o acredito que Greyce esteja falando a verdade, por\xE9m algo
+          me diz que ela de fato n\xE3o tem envolvimento com o crime)"
+        image: detective-default
+        owner: Detetive
+      pergunta: Perguntar sobre o Livro de Caligrafia
+      id: greyce-livro
+      unlock_message: livro-aberto
+      enabled: 0
+      read: 0
+    position: {x: 0, y: 0, z: 0}
+    scale: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 0}
+--- !u!61 &6883256478190068693
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7277678701365799109}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0000104904175, y: -0.90306854}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 28.939999, y: 43.57}
+    newSize: {x: 28.939999, y: 43.57}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 21.263903, y: 39.123863}
+  m_EdgeRadius: 0
+--- !u!1 &7277678701365799109
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3948241478981037352}
+  - component: {fileID: 393748280248742024}
+  - component: {fileID: 5151352206536114566}
+  - component: {fileID: 6883256478190068693}
+  m_Layer: 0
+  m_Name: Greyce
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1

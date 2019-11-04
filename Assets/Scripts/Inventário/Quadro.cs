@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
+using System.Linq;
 public class Quadro : MonoBehaviour
 {
 
@@ -12,9 +14,7 @@ public class Quadro : MonoBehaviour
 
     [HideInInspector]
     public ItemConnection creatingConnection;
-
     public TextureManager textureManager;
-
     public bool mouseOver;
 
     public Inventory inventory;
@@ -22,6 +22,15 @@ public class Quadro : MonoBehaviour
     public GameObject connectionPrefab;
     public GameObject connectionPanel;
     public GameObject lineGroup;
+
+    public GameObject labelCheck;
+    public bool checkSelection = false;
+
+    public SolutionScriptableObject solution;
+    public FadeEffect fadeEffect;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -61,7 +70,16 @@ public class Quadro : MonoBehaviour
 
     public void OpenMenu(PistaFrame pista, GameObject pistaSlot)
     {
-        menu.OpenMenu(pista, pistaSlot, null, true, true, true);
+
+        bool canDelete = true;
+        foreach(ItemConnection conn in Object.FindObjectsOfType(typeof(ItemConnection))){
+            if(conn.status != 0){
+                if(pista == conn.GetPistaA() || pista == conn.GetPistaB())
+                    canDelete = false;
+            }
+        }
+
+        menu.OpenMenu(pista, pistaSlot, null, true, true, canDelete);
     }
 
     public void CloseMenu()
@@ -81,9 +99,88 @@ public class Quadro : MonoBehaviour
         }
     }
 
+    public void BeginCheck(){
+        
+        if (menu.gameObject.activeInHierarchy) {
+            menu.gameObject.SetActive(false);
+        }
+
+        if(!checkSelection){
+            checkSelection = true;
+            if (creatingConnection != null) {
+                Destroy(creatingConnection.gameObject);
+                creatingConnection = null;
+            }
+            labelCheck.SetActive(true);
+        }
+        else{
+            checkSelection = false;
+            labelCheck.SetActive(false);
+
+            foreach(PistaFrame pista in Object.FindObjectsOfType(typeof(PistaFrame))){
+                pista.selected = false;
+            }
+        }
+    }
+
+    public void ConfirmCheck(){
+        checkSelection = false;
+        labelCheck.SetActive(false);
+        
+        List<ItemConnection> conns = Object.FindObjectsOfType(typeof(ItemConnection)).Select( (obj) => {return (ItemConnection) obj ;}).TakeWhile( (conn) => {
+
+            PistaFrame pistaA = conn.objectA.GetComponent<PistaPin>().pista.transform.parent.GetComponent<PistaFrame>();
+            PistaFrame pistaB = conn.objectB.GetComponent<PistaPin>().pista.transform.parent.GetComponent<PistaFrame>();
+
+            return pistaA.selected && pistaB.selected;
+        }).ToList();
+
+        //passa pro GetResponse
+
+        SolutionScriptableObject.Solution solution = this.solution.GetResponse(conns);
+        if(solution != null){
+            Debug.Log("Encontrei uma solução de ID " + solution.event_id);
+            GlobalProfile.getInstance().dialogIgnition = solution.dialogo.ToList();
+            GlobalProfile.getInstance().SendMessage(solution.event_id);
+
+            foreach(ItemConnection conn in conns){
+                foreach(SolutionScriptableObject.ConnStruct str in solution.conns){
+                    if(str.connection == conn.connector){
+                        conn.status = solution.correctness;
+                    }
+                }
+            }
+
+            SaveQuadro();
+            fadeEffect.ExitScene(GlobalProfile.getInstance().lastScenarioBeforeInventory);
+
+            
+            
+        }
+        else{
+            Debug.Log("Não encontrei nenhuma solução com a configuração:");
+
+            foreach(ItemConnection conn in conns){
+                PistaFrame pistaA = conn.objectA.GetComponent<PistaPin>().pista.transform.parent.GetComponent<PistaFrame>();
+                PistaFrame pistaB = conn.objectB.GetComponent<PistaPin>().pista.transform.parent.GetComponent<PistaFrame>();
+
+                Debug.Log("Pista 1: " + pistaA.item.itemID);
+                Debug.Log("Pista 2: " + pistaB.item.itemID);
+                Debug.Log("Conexão: " + conn.connector);
+            }
+
+        }
+    }
+
     public void SaveQuadro(){
         QuadroData data = CreateQuadroData();
         SaveGameSystem.SaveGame(data, "slot"+GlobalProfile.Slot+"_quadro");
+        GlobalProfile.getInstance().SaveGame();
+    }
+
+    public void BackToGame(){
+        SaveQuadro();
+        SceneManager.LoadScene(GlobalProfile.getInstance().lastScenarioBeforeInventory);
     }
 
     public QuadroData CreateQuadroData(){
@@ -104,10 +201,13 @@ public class Quadro : MonoBehaviour
 
         foreach(ItemConnection conn in connections){
 
+            Debug.Log("Saving connection " + conn.connector);
+
             QuadroData.Connection connect = new QuadroData.Connection();
             connect.itemA = -1;
             connect.itemB = -1;
-            connect.connectionName = conn.connector.ToString();
+            connect.status = conn.status;
+            connect.connectionName = conn.connector;
 
             PistaFrame pistaA = conn.objectA.GetComponent<PistaPin>().pista.transform.parent.GetComponent<PistaFrame>();
             PistaFrame pistaB = conn.objectB.GetComponent<PistaPin>().pista.transform.parent.GetComponent<PistaFrame>();
@@ -140,6 +240,8 @@ public class Quadro : MonoBehaviour
 
         foreach(QuadroData.Connection conn in data.connections){
 
+            Debug.Log("Loading connection " + conn.connectionName);
+
             GameObject lineConection = Instantiate(connectionPrefab);
             ItemConnection connection = lineConection.GetComponent<ItemConnection>();
             connection.connectorSelector = connectionPanel;
@@ -147,6 +249,8 @@ public class Quadro : MonoBehaviour
             connection.objectB = frames[conn.itemB].outerPin;
             connection.isOnMouse = false;
             connection.menu = menu;
+            connection.status = conn.status;
+            connection.connector = conn.connectionName;
             lineConection.transform.SetParent(lineGroup.transform, false);
 
         }

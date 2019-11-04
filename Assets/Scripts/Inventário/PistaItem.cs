@@ -33,7 +33,9 @@ public class PistaItem : MonoBehaviour
             //Abrir um texto
             GlobalProfile.getInstance().addItem(new InventoryItem(data.itemId, data.displayName, spriteRenderer.sprite, data.itemDescription));
             //Destruir item
+            Debug.Log("Adding item with sprite: " + spriteRenderer.sprite.texture.name);
             GlobalProfile.getInstance().SendMessage(data.itemId);
+            GlobalProfile.getInstance().SaveInventory();
             manager.RefreshAllCharacterDialogData();
             speech.OpenText(data.dialogo.texts);
             Destroy(gameObject);

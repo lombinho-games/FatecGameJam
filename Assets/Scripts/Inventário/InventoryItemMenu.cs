@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class InventoryItemMenu : MonoBehaviour
 {
@@ -15,10 +16,13 @@ public class InventoryItemMenu : MonoBehaviour
     public GameObject connectionPanel;
     public GameObject descriptionPanel;
 
+   
+
     public GameObject mouse;
     public GameObject lineGroup;
     public Quadro quadro;
     public GameObject connectionPrefab;
+
 
     //Botões
     public GameObject connectButton;
@@ -64,6 +68,11 @@ public class InventoryItemMenu : MonoBehaviour
         connection.menu = this;
         lineConection.transform.SetParent(lineGroup.transform, false);
         quadro.creatingConnection = connection;
+
+    }
+
+    public void Check(){
+        //Encontra todas as conexões entre pistas selecionadas e forma uma lista
 
     }
 

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class SpeechManager : MonoBehaviour
 {
@@ -30,6 +31,8 @@ public class SpeechManager : MonoBehaviour
     public GameObject gui;
     [HideInInspector]
     public Text charName;
+
+    public FadeEffect fadeEffect;
 
     //Button ui
 
@@ -107,8 +110,6 @@ public class SpeechManager : MonoBehaviour
 
     public void OpenCharacterDialog(SpeechableCharacter personagem){
         GlobalProfile.getInstance().SaveGame();
-
-
         Cursor.SetCursor(null,hotSpot,CursorMode);
         gameObject.SetActive(true);
         personagens.SetActive(false);
@@ -160,6 +161,15 @@ public class SpeechManager : MonoBehaviour
 
                 btn_btn.onClick.AddListener( () => {
                     OpenText(dig.texts);
+
+                    GlobalProfile.getInstance().addItem(
+                        new InventoryItem(
+                            personagem.data.id, 
+                            personagem.data.displayName, 
+                            manager.textureManager.GetSpritePista(personagem.data.headBob), 
+                            personagem.data.description
+                        ));
+
                     dig.read = true;
                     GlobalProfile.getInstance().SendMessage(dig.id);
                     manager.RefreshAllCharacterDialogData();
@@ -222,13 +232,21 @@ public class SpeechManager : MonoBehaviour
 
 
     public void CloseDialog(){
-        gameObject.SetActive(false);
-        personagens.SetActive(true);
-        gui.SetActive(true);
-        isTalking = false;
-        Destroy(buttonCanvas);
-        buttonCanvas = null;
-        Cursor.SetCursor(null,hotSpot,CursorMode);
+        
+
+        if(texts == GlobalProfile.getInstance().dialogIgnition){
+            GlobalProfile.getInstance().dialogIgnition = null;
+            fadeEffect.ExitScene(2);
+        }
+        else{
+            gameObject.SetActive(false);
+            personagens.SetActive(true);
+            gui.SetActive(true);
+            isTalking = false;
+            Destroy(buttonCanvas);
+            buttonCanvas = null;
+            Cursor.SetCursor(null,hotSpot,CursorMode);
+        }
     }
     public void ChangeCursor(){
         Cursor.SetCursor(TextureCursorAdvance,hotSpot,CursorMode);

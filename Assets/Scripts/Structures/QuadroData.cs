@@ -19,6 +19,7 @@ public class QuadroData : SaveGame
         public int itemA;
         public int itemB;
         public string connectionName;
+        public int status; //0 = sem identificação, 1 = correto, -1 = contradição
     }
 
     [SerializeField]

@@ -7,6 +7,9 @@ public class CharacterData
 {
     
     //Propriedades
+    public string displayName;
+    public string id;
+    public string description;
     public string defaultImage; //ID da imagem
     public string headBob; //ID da imagem
     bool hasTalked;

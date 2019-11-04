@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Interfaces/Introduction.unity
     guid: 215a750e0aa4a564791bc08a73ee1a9e
   - enabled: 1
+    path: Assets/Scenes/Interfaces/Menu Inicial.unity
+    guid: cbaae0bcdd3c8d545a22501920867e81
+  - enabled: 1
+    path: Assets/Scenes/Interfaces/Inventario.unity
+    guid: e3dd5221b5c8ba84b8d4df36f0a76fbc
+  - enabled: 1
     path: Assets/Scenes/Scenarios/Hall.unity
     guid: a35574eaeb67c31488fecf81c0545b75
   - enabled: 1
@@ -32,4 +38,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scenarios/Cozinha.unity
     guid: 2c7e27b1d9a8c1a47bf4042723ee0bc5
+  - enabled: 1
+    path: Assets/Scenes/Scenarios/Jardim dos Fundos.unity
+    guid: 74dd5172f83850048bfe450199a9ca8d
+  - enabled: 1
+    path: Assets/Scenes/Scenarios/Jardim da Frente.unity
+    guid: 9e781ba50007fc346b4750345cb3ba82
   m_configObjects: {}

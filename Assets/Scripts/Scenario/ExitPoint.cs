@@ -86,7 +86,7 @@ public class ExitPoint : MonoBehaviour
             bool succ = SaveGameSystem.SaveGame(data, "slot"+GlobalProfile.Slot+"_"+ GlobalProfile.GetCurrentSceneName());
             GlobalProfile.getInstance().SaveGame();
             Cursor.SetCursor(null, hotSpot, cursorMode);
-            SceneManager.LoadScene(this.data.exitPoint);
+            manager.fadeEffect.ExitScene(this.data.exitPoint);
         }
     }
 

@@ -34,6 +34,7 @@ public class DialogWindow : EditorWindow
      }
 
     void OnGUI(){
+        EditorStyles.textField.wordWrap = true;
         GUI.enabled = !modalWindows.IsWindowOpen;
         
         if(Selection.activeGameObject == null) return;
@@ -106,116 +107,129 @@ public class DialogWindow : EditorWindow
     }
 
     public void OpenCharacterDialogEditor(SpeechableCharacter personagem){
+        
             personagem.speechCanvas = (SpeechManager) EditorGUILayout.ObjectField("Speech Canvas", personagem.speechCanvas, typeof(SpeechManager), true);
             personagem.manager = (InspectionManager) EditorGUILayout.ObjectField("Manager", personagem.manager, typeof(InspectionManager), true);
-            //Busca a lista
-            string[] pistaKeys = personagem.manager.textureManager.getPistaKeys();
-            string[] poseKeys = personagem.manager.textureManager.getPoseKeys();
+            
+            if(personagem.manager != null){
 
-            //Icone
-            int bobValue = EditorGUILayout.Popup("Ícone", personagem.manager.textureManager.getIndexByKeyPista(personagem.data.headBob), pistaKeys);
-            personagem.data.headBob = pistaKeys[bobValue];
-            GUI.DrawTexture(new Rect(0, 70, 100, 100), personagem.manager.textureManager.pistas[bobValue].sprite.texture);
-            GUILayout.Space(120);
 
-            //Pose
-            int poseValue = EditorGUILayout.Popup("Pose padrão", personagem.manager.textureManager.getIndexByKeyPose(personagem.data.defaultImage), poseKeys);
-            personagem.data.defaultImage = poseKeys[poseValue];
-            GUI.DrawTexture(new Rect(0, 210, 100, 100), personagem.manager.textureManager.sprites[poseValue].sprite.texture);
-            GUILayout.Space(120);
+                //Busca a lista
+                string[] pistaKeys = personagem.manager.textureManager.getPistaKeys();
+                string[] poseKeys = personagem.manager.textureManager.getPoseKeys();
 
-            GUILayout.Label("Diálogos:");
-            if(GUILayout.Button("Adicionar diálogo")){
-                Dialogo nd = new Dialogo(new List<TextData>(), "", "", true,false, "");
-                
-                //Modal para criar o diálogo
-                var win = new ModalWindow(new Rect(30, 30, position.width - 60, position.height - 60), "CreateDialog", (w) =>
-                {
-                    nd.id = EditorGUILayout.TextField("ID da Mensagem", nd.id);
-                    nd.pergunta = EditorGUILayout.TextField("Pergunta", nd.pergunta);
-                    nd.enabled = EditorGUILayout.Toggle("Destravado", nd.enabled);
-                    if(GUILayout.Button("OK")){
-                        personagem.data.dialogos.Add(nd);
-                        w.Close();
-                    } 
-                    if(GUILayout.Button("Cancel")) w.Close();
-                    GUI.DragWindow();
-                });
-                modalWindows.Add(win);
-            }
+                //Icone
+                int bobValue = EditorGUILayout.Popup("Ícone", personagem.manager.textureManager.getIndexByKeyPista(personagem.data.headBob), pistaKeys);
+                personagem.data.headBob = pistaKeys[bobValue];
+                GUI.DrawTexture(new Rect(0, 70, 100, 100), personagem.manager.textureManager.pistas[bobValue].sprite.texture);
+                GUILayout.Space(120);
 
-            if(personagem.data.dialogos == null){
-                personagem.data.dialogos = new List<Dialogo>();
-            }
+                //Pose
+                int poseValue = EditorGUILayout.Popup("Pose padrão", personagem.manager.textureManager.getIndexByKeyPose(personagem.data.defaultImage), poseKeys);
+                personagem.data.defaultImage = poseKeys[poseValue];
+                GUI.DrawTexture(new Rect(0, 210, 100, 100), personagem.manager.textureManager.sprites[poseValue].sprite.texture);
+                GUILayout.Space(120);
 
-        scrollPerso = GUILayout.BeginScrollView(scrollPerso);
+                personagem.data.displayName = EditorGUILayout.TextField("Nome", personagem.data.displayName);
+                personagem.data.id = EditorGUILayout.TextField("ID", personagem.data.id);
+                GUILayout.Label("Descrição");
+                personagem.data.description = EditorGUILayout.TextArea(personagem.data.description, GUILayout.Width(300));
+            
 
-            for(int i = 0; i < personagem.data.dialogos.Count; i ++){
-                GUILayout.BeginVertical("box");
-                if(personagem.data.dialogos[i] == null) personagem.data.dialogos[i] = new Dialogo(new List<TextData>(), "", "", true,false, "");
-                    GUILayout.BeginHorizontal("box");
-                    GUILayout.Label("Pergunta");
-                    personagem.data.dialogos[i].pergunta = EditorGUILayout.TextField(personagem.data.dialogos[i].pergunta);
-                    GUILayout.EndHorizontal();
-                    GUILayout.BeginHorizontal("box");
-                    GUILayout.Label("ID da Mensagem");
-                    personagem.data.dialogos[i].id = EditorGUILayout.TextField(personagem.data.dialogos[i].id);
-                    GUILayout.EndHorizontal();
-                    GUILayout.BeginHorizontal("box");
-                    GUILayout.Label("Mensagem de desbloqueio");
-                    personagem.data.dialogos[i].unlock_message = EditorGUILayout.TextField(personagem.data.dialogos[i].unlock_message);
-                    GUILayout.EndHorizontal();
-
-            GUILayout.BeginHorizontal("box");
-                if(GUILayout.Button("Editar")){
-
-                    //Modal pra editar cada texto do diálogo:
-                    Dialogo dig = personagem.data.dialogos[i];
-                    var win = new ModalWindow(new Rect(30, 30, position.width - 60, position.height - 60), "Edit Dialog", (w) =>
+                GUILayout.Label("Diálogos:");
+                if(GUILayout.Button("Adicionar diálogo")){
+                    Dialogo nd = new Dialogo(new List<TextData>(), "", "", true,false, "");
+                    
+                    //Modal para criar o diálogo
+                    var win = new ModalWindow(new Rect(30, 30, position.width - 60, position.height - 60), "CreateDialog", (w) =>
                     {
-                        dig.enabled = EditorGUILayout.Toggle("Destravado", dig.enabled);
-                        if(GUILayout.Button("Adicionar Texto")){
-                            dig.texts.Add(new TextData());
-                        }
-                        scrollDig = GUILayout.BeginScrollView(scrollDig);
-
-                        for(int j = 0; j < dig.texts.Count; j ++){
-                            GUILayout.BeginVertical("box");
-                            GUILayout.Label("Texto " + j, EditorStyles.boldLabel);
-                            dig.texts[j].texto = EditorGUILayout.TextArea(dig.texts[j].texto);
-                            
-                            dig.texts[j].owner = EditorGUILayout.TextField("Quem tá falando", dig.texts[j].owner);
-                            
-                            int index = personagem.manager.textureManager.getIndexByKeyPose(dig.texts[j].image);
-                            if(index == -1) index = 0;
-                            int digValue = EditorGUILayout.Popup("Imagem", index, poseKeys);
-                            dig.texts[j].image = poseKeys[digValue];
-
-                            if (GUILayout.Button("Remover")) {
-                                dig.texts.Remove(dig.texts[j]);
-                            }
-
-                            GUILayout.EndVertical();
-
-                            GUILayout.Space(10);
-                        }
-                        GUILayout.EndScrollView();
-
-                        if(GUILayout.Button("Fechar")) w.Close();
-
+                        nd.id = EditorGUILayout.TextField("ID da Mensagem", nd.id);
+                        nd.pergunta = EditorGUILayout.TextField("Pergunta", nd.pergunta);
+                        nd.enabled = EditorGUILayout.Toggle("Destravado", nd.enabled);
+                        if(GUILayout.Button("OK")){
+                            personagem.data.dialogos.Add(nd);
+                            w.Close();
+                        } 
+                        if(GUILayout.Button("Cancel")) w.Close();
                         GUI.DragWindow();
                     });
                     modalWindows.Add(win);
+                }
 
+                if(personagem.data.dialogos == null){
+                    personagem.data.dialogos = new List<Dialogo>();
                 }
-                if(GUILayout.Button("Remover")){
-                    personagem.data.dialogos.Remove(personagem.data.dialogos[i]);
+
+            scrollPerso = GUILayout.BeginScrollView(scrollPerso);
+
+                for(int i = 0; i < personagem.data.dialogos.Count; i ++){
+                    GUILayout.BeginVertical("box");
+                    if(personagem.data.dialogos[i] == null) personagem.data.dialogos[i] = new Dialogo(new List<TextData>(), "", "", true,false, "");
+                        GUILayout.BeginHorizontal("box");
+                        GUILayout.Label("Pergunta");
+                        personagem.data.dialogos[i].pergunta = EditorGUILayout.TextField(personagem.data.dialogos[i].pergunta);
+                        GUILayout.EndHorizontal();
+                        GUILayout.BeginHorizontal("box");
+                        GUILayout.Label("ID da Mensagem");
+                        personagem.data.dialogos[i].id = EditorGUILayout.TextField(personagem.data.dialogos[i].id);
+                        GUILayout.EndHorizontal();
+                        GUILayout.BeginHorizontal("box");
+                        GUILayout.Label("Mensagem de desbloqueio");
+                        personagem.data.dialogos[i].unlock_message = EditorGUILayout.TextField(personagem.data.dialogos[i].unlock_message);
+                        GUILayout.EndHorizontal();
+
+                GUILayout.BeginHorizontal("box");
+                    if(GUILayout.Button("Editar")){
+
+                        //Modal pra editar cada texto do diálogo:
+                        Dialogo dig = personagem.data.dialogos[i];
+                        var win = new ModalWindow(new Rect(30, 30, position.width - 60, position.height - 60), "Edit Dialog", (w) =>
+                        {
+                            dig.enabled = EditorGUILayout.Toggle("Destravado", dig.enabled);
+                            if(GUILayout.Button("Adicionar Texto")){
+                                dig.texts.Add(new TextData());
+                            }
+                            scrollDig = GUILayout.BeginScrollView(scrollDig);
+
+                            for(int j = 0; j < dig.texts.Count; j ++){
+                                GUILayout.BeginVertical("box");
+                                GUILayout.Label("Texto " + j, EditorStyles.boldLabel);
+                                dig.texts[j].texto = EditorGUILayout.TextArea(dig.texts[j].texto, GUILayout.Width(350));
+                                
+                                dig.texts[j].owner = EditorGUILayout.TextField("Quem tá falando", dig.texts[j].owner);
+                                
+                                int index = personagem.manager.textureManager.getIndexByKeyPose(dig.texts[j].image);
+                                if(index == -1) index = 0;
+                                int digValue = EditorGUILayout.Popup("Imagem", index, poseKeys);
+                                dig.texts[j].image = poseKeys[digValue];
+
+                                if (GUILayout.Button("Remover")) {
+                                    dig.texts.Remove(dig.texts[j]);
+                                }
+
+                                GUILayout.EndVertical();
+
+                                GUILayout.Space(10);
+                            }
+                            GUILayout.EndScrollView();
+
+                            if(GUILayout.Button("Fechar")) w.Close();
+
+                            GUI.DragWindow();
+                        });
+                        modalWindows.Add(win);
+
+                    }
+                    if(GUILayout.Button("Remover")){
+                        personagem.data.dialogos.Remove(personagem.data.dialogos[i]);
+                    }
+                    GUILayout.EndHorizontal();
+                    GUILayout.EndVertical();
+                    GUILayout.Space(10);
                 }
-                GUILayout.EndHorizontal();
-            GUILayout.EndVertical();
-            GUILayout.Space(10);
-        }
-        GUILayout.EndScrollView();
+                GUILayout.EndScrollView();
+            }
+
     }
 
 }

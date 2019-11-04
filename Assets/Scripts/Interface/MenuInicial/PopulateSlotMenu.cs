@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PopulateSlotMenu : MonoBehaviour
 {
 
+    public FadeEffect fadeEffect;
     public GameObject newCasePrefab;
     public GameObject slotsPrefab;
     public GameObject slotsGroup;
@@ -50,6 +51,7 @@ public class PopulateSlotMenu : MonoBehaviour
             ui.dataInicio = slot.date;
             ui.cenario = slot.scenario;
             ui.tempoDeJogo = slot.gameTime;
+            ui.fadeEffect = fadeEffect;
 
             AddToPage(ui);
             ui.gameObject.SetActive(false);
@@ -120,7 +122,7 @@ public class PopulateSlotMenu : MonoBehaviour
     public void CreateNewCase(){
         Debug.Log("Creating new Case");
 
-        Slot newSlot = new Slot(GlobalProfile.gameSlots.NextID(), 1/* ID do Hall */, DateTime.Now, new DateTime());
+        Slot newSlot = new Slot(GlobalProfile.gameSlots.NextID(), 3/* ID do Hall */, DateTime.Now, new DateTime());
         GlobalProfile.gameSlots.AddSlotToList(newSlot);
         SaveGameSystem.SaveGame(GlobalProfile.gameSlots, "slots");
 
@@ -134,6 +136,7 @@ public class PopulateSlotMenu : MonoBehaviour
         ui.dataInicio = newSlot.date;
         ui.cenario = newSlot.scenario;
         ui.tempoDeJogo = newSlot.gameTime;
+        ui.fadeEffect = fadeEffect;
         ui.gameObject.SetActive(false);
 
         AddToPage(ui);

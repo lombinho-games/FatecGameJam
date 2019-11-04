@@ -185,21 +185,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 2cb299f19ec4e36419135981ff22b42d,
         type: 3}
-    - target: {fileID: 6782741222782814037, guid: dfc79180924da2340ab88c61091fce5a,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -17.29
-      objectReference: {fileID: 0}
-    - target: {fileID: 6782741224183856819, guid: dfc79180924da2340ab88c61091fce5a,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 17.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6782741223735394845, guid: dfc79180924da2340ab88c61091fce5a,
-        type: 3}
-      propertyPath: m_Name
-      value: Banheiro Suite
-      objectReference: {fileID: 0}
     - target: {fileID: 6782741223159566735, guid: dfc79180924da2340ab88c61091fce5a,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -223,26 +208,6 @@ PrefabInstance:
     - target: {fileID: 6782741223159566735, guid: dfc79180924da2340ab88c61091fce5a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3124369890579125633, guid: dfc79180924da2340ab88c61091fce5a,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3124369890579125633, guid: dfc79180924da2340ab88c61091fce5a,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3124369890579125633, guid: dfc79180924da2340ab88c61091fce5a,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3124369890579125633, guid: dfc79180924da2340ab88c61091fce5a,
-        type: 3}
-      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3124369890579125632, guid: dfc79180924da2340ab88c61091fce5a,
@@ -270,10 +235,65 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 102.28003
       objectReference: {fileID: 0}
+    - target: {fileID: 3124369890579125633, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3124369890579125633, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3124369890579125633, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3124369890579125633, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2485829451886367990, guid: dfc79180924da2340ab88c61091fce5a,
         type: 3}
       propertyPath: exitPoint
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485829451886367990, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: data.exitPoint
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485829451886367990, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: data.position.x
+      value: -3.9157987
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485829451886367990, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: data.position.y
+      value: -4.0534515
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485829451886367990, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: data.position.z
+      value: 8.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6782741222782814037, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -17.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 6782741224183856819, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 17.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6782741223735394845, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_Name
+      value: Banheiro Suite
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfc79180924da2340ab88c61091fce5a, type: 3}
