@@ -646,6 +646,9 @@ MonoBehaviour:
   slotsPrefab: {fileID: 1795811244409448357, guid: 033d569e43476314b98dbed45a2741a2,
     type: 3}
   slotsGroup: {fileID: 1783347665}
+  previousPage: {fileID: 0}
+  nextPage: {fileID: 0}
+  pageText: {fileID: 0}
 --- !u!4 &1885007471
 Transform:
   m_ObjectHideFlags: 0
