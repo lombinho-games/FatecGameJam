@@ -146,7 +146,6 @@ public class Quadro : MonoBehaviour
                 }
             }
 
-            Debug.Log("Encontrei uma solução de ID " + solution.event_id);
             GlobalProfile.getInstance().dialogIgnition = solution.dialogo.ToList();
             GlobalProfile.getInstance().SendMessage(solution.event_id);
 
@@ -162,8 +161,6 @@ public class Quadro : MonoBehaviour
             fadeEffect.ExitScene(GlobalProfile.getInstance().lastScenarioBeforeInventory);
         }
         else{
-            Debug.Log("Não encontrei nenhuma solução com a configuração de " + conns.Count + " conexões:");
-
             foreach(ItemConnection conn in conns){
                 PistaFrame pistaA = conn.objectA.GetComponent<PistaPin>().pista.transform.parent.GetComponent<PistaFrame>();
                 PistaFrame pistaB = conn.objectB.GetComponent<PistaPin>().pista.transform.parent.GetComponent<PistaFrame>();
@@ -215,23 +212,17 @@ public class Quadro : MonoBehaviour
         ItemConnection[] connections = content.transform.Find("LinhasGroup").transform.GetComponentsInChildren<ItemConnection>();
 
         foreach(ItemConnection conn in connections){
-
-            Debug.Log("Saving connection " + conn.connector);
-
             QuadroData.Connection connect = new QuadroData.Connection();
             connect.itemA = -1;
             connect.itemB = -1;
             connect.status = conn.status;
             connect.connectionName = conn.connector;
 
-            PistaFrame pistaA = conn.objectA.GetComponent<PistaPin>().pista.transform.parent.GetComponent<PistaFrame>();
-            PistaFrame pistaB = conn.objectB.GetComponent<PistaPin>().pista.transform.parent.GetComponent<PistaFrame>();
-
             for(int i = 0; i < pistas.Length; i ++){
-                if(pistas[i] == pistaA){
+                if(pistas[i] == conn.GetPistaA()){
                     connect.itemA = i;
                 }
-                if(pistas[i] == pistaB){
+                if(pistas[i] == conn.GetPistaB()){
                     connect.itemB = i;
                 }
                 if(connect.itemA != -1 && connect.itemB != -1) break;
@@ -254,9 +245,6 @@ public class Quadro : MonoBehaviour
         }
 
         foreach(QuadroData.Connection conn in data.connections){
-
-            Debug.Log("Loading connection " + conn.connectionName);
-
             GameObject lineConection = Instantiate(connectionPrefab);
             ItemConnection connection = lineConection.GetComponent<ItemConnection>();
             connection.connectorSelector = connectionPanel;

@@ -16,7 +16,7 @@ public class ItemConnection : MaskableGraphic
     public GameObject objectA;
     public GameObject objectB;
     public InventoryItemMenu menu;
-    public string connector = "Estava em";
+    public string connector = "";
     public GameObject textObject;
     public GameObject connectorSelector;
     Color currentColor;
@@ -109,7 +109,9 @@ public class ItemConnection : MaskableGraphic
     // Start is called before the first frame update
     protected override void Start()
     {
-        
+        if(connector == ""){
+            connector = "---";
+        }
     }
 
     // Update is called once per frame
