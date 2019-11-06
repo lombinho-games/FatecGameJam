@@ -23,6 +23,10 @@ public class ExitPointEditor : Editor
 
         exitPoint.GetData().title = EditorGUILayout.TextField("Title", exitPoint.GetData().title);
 
+        string[] pistaKeys = exitPoint.manager.textureManager.getPistaKeys();
+        int imageValue = EditorGUILayout.Popup("Ícone pista", exitPoint.manager.textureManager.getIndexByKeyPista(exitPoint.GetData().icon_frame), pistaKeys);
+        exitPoint.GetData().icon_frame = pistaKeys[imageValue];
+
         string[] cursors = new string[]{
             "Left", "Right", "Up", "Down"
         };

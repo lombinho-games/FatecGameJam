@@ -14,6 +14,8 @@ public class SpeechableCharacter : MonoBehaviour
     //Data
     public CharacterData data;
 
+    public GameObject exclamation;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,15 @@ public class SpeechableCharacter : MonoBehaviour
         data.position = transform.position;
         data.scale = transform.localScale;
         data.rotation = transform.rotation;
+
+        bool exl = false;
+        foreach(Dialogo dig in AvailableDialogs()){
+            if(dig.enabled && !dig.read){
+                exl = true;
+                break;
+            }
+        }
+        exclamation.SetActive(exl);
     }
 
     // Update is called once per frame

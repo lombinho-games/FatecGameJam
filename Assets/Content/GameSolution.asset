@@ -16,9 +16,9 @@ MonoBehaviour:
   - event_id: greyce-tempero-contradiction
     conns:
     - pista1: greyce
-      pista2: cozinha
+      pista2: cenario/cozinha
       connection: "N\xE3o estava em"
-    - pista1: cozinha
+    - pista1: cenario/cozinha
       pista2: tempero
       connection: Porque
     dialogo:
@@ -43,13 +43,13 @@ MonoBehaviour:
   - event_id: greyce-caligrafia-fundos
     conns:
     - pista1: greyce
-      pista2: jardim-dos-fundos
+      pista2: cenario/jardim-dos-fundos
       connection: Estava em
-    - pista1: jardim-dos-fundos
+    - pista1: cenario/jardim-dos-fundos
       pista2: livro-aberto
       connection: Porque
     - pista1: alfred
-      pista2: jardim-dos-fundos
+      pista2: cenario/jardim-dos-fundos
       connection: Estava em
     dialogo:
     - texto: Entendi...
@@ -68,6 +68,31 @@ MonoBehaviour:
       owner: Detetive
     - texto: Mas na verdade ela estava no Jardim dos Fundos com Alfred aprendendo
         a escrever durante o Roubo
+      image: detective-default
+      owner: Detetive
+    correctness: 1
+  - event_id: greyce-caligrafia-incompleto
+    conns:
+    - pista1: greyce
+      pista2: cenario/jardim-dos-fundos
+      connection: Estava em
+    - pista1: cenario/jardim-dos-fundos
+      pista2: livro-aberto
+      connection: Porque
+    dialogo:
+    - texto: "Greyce estava no Jardim dos Fundos.... Faz sentido, visto que l\xE1
+        foi eencontrado um livro de caligrafia, e ela \xE9 a \xFAnica que n\xE3o sabe
+        ler oou escrever"
+      image: detective-default
+      owner: Detetive
+    - texto: "Mas algo ainda est\xE1 faltando... Como ela poderia estar aprendendo
+        sozinha?"
+      image: detective-default
+      owner: Detetive
+    - texto: "Ser\xE1 que tinha mais algu\xE9m com ela?"
+      image: detective-default
+      owner: Detetive
+    - texto: Preciso investigar melhor...
       image: detective-default
       owner: Detetive
     correctness: 1

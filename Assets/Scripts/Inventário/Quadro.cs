@@ -128,24 +128,31 @@ public class Quadro : MonoBehaviour
         labelCheck.SetActive(false);
         
         List<ItemConnection> conns = Object.FindObjectsOfType(typeof(ItemConnection)).Select( (obj) => {return (ItemConnection) obj ;}).TakeWhile( (conn) => {
-
-            PistaFrame pistaA = conn.objectA.GetComponent<PistaPin>().pista.transform.parent.GetComponent<PistaFrame>();
-            PistaFrame pistaB = conn.objectB.GetComponent<PistaPin>().pista.transform.parent.GetComponent<PistaFrame>();
-
-            return pistaA.selected && pistaB.selected;
+            return conn.GetPistaA().selected && conn.GetPistaB().selected;
         }).ToList();
+
+        foreach(PistaFrame pista in Object.FindObjectsOfType(typeof(PistaFrame))){
+                pista.selected = false;
+        }
 
         //passa pro GetResponse
 
-        SolutionScriptableObject.Solution solution = this.solution.GetResponse(conns);
-        if(solution != null){
+        List<SolutionScriptableObject.Solution> solutions = this.solution.GetResponse(conns);
+        if(solutions.Count > 0){
+            SolutionScriptableObject.Solution solution = solutions[0]; //Da lista de soluções encontradas, procura a que tem mais conexões
+            foreach(SolutionScriptableObject.Solution s in solutions){
+                if(s.conns.Length > solution.conns.Length){
+                    solution = s;
+                }
+            }
+
             Debug.Log("Encontrei uma solução de ID " + solution.event_id);
             GlobalProfile.getInstance().dialogIgnition = solution.dialogo.ToList();
             GlobalProfile.getInstance().SendMessage(solution.event_id);
 
             foreach(ItemConnection conn in conns){
                 foreach(SolutionScriptableObject.ConnStruct str in solution.conns){
-                    if(str.connection == conn.connector){
+                    if(CompareConnections(conn, str)){
                         conn.status = solution.correctness;
                     }
                 }
@@ -153,12 +160,9 @@ public class Quadro : MonoBehaviour
 
             SaveQuadro();
             fadeEffect.ExitScene(GlobalProfile.getInstance().lastScenarioBeforeInventory);
-
-            
-            
         }
         else{
-            Debug.Log("Não encontrei nenhuma solução com a configuração:");
+            Debug.Log("Não encontrei nenhuma solução com a configuração de " + conns.Count + " conexões:");
 
             foreach(ItemConnection conn in conns){
                 PistaFrame pistaA = conn.objectA.GetComponent<PistaPin>().pista.transform.parent.GetComponent<PistaFrame>();
@@ -170,6 +174,17 @@ public class Quadro : MonoBehaviour
             }
 
         }
+    }
+
+    public bool CompareConnections(ItemConnection conn, SolutionScriptableObject.ConnStruct str){
+        if(conn.connector == str.connection){
+            if(conn.GetPistaA().item.itemID == str.pista1 && conn.GetPistaB().item.itemID == str.pista2)
+                return true;
+            
+            if(conn.GetPistaB().item.itemID == str.pista1 && conn.GetPistaA().item.itemID == str.pista2)
+                return true;
+        }
+        return false;
     }
 
     public void SaveQuadro(){

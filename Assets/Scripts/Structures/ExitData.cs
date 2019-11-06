@@ -10,6 +10,7 @@ public class ExitData
     public int exitPoint;
     public bool enabled;
     public string unlockMessage;
+    public string icon_frame;
 
     //Transform
     public Vector3 position;

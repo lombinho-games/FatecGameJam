@@ -23,12 +23,14 @@ public class ExitPoint : MonoBehaviour
     [HideInInspector]
     public ExitData data = new ExitData();
 
+    float alpha = 0;
+    bool mouseOver = false;
+
+    public GameObject innerGroup;
+
     // Start is called before the first frame update
     void Start()
     {  
-        foreach (Transform t in transform){
-          t.gameObject.SetActive(false);
-        }
         RefreshDialogData();
     }
 
@@ -36,13 +38,11 @@ public class ExitPoint : MonoBehaviour
     {
         if (GlobalProfile.getInstance().HasReceivedMessage(data.unlockMessage)) 
             data.enabled = true;
-        
     }
 
     public void ReceiveMessage(string message){
         if (message == data.unlockMessage) 
-            data.enabled = true;
-        
+            data.enabled = true;   
     }
 
     public void SetCursorDirection(int opt){
@@ -78,6 +78,30 @@ public class ExitPoint : MonoBehaviour
     {   
         if(data == null) data = new ExitData();
         childText.text = data.title;
+
+        if(mouseOver)
+            alpha += (1 - alpha) / 5f;
+        else
+            alpha += (0 - alpha) / 5f;
+
+
+        if(innerGroup != null){
+            Vector3 localPos = innerGroup.transform.localPosition;
+            localPos.y = alpha * 5;
+            innerGroup.transform.localPosition = localPos;
+
+            innerGroup.GetComponentInChildren<Image>().sprite = manager.textureManager.GetSpritePista(data.icon_frame);
+
+            #if UNITY_EDITOR 
+                if (!Application.isPlaying) return; //or whatever script needs to be run when in edition mode.
+            #endif
+
+            innerGroup.GetComponentInChildren<Text>().color = new Color(1, 1, 1, alpha);
+            if(data.enabled)
+                innerGroup.GetComponentInChildren<Image>().color = new Color(1, 1, 1, alpha);
+            else
+                innerGroup.GetComponentInChildren<Image>().color = new Color(0, 0, 0, alpha);
+        }
     }
     public void Exit(){
         //TODO: Salva cenário
@@ -118,9 +142,8 @@ public class ExitPoint : MonoBehaviour
         if(!speech.isActiveAndEnabled){
             Cursor.SetCursor(tCursor, hotSpot, cursorMode);
             if(!isUI){
-                foreach (Transform t in transform){
-                    t.gameObject.SetActive(true);
-                }
+                //Faz efeitinho de aparecer
+                mouseOver = true;
             }
         }
     }
@@ -128,9 +151,8 @@ public class ExitPoint : MonoBehaviour
         if(!speech.isActiveAndEnabled){
             Cursor.SetCursor(null, hotSpot, cursorMode);
             if(!isUI){
-                foreach (Transform t in transform){
-                    t.gameObject.SetActive(false);
-                }
+                //Faz efeitinho de sumir
+                mouseOver = false;
             }
         }
     }

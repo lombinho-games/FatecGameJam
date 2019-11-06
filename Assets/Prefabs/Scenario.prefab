@@ -678,9 +678,11 @@ MonoBehaviour:
     exitPoint: 0
     enabled: 1
     unlockMessage: 
+    icon_frame: 
     position: {x: -2.118305, y: -3.4432042, z: 10.191391}
     scale: {x: 1, y: 1, z: 1}
     rotation: {x: -0, y: -0, z: -0, w: 1}
+  innerGroup: {fileID: 0}
 --- !u!1 &3124369891340713899
 GameObject:
   m_ObjectHideFlags: 0
@@ -1173,6 +1175,8 @@ MonoBehaviour:
     type: 3}
   exitPrefab: {fileID: 5525538405274900939, guid: 71143aff72b1a1a439482d357f713421,
     type: 3}
+  cenario_pista: 
+  cenario_desc: 
   personagens_folder: {fileID: 4748278524782131710}
   pistas_folder: {fileID: 2796230212296183068}
   exits_folder: {fileID: 2179302160700208103}
@@ -1858,7 +1862,7 @@ MonoBehaviour:
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
+  m_DynamicPixelsPerUnit: 5
 --- !u!114 &6782741223735394844
 MonoBehaviour:
   m_ObjectHideFlags: 0

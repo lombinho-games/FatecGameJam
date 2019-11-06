@@ -51,6 +51,8 @@ public class SpeechManager : MonoBehaviour
 
     GameObject buttonCanvas;
 
+    GameObject minimap;
+
     void Start()
     {
         charTimer = 0;
@@ -114,6 +116,10 @@ public class SpeechManager : MonoBehaviour
         gameObject.SetActive(true);
         personagens.SetActive(false);
         gui.SetActive(false);
+        if(!minimap)
+            minimap = GameObject.Find("MinimapCanvas");
+        if(minimap)
+            minimap.SetActive(false);
         characterImage.sprite = manager.textureManager.GetSpritePose(personagem.data.defaultImage);
         characterImage.color = new Color(1, 1, 1, 1);
         canvasText.text = "";
@@ -206,6 +212,10 @@ public class SpeechManager : MonoBehaviour
         this.texts = texts;
         gameObject.SetActive(true);
         isTalking = true;
+        if(!minimap)
+            minimap = GameObject.Find("MinimapCanvas");
+        if(minimap)
+            minimap.SetActive(false);
         BeginText(0);
     }
 
@@ -233,6 +243,8 @@ public class SpeechManager : MonoBehaviour
 
     public void CloseDialog(){
         
+        if(minimap)
+            minimap.SetActive(true);
 
         if(texts == GlobalProfile.getInstance().dialogIgnition){
             GlobalProfile.getInstance().dialogIgnition = null;

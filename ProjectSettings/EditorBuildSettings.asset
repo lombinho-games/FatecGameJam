@@ -44,4 +44,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scenarios/Jardim da Frente.unity
     guid: 9e781ba50007fc346b4750345cb3ba82
+  - enabled: 1
+    path: "Assets/Scenes/Scenarios/Escrit\xF3rio.unity"
+    guid: e3e876c648bcd2448851742cf9519032
+  - enabled: 1
+    path: "Assets/Scenes/Scenarios/Sala de M\xFAsica.unity"
+    guid: 664c7af1eff215b4ab35c4beedeaffd3
   m_configObjects: {}

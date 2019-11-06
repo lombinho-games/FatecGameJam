@@ -26,42 +26,44 @@ public class SolutionScriptableObject : ScriptableObject
     [SerializeField]
     public Solution[] solutions;
 
-    public Solution GetResponse(List<ItemConnection> connections){
-        for(int i = 0; i < solutions.Length; i ++){
+    public List<Solution> GetResponse(List<ItemConnection> connections){
+
+        List<Solution> resp = new List<Solution>();
+
+        for(int i = 0; i < solutions.Length; i ++){ //Passa por todas as soluções
             Solution sol = solutions[i];
 
-            bool verificaTudo = true;
+            bool verificaTudo = true; //Pra cada solução que existe, checa se as conexões da solução estão contidas dentro do grupo de
+            //conexões selecionadas
             for(int j = 0; j < sol.conns.Length; j++){
                 if(ContainsConnectionInList(sol.conns[j], connections) == null){
-                    verificaTudo = false;
+                    verificaTudo = false; //se existe uma conexão na solução que não esteja no grupo, já tá errado
                     break;
                 }
             }
 
+            //Isso significa que se o grupo de conexões selecionadas pelo jogador tenha todas as conexões de uma solução específica,
+            //Mesmo que tenha mais soluções selecionadas, ele vai dar certo
+
             if(verificaTudo){
-                return sol;
+                resp.Add(sol);
             }
         }
-        return null;
+        return resp;
     }
 
     public ItemConnection ContainsConnectionInList(ConnStruct st, List<ItemConnection> list){
         foreach(ItemConnection it in list){
-            PistaFrame pistaA = it.objectA.GetComponent<PistaPin>().pista.transform.parent.GetComponent<PistaFrame>();
-            PistaFrame pistaB = it.objectB.GetComponent<PistaPin>().pista.transform.parent.GetComponent<PistaFrame>();
-
-            if(st.pista1 == pistaA.item.itemID && st.pista2 == pistaB.item.itemID){
+            if(st.pista1 == it.GetPistaA().item.itemID && st.pista2 == it.GetPistaB().item.itemID){
                 if(st.connection == it.connector){
                     return it;
                 }
             }
-
-            if(st.pista1 == pistaB.item.itemID && st.pista2 == pistaA.item.itemID){
+            if(st.pista1 == it.GetPistaB().item.itemID && st.pista2 == it.GetPistaA().item.itemID){
                 if(st.connection == it.connector){
                     return it;
                 }
             }
-
         }
         return null;
     }

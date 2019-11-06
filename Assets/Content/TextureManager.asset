@@ -76,7 +76,25 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 2fd8c5d33ae6f434bb7f57f03390cc04, type: 3}
   - name: testamento
     sprite: {fileID: 21300000, guid: a5a07f37eeeedb743a5c96ef480ead11, type: 3}
-  - name: cozinha
-    sprite: {fileID: 21300000, guid: e19d187a6b1351646b4cfc8b167ae18f, type: 3}
-  - name: jardim-dos-fundos
+  - name: cenario/cozinha
+    sprite: {fileID: 21300000, guid: e17ff03be81a4e54c9cc9ee7d036aade, type: 3}
+  - name: cenario/jardim-dos-fundos
     sprite: {fileID: 21300000, guid: 43823808bee0d05468466195b5df2e2c, type: 3}
+  - name: cenario/hall
+    sprite: {fileID: 21300000, guid: d1d1bd2b0ffb8944fbae1de208a77624, type: 3}
+  - name: cenario/corredor
+    sprite: {fileID: 21300000, guid: 422667f48e817b74c95f2d3013fd4cef, type: 3}
+  - name: cenario/suite
+    sprite: {fileID: 21300000, guid: 066d2371e32d62d4cbff29570e779099, type: 3}
+  - name: cenario/banheiro
+    sprite: {fileID: 21300000, guid: 39f903dfa67557843acc1a47bf074249, type: 3}
+  - name: cenario/escritorio
+    sprite: {fileID: 21300000, guid: 4060515b5b69085449223c8266579b38, type: 3}
+  - name: cenario/sala-de-estar
+    sprite: {fileID: 21300000, guid: dadb165f646cf7d4586147b419618ba1, type: 3}
+  - name: cenario/sala-de-jantar
+    sprite: {fileID: 21300000, guid: 8ef69137b3c1189449fd42f2168dd7f1, type: 3}
+  - name: cenario/sala-de-musica
+    sprite: {fileID: 21300000, guid: b82dbdc50f39d024faa666280af6b5dc, type: 3}
+  - name: cenario/biblioteca
+    sprite: {fileID: 21300000, guid: c7b14c88996f9594ba691111d27ee8c7, type: 3}
