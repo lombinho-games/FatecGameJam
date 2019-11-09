@@ -52,10 +52,14 @@ public class SpeechManager : MonoBehaviour
     GameObject buttonCanvas;
 
     GameObject minimap;
+    
 
     void Start()
     {
         charTimer = 0;
+    }
+    public void setSpeed(float speedText){
+        charTimer = speedText;
     }
 
     // Update is called once per frame
