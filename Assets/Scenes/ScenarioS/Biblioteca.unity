@@ -54,7 +54,7 @@ LightmapSettings:
     m_EnableBakedLightmaps: 0
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
-    serializedVersion: 10
+    serializedVersion: 12
     m_Resolution: 2
     m_BakeResolution: 40
     m_AtlasSize: 1024
@@ -62,6 +62,7 @@ LightmapSettings:
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
     m_CompAOExponentDirect: 0
+    m_ExtractAmbientOcclusion: 0
     m_Padding: 2
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
@@ -76,10 +77,16 @@ LightmapSettings:
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
     m_PVRBounces: 2
+    m_PVREnvironmentSampleCount: 500
+    m_PVREnvironmentReferencePointCount: 2048
+    m_PVRFilteringMode: 2
+    m_PVRDenoiserTypeDirect: 0
+    m_PVRDenoiserTypeIndirect: 0
+    m_PVRDenoiserTypeAO: 0
     m_PVRFilterTypeDirect: 0
     m_PVRFilterTypeIndirect: 0
     m_PVRFilterTypeAO: 0
-    m_PVRFilteringMode: 1
+    m_PVREnvironmentMIS: 0
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
@@ -87,7 +94,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaDirect: 0.5
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
-    m_ShowResolutionOverlay: 1
+    m_ExportTrainingData: 0
+    m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -123,16 +131,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Scenario
-      objectReference: {fileID: 0}
-    - target: {fileID: 3611990409394683886, guid: dfc79180924da2340ab88c61091fce5a,
-        type: 3}
-      propertyPath: cenario_pista
-      value: cenario/biblioteca
-      objectReference: {fileID: 0}
-    - target: {fileID: 3611990409394683886, guid: dfc79180924da2340ab88c61091fce5a,
-        type: 3}
-      propertyPath: cenario_desc
-      value: Biblioteca, onde foi encontrado uma nota fiscal de um livro de caligrafia
       objectReference: {fileID: 0}
     - target: {fileID: 5138305931716355625, guid: dfc79180924da2340ab88c61091fce5a,
         type: 3}
@@ -189,31 +187,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6782741223736257914, guid: dfc79180924da2340ab88c61091fce5a,
+    - target: {fileID: 6782741222782814037, guid: dfc79180924da2340ab88c61091fce5a,
         type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: b07a576b927cd0145ab59b4d54e98f47,
-        type: 3}
-    - target: {fileID: 6782741223159566735, guid: dfc79180924da2340ab88c61091fce5a,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
+      propertyPath: m_LocalPosition.x
+      value: -17.31
       objectReference: {fileID: 0}
-    - target: {fileID: 6782741223159566735, guid: dfc79180924da2340ab88c61091fce5a,
+    - target: {fileID: 6782741224183856819, guid: dfc79180924da2340ab88c61091fce5a,
         type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6782741223159566735, guid: dfc79180924da2340ab88c61091fce5a,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6782741223159566735, guid: dfc79180924da2340ab88c61091fce5a,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
+      propertyPath: m_LocalPosition.x
+      value: 17.27
       objectReference: {fileID: 0}
     - target: {fileID: 4310204084697313015, guid: dfc79180924da2340ab88c61091fce5a,
         type: 3}
@@ -225,6 +207,16 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3611990409394683886, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: cenario_pista
+      value: cenario/biblioteca
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611990409394683886, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: cenario_desc
+      value: Biblioteca, onde foi encontrado uma nota fiscal de um livro de caligrafia
+      objectReference: {fileID: 0}
     - target: {fileID: 3124369890579125633, guid: dfc79180924da2340ab88c61091fce5a,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -245,6 +237,58 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6782741223159566735, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6782741223159566735, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6782741223159566735, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6782741223159566735, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6226354469319224938, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6226354469319224938, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6226354469319224938, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6226354469319224938, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6782741223736257914, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b07a576b927cd0145ab59b4d54e98f47,
+        type: 3}
+    - target: {fileID: 3124369890579125628, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 422667f48e817b74c95f2d3013fd4cef,
+        type: 3}
     - target: {fileID: 2485829451886367990, guid: dfc79180924da2340ab88c61091fce5a,
         type: 3}
       propertyPath: data.enabled
@@ -310,22 +354,6 @@ PrefabInstance:
       propertyPath: childText
       value: 
       objectReference: {fileID: 751448753}
-    - target: {fileID: 3124369890579125628, guid: dfc79180924da2340ab88c61091fce5a,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 422667f48e817b74c95f2d3013fd4cef,
-        type: 3}
-    - target: {fileID: 6782741222782814037, guid: dfc79180924da2340ab88c61091fce5a,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -17.31
-      objectReference: {fileID: 0}
-    - target: {fileID: 6782741224183856819, guid: dfc79180924da2340ab88c61091fce5a,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 17.27
-      objectReference: {fileID: 0}
     - target: {fileID: 3124369891340713899, guid: dfc79180924da2340ab88c61091fce5a,
         type: 3}
       propertyPath: m_IsActive
@@ -342,7 +370,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &751448754 stripped
@@ -381,6 +409,18 @@ Camera:
     type: 3}
   m_PrefabInstance: {fileID: 751448752}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &751448758 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5562301523163934124, guid: dfc79180924da2340ab88c61091fce5a,
+    type: 3}
+  m_PrefabInstance: {fileID: 751448752}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5addfb01381ea08459cdf239fb7e3884, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2102489932
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -503,12 +543,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 751448757}
-    - target: {fileID: 2112433370878056201, guid: 47689c318a438f84888f33fd8b857d94,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 845f5e5fe983311468490a952e94481f,
-        type: 3}
     - target: {fileID: 5682109769770821206, guid: 47689c318a438f84888f33fd8b857d94,
         type: 3}
       propertyPath: m_Sprite
@@ -520,6 +554,12 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0.49803922
       objectReference: {fileID: 0}
+    - target: {fileID: 2112433370878056201, guid: 47689c318a438f84888f33fd8b857d94,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 845f5e5fe983311468490a952e94481f,
+        type: 3}
     - target: {fileID: 8898030776567653394, guid: 47689c318a438f84888f33fd8b857d94,
         type: 3}
       propertyPath: m_Sprite
@@ -537,7 +577,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3624859447772813472}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
@@ -556,9 +596,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 0
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  delegates: []
 --- !u!1 &3624859447772813472
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,6 +668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c489ffecf77bdb749a45c747d526c143, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PauseUI: {fileID: 751448758}
   cursorTexture: {fileID: 2800000, guid: 1511b6a779d785f448d4baf67e341ac6, type: 3}
   cursorMode: 0
   hotSpot: {x: 0, y: 0}
@@ -686,6 +724,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0

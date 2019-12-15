@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PistaItem : MonoBehaviour
 {
+    public PauseUI PauseUI;
     public Texture2D cursorTexture;
     public CursorMode cursorMode = CursorMode.Auto;
     public Vector2 hotSpot = Vector2.zero;
@@ -28,17 +29,20 @@ public class PistaItem : MonoBehaviour
 
     // Update is called once per frame
     void OnMouseDown(){
-        if(!speech.isActiveAndEnabled){
-            //Adicionar ao inventário
-            //Abrir um texto
-            GlobalProfile.getInstance().addItem(new InventoryItem(data.itemId, data.displayName, spriteRenderer.sprite, data.itemDescription));
-            //Destruir item
-            Debug.Log("Adding item with sprite: " + spriteRenderer.sprite.texture.name);
-            GlobalProfile.getInstance().SendMessage(data.itemId);
-            GlobalProfile.getInstance().SaveInventory();
-            manager.RefreshAllCharacterDialogData();
-            speech.OpenText(data.dialogo.texts);
-            Destroy(gameObject);
+        if (!PauseUI.Paused)
+        {
+            if(!speech.isActiveAndEnabled){
+                //Adicionar ao inventário
+                //Abrir um texto
+                GlobalProfile.getInstance().addItem(new InventoryItem(data.itemId, data.displayName, spriteRenderer.sprite, data.itemDescription));
+                //Destruir item
+                Debug.Log("Adding item with sprite: " + spriteRenderer.sprite.texture.name);
+                GlobalProfile.getInstance().SendMessage(data.itemId);
+                GlobalProfile.getInstance().SaveInventory();
+                manager.RefreshAllCharacterDialogData();
+                speech.OpenText(data.dialogo.texts);
+                Destroy(gameObject);
+            }
         }
     }
 
@@ -52,11 +56,18 @@ public class PistaItem : MonoBehaviour
         this.speech = speech;
     }
     private void OnMouseOver() {
-        if(!speech.isActiveAndEnabled)
-            Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);    
+        if (PauseUI.Paused)
+        {
+            if(!speech.isActiveAndEnabled)
+                Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);    
+        }
+            
     }
     private void OnMouseExit() {
-        if(!speech.isActiveAndEnabled)
-            Cursor.SetCursor(null, hotSpot, cursorMode);
+        if (!PauseUI.Paused)
+        {
+            if(!speech.isActiveAndEnabled)
+                Cursor.SetCursor(null, hotSpot, cursorMode);
+        }
     }
 }

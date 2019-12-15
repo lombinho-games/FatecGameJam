@@ -54,7 +54,7 @@ LightmapSettings:
     m_EnableBakedLightmaps: 0
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
-    serializedVersion: 10
+    serializedVersion: 12
     m_Resolution: 2
     m_BakeResolution: 40
     m_AtlasSize: 1024
@@ -62,6 +62,7 @@ LightmapSettings:
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
     m_CompAOExponentDirect: 0
+    m_ExtractAmbientOcclusion: 0
     m_Padding: 2
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
@@ -76,10 +77,16 @@ LightmapSettings:
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
     m_PVRBounces: 2
+    m_PVREnvironmentSampleCount: 500
+    m_PVREnvironmentReferencePointCount: 2048
+    m_PVRFilteringMode: 2
+    m_PVRDenoiserTypeDirect: 0
+    m_PVRDenoiserTypeIndirect: 0
+    m_PVRDenoiserTypeAO: 0
     m_PVRFilterTypeDirect: 0
     m_PVRFilterTypeIndirect: 0
     m_PVRFilterTypeAO: 0
-    m_PVRFilteringMode: 1
+    m_PVREnvironmentMIS: 0
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
@@ -87,7 +94,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaDirect: 0.5
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
-    m_ShowResolutionOverlay: 1
+    m_ExportTrainingData: 0
+    m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -381,6 +389,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -415,26 +424,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Scenario
-      objectReference: {fileID: 0}
-    - target: {fileID: 3611990409394683886, guid: dfc79180924da2340ab88c61091fce5a,
-        type: 3}
-      propertyPath: scenarioName
-      value: Hall
-      objectReference: {fileID: 0}
-    - target: {fileID: 3611990409394683886, guid: dfc79180924da2340ab88c61091fce5a,
-        type: 3}
-      propertyPath: Slot
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3611990409394683886, guid: dfc79180924da2340ab88c61091fce5a,
-        type: 3}
-      propertyPath: cenario_pista
-      value: cenario/hall
-      objectReference: {fileID: 0}
-    - target: {fileID: 3611990409394683886, guid: dfc79180924da2340ab88c61091fce5a,
-        type: 3}
-      propertyPath: cenario_desc
-      value: O Hall da casa
       objectReference: {fileID: 0}
     - target: {fileID: 5138305931716355625, guid: dfc79180924da2340ab88c61091fce5a,
         type: 3}
@@ -491,33 +480,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6782741223736257914, guid: dfc79180924da2340ab88c61091fce5a,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: ea35c60e829470e438c078ce5be28575,
-        type: 3}
-    - target: {fileID: 6782741223159566735, guid: dfc79180924da2340ab88c61091fce5a,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6782741223159566735, guid: dfc79180924da2340ab88c61091fce5a,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6782741223159566735, guid: dfc79180924da2340ab88c61091fce5a,
+    - target: {fileID: 6782741223735394841, guid: dfc79180924da2340ab88c61091fce5a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6782741223159566735, guid: dfc79180924da2340ab88c61091fce5a,
+    - target: {fileID: 6782741223735394841, guid: dfc79180924da2340ab88c61091fce5a,
         type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
+      propertyPath: m_SizeDelta.x
+      value: 1096.142
       objectReference: {fileID: 0}
-    - target: {fileID: 3124369890579125632, guid: dfc79180924da2340ab88c61091fce5a,
+    - target: {fileID: 1865133937126047090, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097205433952728831, guid: dfc79180924da2340ab88c61091fce5a,
         type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -532,6 +510,31 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3611990409394683886, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: scenarioName
+      value: Hall
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611990409394683886, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: Slot
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611990409394683886, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: cenario_pista
+      value: cenario/hall
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611990409394683886, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: cenario_desc
+      value: O Hall da casa
+      objectReference: {fileID: 0}
+    - target: {fileID: 6782741223735394847, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_DynamicPixelsPerUnit
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3124369890579125633, guid: dfc79180924da2340ab88c61091fce5a,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -552,20 +555,56 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1865133937126047090, guid: dfc79180924da2340ab88c61091fce5a,
+    - target: {fileID: 6782741223159566735, guid: dfc79180924da2340ab88c61091fce5a,
         type: 3}
-      propertyPath: m_RootOrder
-      value: 1
+      propertyPath: m_AnchorMin.y
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6782741223735394841, guid: dfc79180924da2340ab88c61091fce5a,
+    - target: {fileID: 6782741223159566735, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6782741223159566735, guid: dfc79180924da2340ab88c61091fce5a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6782741223735394841, guid: dfc79180924da2340ab88c61091fce5a,
+    - target: {fileID: 6782741223159566735, guid: dfc79180924da2340ab88c61091fce5a,
         type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1096.142
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6226354469319224938, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6226354469319224938, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6226354469319224938, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6226354469319224938, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6782741223736257914, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ea35c60e829470e438c078ce5be28575,
+        type: 3}
+    - target: {fileID: 3124369890579125632, guid: dfc79180924da2340ab88c61091fce5a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2485829451886367990, guid: dfc79180924da2340ab88c61091fce5a,
         type: 3}
@@ -592,16 +631,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6782741223735394847, guid: dfc79180924da2340ab88c61091fce5a,
-        type: 3}
-      propertyPath: m_DynamicPixelsPerUnit
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1097205433952728831, guid: dfc79180924da2340ab88c61091fce5a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfc79180924da2340ab88c61091fce5a, type: 3}
 --- !u!224 &1002634730 stripped
@@ -616,6 +645,18 @@ Camera:
     type: 3}
   m_PrefabInstance: {fileID: 1002634729}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1002634732 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5562301523163934124, guid: dfc79180924da2340ab88c61091fce5a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1002634729}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5addfb01381ea08459cdf239fb7e3884, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1166089745
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -978,6 +1019,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1028,6 +1070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e815c8b7fc1d64646a087a175cf43031, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PauseUI: {fileID: 1002634732}
   CursorMode: 0
   ReadTexture2D: {fileID: 2800000, guid: afe31887c54d350479bb6841cafe864a, type: 3}
   NReadTexture2D: {fileID: 2800000, guid: 87676f8789d2209408c73c2c6f8a9ade, type: 3}
@@ -1168,7 +1211,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 28.94, y: 40.93}
+    oldSize: {x: 28.94, y: 40.931713}
     newSize: {x: 28.94, y: 40.93}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

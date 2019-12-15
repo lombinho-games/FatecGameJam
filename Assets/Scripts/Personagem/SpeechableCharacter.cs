@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Linq;
 public class SpeechableCharacter : MonoBehaviour
 {
+    public PauseUI PauseUI;
     public CursorMode CursorMode = CursorMode.Auto;
     public Texture2D ReadTexture2D;
     public Texture2D NReadTexture2D;
@@ -41,7 +42,7 @@ public class SpeechableCharacter : MonoBehaviour
 
     // Update is called once per frame
     void OnMouseOver(){
-        if(Input.GetMouseButtonDown(0) && !manager.mouseOnSeta){ //perguntar se o mouse não tá em cima da seta
+        if(Input.GetMouseButtonDown(0) && !manager.mouseOnSeta && !PauseUI.Paused){ //perguntar se o mouse não tá em cima da seta
             if(data.dialogos.Count > 0){
                 selectCharacter();
             }
@@ -89,31 +90,37 @@ public class SpeechableCharacter : MonoBehaviour
     }
 
     public void OnMouseEnter() {
+        if (!PauseUI.Paused)
+        {
+            if (Input.GetMouseButtonDown(0)) {
+                RefreshDialogData();
+            }
 
-        if (Input.GetMouseButtonDown(0)) {
-            RefreshDialogData();
-        }
+            if(!speechCanvas.isActiveAndEnabled){
+                bool cRead = true;
+                if(data.dialogos.Count > 0){
+                    foreach(Dialogo d in data.dialogos){
 
-        if(!speechCanvas.isActiveAndEnabled){
-            bool cRead = true;
-            if(data.dialogos.Count > 0){
-                foreach(Dialogo d in data.dialogos){
-
-                    if(d.enabled && !d.read){
-                        cRead = false;
+                        if(d.enabled && !d.read){
+                            cRead = false;
+                        }
                     }
                 }
-            }
-            if(!cRead){
-                Cursor.SetCursor(ReadTexture2D,hotSpot,CursorMode); // Cursor de novo Texto disponivel      
-            }
-            else{
-                Cursor.SetCursor(NReadTexture2D,hotSpot,CursorMode); // Cursor de Texto base
-            }
+                if(!cRead){
+                    Cursor.SetCursor(ReadTexture2D,hotSpot,CursorMode); // Cursor de novo Texto disponivel      
+                }
+                else{
+                    Cursor.SetCursor(NReadTexture2D,hotSpot,CursorMode); // Cursor de Texto base
+                }
+            }    
         }
     }
     public void OnMouseExit() {
-        if(!speechCanvas.isActiveAndEnabled)
-            Cursor.SetCursor(null,hotSpot,CursorMode);
-    }   
+        if (!PauseUI.Paused)
+        {
+            if(!speechCanvas.isActiveAndEnabled)
+                Cursor.SetCursor(null,hotSpot,CursorMode);
+        }   
+            
+    }
 }
